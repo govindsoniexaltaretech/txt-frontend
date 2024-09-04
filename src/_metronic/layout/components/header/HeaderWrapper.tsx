@@ -26,6 +26,7 @@ export function HeaderWrapper() {
       data-kt-sticky-name='app-header-minimize'
       data-kt-sticky-offset='{default: "200px", lg: "0"}'
       data-kt-sticky-animation='false'
+      style={{background: "#fff"}}
     >
       <div
         id='kt_app_header_container'

@@ -13,6 +13,8 @@ const PrivateRoutes = () => {
   const UserTxt = lazy(() => import('../modules/profile/txt/Users/Home'))
   const OverViewUsers = lazy(() => import('../modules/profile/txt/Users/Overview'))
   const Appointments = lazy(() => import('../modules/profile/txt/Appointments/Home'))
+  const Services = lazy(() => import('../modules/profile/txt/Services/Home'))
+  const Subscriptions = lazy(() => import('../modules/profile/txt/Subscriptions/Home'))
   
   // End User 
   const ProfilePage = lazy(() => import('../modules/profile/ProfilePage'))
@@ -54,6 +56,22 @@ const PrivateRoutes = () => {
           element={
             <SuspensedView>
               <Appointments />
+            </SuspensedView>
+          }
+        />
+        <Route
+          path='services/*'
+          element={
+            <SuspensedView>
+              <Services />
+            </SuspensedView>
+          }
+        />
+        <Route
+          path='subscription/*'
+          element={
+            <SuspensedView>
+              <Subscriptions />
             </SuspensedView>
           }
         />
