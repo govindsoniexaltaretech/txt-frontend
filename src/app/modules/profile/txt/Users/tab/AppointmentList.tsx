@@ -14,23 +14,23 @@ interface Appointment {
 const appointments: Appointment[] = [
     {
         id: 3451,
-        property_type: '/metronic8/react/demo1/media/avatars/300-5.jpg',
-        address: '123 Elm Street',
+        property_type: '/media/avatars/300-5.jpg',
+        address: '756 Nguyen Hue Boulevard',
         appointment_type: 'Property Tour',
         date_time: '06-06-2024 18:00',
         status: 'Scheduled',
     },
     {
         id: 2352,
-        property_type: '/metronic8/react/demo1/media/avatars/300-5.jpg',
-        address: '456 Oak Avenue',
+        property_type: '/media/avatars/300-1.jpg',
+        address: '756 Nguyen Hue Boulevard',
         appointment_type: 'Property Tour',
         date_time: '07-06-2024 14:00',
         status: 'Rescheduled',
     },
     {
         id: 3212,
-        property_type: '/metronic8/react/demo1/media/avatars/300-5.jpg',
+        property_type: '/media/avatars/300-4.jpg',
         address: '789 Pine Road',
         appointment_type: 'Virtual Tour',
         date_time: '08-06-2024 09:00',
@@ -38,7 +38,7 @@ const appointments: Appointment[] = [
     },
     {
         id: 4234,
-        property_type: '/metronic8/react/demo1/media/avatars/300-5.jpg',
+        property_type: '/media/avatars/300-3.jpg',
         address: '101 Maple Lane',
         appointment_type: 'Property Tour',
         date_time: '09-06-2024 11:00',
@@ -46,10 +46,23 @@ const appointments: Appointment[] = [
     },
 ];
 
-const statusColors: { [key in Status]: string } = {
-    Scheduled: '#3E97FF',
-    Rescheduled: '#7239EA',
-    Completed: '#50CD89',
+// const statusColors: { [key in Status]: string } = {
+//     Scheduled: '#3E97FF',
+//     Rescheduled: '#7239EA',
+//     Completed: '#50CD89',
+// };
+
+const getRoleStyles = (status: Status) => {
+    switch (status) {
+        case 'Scheduled':
+            return { color: '#3E97FF', backgroundColor: '#EEF6FF' };
+        case 'Completed':
+            return { color: '#50CD89', backgroundColor: '#E8FFF3' };
+        case 'Rescheduled':
+            return { color: '#7239EA', backgroundColor: '#F8F5FF' };
+        default:
+            return {};
+    }
 };
 
 const AppointmentList: React.FC = () => {
@@ -72,7 +85,7 @@ const AppointmentList: React.FC = () => {
                         <table id="kt_table_users" className="table align-middle table-row-dashed fs-6 gy-5">
                             {!selectedAppointment && (
                                 <thead>
-                                    <tr className="text-start text-muted fw-bolder fs-7 text-uppercase gs-0">
+                                    <tr className="text-start text-muted fw-bolder fs-5 gs-0">
                                         <>
                                             <th className="min-w-125px">Id</th>
                                             <th className="min-w-125px">Property Type</th>
@@ -84,7 +97,7 @@ const AppointmentList: React.FC = () => {
                                     </tr>
                                 </thead>
                             )}
-                            <tbody className="text-gray-600 fw-bold">
+                            <tbody className="text-gray-600 fs-4 fw-bold">
                                 {appointments.map((appointment) => (
                                     <React.Fragment key={appointment.id}>
                                         {(selectedAppointment === null || selectedAppointment === appointment.id) && (
@@ -96,10 +109,10 @@ const AppointmentList: React.FC = () => {
                                                     <>
                                                         <td>{appointment.id}</td>
                                                         <td>
-                                                            <div className="d-flex align-items-center">
-                                                                <div className="symbol overflow-hidden me-3">
+                                                            <div className="d-flex align-items-center" style={{ justifyContent: "center" }}>
+                                                                <div className="symbol overflow-hidden me-3" style={{ borderRadius: "0"}}>
                                                                     <a href="#">
-                                                                        <div className="symbol-label">
+                                                                        <div className="symbol-label" style={{ borderRadius: "0"}}>
                                                                             <img src={appointment.property_type} alt={`Property ${appointment.id}`} className="w-100" />
                                                                         </div>
                                                                     </a>
@@ -113,11 +126,8 @@ const AppointmentList: React.FC = () => {
                                                             <div
                                                                 className="badge"
                                                                 style={{
-                                                                    backgroundColor: statusColors[appointment.status as Status] || '#CCCCCC',
-                                                                    color: '#fff',
-                                                                    padding: '5px 10px',
-                                                                    borderRadius: '5px',
-                                                                    fontWeight: 'bold'
+                                                                    ...getRoleStyles(appointment.status),
+                                                                    padding: '1rem'
                                                                 }}
                                                             >
                                                                 {appointment.status}

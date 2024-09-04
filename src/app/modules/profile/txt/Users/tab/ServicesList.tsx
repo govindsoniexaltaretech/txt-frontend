@@ -16,7 +16,7 @@ interface Aservice {
 const aservices: Aservice[] = [
     {
         service_id: 9752,
-        service_property_type: '/metronic8/react/demo1/media/avatars/300-5.jpg',
+        service_property_type: '/media/avatars/300-5.jpg',
         service_typel: 'Curtain cleaning',
         service_provider: 'Taylor Smith',
         date_time: '06-06-2024 18:00',
@@ -24,7 +24,7 @@ const aservices: Aservice[] = [
     },
     {
         service_id: 9352,
-        service_property_type: '/metronic8/react/demo1/media/avatars/300-5.jpg',
+        service_property_type: '/media/avatars/300-1.jpg',
         service_typel: 'AC Cleaning',
         service_provider: '',
         date_time: '07-06-2024 14:00',
@@ -32,7 +32,7 @@ const aservices: Aservice[] = [
     },
     {
         service_id: 3233,
-        service_property_type: '/metronic8/react/demo1/media/avatars/300-5.jpg',
+        service_property_type: '/media/avatars/300-2.jpg',
         service_typel: 'Curtain Cleaning',
         service_provider: 'Olivia Thomas',
         date_time: '08-06-2024 09:00',
@@ -40,7 +40,7 @@ const aservices: Aservice[] = [
     },
     {
         service_id: 5666,
-        service_property_type: '/metronic8/react/demo1/media/avatars/300-5.jpg',
+        service_property_type: '/media/avatars/300-3.jpg',
         service_typel: 'Bathroom Cleaning',
         service_provider: 'Gems Andrew',
         date_time: '09-06-2024 11:00',
@@ -48,7 +48,7 @@ const aservices: Aservice[] = [
     },
     {
         service_id: 7778,
-        service_property_type: '/metronic8/react/demo1/media/avatars/300-5.jpg',
+        service_property_type: '/media/avatars/300-4.jpg',
         service_typel: 'AC Cleaning',
         service_provider: 'Olivia Thomas',
         date_time: '08-06-2024 09:00',
@@ -56,7 +56,7 @@ const aservices: Aservice[] = [
     },
     {
         service_id: 6009,
-        service_property_type: '/metronic8/react/demo1/media/avatars/300-5.jpg',
+        service_property_type: '/media/avatars/300-6.jpg',
         service_typel: 'Plumbing',
         service_provider: 'Gems Andrew',
         date_time: '09-06-2024 11:00',
@@ -64,11 +64,25 @@ const aservices: Aservice[] = [
     }
 ];
 
-const statusColors: { [key in Status]: string } = {
-    Scheduled: '#3E97FF',
-    Rescheduled: '#7239EA',
-    Completed: '#50CD89',
+// const statusColors: { [key in Status]: string } = {
+//     Scheduled: '#3E97FF',
+//     Rescheduled: '#7239EA',
+//     Completed: '#50CD89',
+// };
+
+const getRoleStyles = (status: Status) => {
+    switch (status) {
+        case 'Scheduled':
+            return { color: '#3E97FF', backgroundColor: '#EEF6FF' };
+        case 'Completed':
+            return { color: '#50CD89', backgroundColor: '#E8FFF3' };
+        case 'Rescheduled':
+            return { color: '#7239EA', backgroundColor: '#F8F5FF' };
+        default:
+            return {};
+    }
 };
+
 
 const ServicesList: React.FC = () => {
 
@@ -114,10 +128,10 @@ const ServicesList: React.FC = () => {
                                                     <>
                                                         <td>{aservice.service_id}</td>
                                                         <td>
-                                                            <div className="d-flex align-items-center">
-                                                                <div className="symbol overflow-hidden me-3">
+                                                            <div className="d-flex align-items-center" style={{ justifyContent: "start" }}>
+                                                                <div className="symbol overflow-hidden me-3" style={{ borderRadius: "0"}}>
                                                                     <a href="#">
-                                                                        <div className="symbol-label">
+                                                                        <div className="symbol-label" style={{ borderRadius: "0"}}>
                                                                             <img src={aservice.service_property_type} alt={`Property ${aservice.service_id}`} className="w-100" />
                                                                         </div>
                                                                     </a>
@@ -131,15 +145,14 @@ const ServicesList: React.FC = () => {
                                                             <div
                                                                 className="badge"
                                                                 style={{
-                                                                    backgroundColor: statusColors[aservice.status as Status] || '#CCCCCC',
-                                                                    color: '#fff',
-                                                                    padding: '5px 10px',
-                                                                    borderRadius: '5px',
-                                                                    fontWeight: 'bold'
+                                                                    ...getRoleStyles(aservice.status),
+                                                                    padding: '1rem'
                                                                 }}
                                                             >
                                                                 {aservice.status}
                                                             </div>
+
+
                                                         </td>
                                                     </>
                                                 )}

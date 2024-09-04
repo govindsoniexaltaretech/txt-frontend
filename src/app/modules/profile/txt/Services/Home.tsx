@@ -2,7 +2,7 @@ import React from 'react';
 import ServicesHList from './ServicesHList';
 
 const Home: React.FC = () => {
-   
+
     return (
         <>
             <div className='app-main flex-column flex-row-fluid' id="kt_app_main">
@@ -36,89 +36,56 @@ const Home: React.FC = () => {
                                                 type="text"
                                                 data-kt-user-table-filter="search"
                                                 className="form-control form-control-solid w-250px ps-14"
-                                                placeholder="Search user"
+                                                placeholder="Search"
                                                 value=""
                                             />
                                         </div>
                                     </div>
                                     <div className="card-toolbar">
                                         <div className="d-flex justify-content-end" data-kt-user-table-toolbar="base">
-                                            <div className="text-end min-w-100px">
-                                                <a
-                                                    href="#"
-                                                    className="btn btn-light btn-active-light-primary btn-sm"
-                                                    data-kt-menu-trigger="click"
-                                                    data-kt-menu-placement="bottom-end"
-                                                >
-                                                    Service Type
-                                                    <i className="ki-duotone ki-down fs-5 m-0"></i>
+                                            <div className='rest' style={{ paddingRight: '.7rem' }}>
+                                                <a href="#" className="btn btn-light btn-active-light-primary btn-sm" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end" style={{ width: '14rem', justifyContent: 'space-between', display: 'flex' }}>
+                                                    Service Type<i className="ki-duotone ki-down fs-5 m-0"></i>
+
                                                 </a>
                                                 <div className="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-bold fs-7 w-125px py-4">
                                                     <div className="menu-item px-3">
-                                                        <a href="#" className="menu-link px-3">
-                                                            Property Tour                                                        </a>
+                                                        <a className="menu-link px-3">Edit</a>
                                                     </div>
                                                     <div className="menu-item px-3">
-                                                        <a
-                                                            href="#"
-                                                            className="menu-link px-3"
-                                                            data-kt-users-table-filter="delete_row"
-                                                        >
-                                                            Surveyor Service
+                                                        <a className="menu-link px-3" data-kt-users-table-filter="delete_row">
+                                                            Delete
                                                         </a>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="text-end min-w-100px" style={{padding: "0 .4rem"}}>
-                                                <a
-                                                    href="#"
-                                                    className="btn btn-light btn-active-light-primary btn-sm"
-                                                    data-kt-menu-trigger="click"
-                                                    data-kt-menu-placement="bottom-end"
-                                                >
-                                                    Service Between
-                                                    <i className="ki-duotone ki-down fs-5 m-0"></i>
+                                            <div className='rest' style={{ paddingRight: '.7rem' }}>
+                                                <a href="#" className="btn btn-light btn-active-light-primary btn-sm" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end" style={{ width: '14rem', justifyContent: 'space-between', display: 'flex' }}>
+                                                    Service Between<i className="ki-duotone ki-down fs-5 m-0"></i>
+
                                                 </a>
                                                 <div className="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-bold fs-7 w-125px py-4">
                                                     <div className="menu-item px-3">
-                                                        <a href="#" className="menu-link px-3">
-                                                            Buyer & Owner
-                                                        </a>
+                                                        <a className="menu-link px-3">Edit</a>
                                                     </div>
                                                     <div className="menu-item px-3">
-                                                        <a
-                                                            href="#"
-                                                            className="menu-link px-3"
-                                                            data-kt-users-table-filter="delete_row"
-                                                        >
-                                                            Property inspector & Owner
+                                                        <a className="menu-link px-3" data-kt-users-table-filter="delete_row">
+                                                            Delete
                                                         </a>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="text-end min-w-100px">
-                                                <a
-                                                    href="#"
-                                                    className="btn btn-light btn-active-light-primary btn-sm"
-                                                    data-kt-menu-trigger="click"
-                                                    data-kt-menu-placement="bottom-end"
-                                                >
-                                                    Status
-                                                    <i className="ki-duotone ki-down fs-5 m-0"></i>
+                                            <div className='rest' style={{ paddingRight: '0rem' }}>
+                                                <a href="#" className="btn btn-light btn-active-light-primary btn-sm" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end" style={{ width: '14rem', justifyContent: 'space-between', display: 'flex' }}>
+                                                    Status<i className="ki-duotone ki-down fs-5 m-0"></i>
                                                 </a>
                                                 <div className="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-bold fs-7 w-125px py-4">
                                                     <div className="menu-item px-3">
-                                                        <a href="#" className="menu-link px-3">
-                                                            Pending
-                                                        </a>
+                                                        <a className="menu-link px-3">Edit</a>
                                                     </div>
                                                     <div className="menu-item px-3">
-                                                        <a
-                                                            href="#"
-                                                            className="menu-link px-3"
-                                                            data-kt-users-table-filter="delete_row"
-                                                        >
-                                                            Complete
+                                                        <a className="menu-link px-3" data-kt-users-table-filter="delete_row">
+                                                            Delete
                                                         </a>
                                                     </div>
                                                 </div>

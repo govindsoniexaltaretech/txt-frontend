@@ -33,12 +33,26 @@ const Home: React.FC = () => {
                                     {/* Professionals Card */}
                                     <div className="card card-flush h-md-auto mb-5 mb-xl-10">
                                         <div className="card-header pt-5">
+                                            <i
+                                                className="bi bi-gift-fill"
+                                                style={{
+                                                    fontSize: '1.8rem',
+                                                    color: 'rgb(126, 130, 153)',
+                                                    background: 'rgb(249, 249, 249)',
+                                                    display: 'flex',
+                                                    padding: '.7rem',
+                                                    height: 'max-content',
+                                                }}
+                                            ></i>
+
+                                        </div>
+                                        <div className="card-header pt-0">
                                             <div className="card-title d-flex flex-column">
                                                 <span className="fs-2hx fw-bold text-gray-900 me-2 lh-1 ls-n2">17,986</span>
                                             </div>
                                         </div>
                                         <div className="card-body d-flex flex-column justify-content-end pe-0">
-                                            <span className="text-gray-500 pt-1 fw-semibold fs-6">Free Plan Users</span>
+                                            <span className="text-gray-500 pt-1 fw-semibold fs-3">Free Plan Users</span>
                                         </div>
                                     </div>
                                 </div>
@@ -49,12 +63,25 @@ const Home: React.FC = () => {
                                     {/* Professionals Card */}
                                     <div className="card card-flush h-md-auto mb-5 mb-xl-10">
                                         <div className="card-header pt-5">
+                                            <i
+                                                className="bi bi-trophy-fill"
+                                                style={{
+                                                    fontSize: '1.8rem',
+                                                    color: '#2884EF',
+                                                    background: '#EEF6FF',
+                                                    display: 'flex',
+                                                    padding: '.7rem',
+                                                    height: 'max-content',
+                                                }}
+                                            ></i>
+                                        </div>
+                                        <div className="card-header pt-5">
                                             <div className="card-title d-flex flex-column">
-                                                <span className="fs-2hx fw-bold text-gray-900 me-2 lh-1 ls-n2">4,567</span>
+                                                <span className="fs-2hx fw-bold text-gray-900 me-2 lh-1 ls-n2">5,876</span>
                                             </div>
                                         </div>
                                         <div className="card-body d-flex flex-column justify-content-end pe-0">
-                                            <span className="text-gray-500 pt-1 fw-semibold fs-6">Basic Plan Users</span>
+                                            <span className="text-gray-500 pt-1 fw-semibold fs-3">Basic Plan Users</span>
                                         </div>
                                     </div>
                                 </div>
@@ -65,12 +92,25 @@ const Home: React.FC = () => {
                                     {/* Professionals Card */}
                                     <div className="card card-flush h-md-auto mb-5 mb-xl-10">
                                         <div className="card-header pt-5">
+                                            <i
+                                                className="bi bi-award"
+                                                style={{
+                                                    fontSize: '1.8rem',
+                                                    color: '#47BE7D',
+                                                    background: '#E8FFF3',
+                                                    display: 'flex',
+                                                    padding: '.7rem',
+                                                    height: 'max-content',
+                                                }}
+                                            ></i>
+                                        </div>
+                                        <div className="card-header pt-5">
                                             <div className="card-title d-flex flex-column">
-                                                <span className="fs-2hx fw-bold text-gray-900 me-2 lh-1 ls-n2">19,860</span>
+                                                <span className="fs-2hx fw-bold text-gray-900 me-2 lh-1 ls-n2">3,765</span>
                                             </div>
                                         </div>
                                         <div className="card-body d-flex flex-column justify-content-end pe-0">
-                                            <span className="text-gray-500 pt-1 fw-semibold fs-6">Premium Plan Users</span>
+                                            <span className="text-gray-500 pt-1 fw-semibold fs-3">Premium Plan Users</span>
                                         </div>
                                     </div>
                                 </div>
@@ -81,13 +121,24 @@ const Home: React.FC = () => {
                                     {/* Professionals Card */}
                                     <div className="card card-flush h-md-auto mb-5 mb-xl-10">
                                         <div className="card-header pt-5">
-                                            <div className="card-title d-flex flex-column">
-                                                <span className="fs-2hx fw-bold text-gray-900 me-2 lh-1 ls-n2">22,005</span>
-                                                <span className="fs text-gray-900 me-2 lh-1 ls-n2">82.79% Subscribers</span>
-                                            </div>
+                                            <i
+                                                className="bi bi-plus"
+                                                style={{
+                                                    fontSize: '1.8rem',
+                                                    color: '#7239EA',
+                                                    background: '#F8F5FF',
+                                                    display: 'flex',
+                                                    padding: '.7rem',
+                                                    height: 'max-content',
+                                                }}
+                                            ></i>
+                                        </div>
+                                        <div className="card-header pt-5 card-title d-flex">
+                                            <span className="fs-2hx fw-bold text-gray-900 me-2 lh-1 ls-n2">22,005</span>
+                                            <span className="text-gray-500 pt-1 fw-semibold fs-7"> 82.79% Subscribers</span>
                                         </div>
                                         <div className="card-body d-flex flex-column justify-content-end pe-0">
-                                            <span className="text-gray-500 pt-1 fw-semibold fs-6">Total no. of Subscribed Users</span>
+                                            <span className="text-gray-500 pt-1 fw-semibold fs-3">Total no. of Subscribed Users</span>
                                         </div>
                                     </div>
                                 </div>
@@ -110,93 +161,62 @@ const Home: React.FC = () => {
                                                 type="text"
                                                 data-kt-user-table-filter="search"
                                                 className="form-control form-control-solid w-250px ps-14"
-                                                placeholder="Search user"
+                                                placeholder="Search"
                                                 value=""
                                             />
                                         </div>
                                     </div>
                                     <div className="card-toolbar">
                                         <div className="d-flex justify-content-end" data-kt-user-table-toolbar="base">
-                                            <div className="text-end min-w-100px">
-                                                <a
-                                                    href="#"
-                                                    className="btn btn-light btn-active-light-primary btn-sm"
-                                                    data-kt-menu-trigger="click"
-                                                    data-kt-menu-placement="bottom-end"
-                                                >
-                                                    Plan
-                                                    <i className="ki-duotone ki-down fs-5 m-0"></i>
+
+                                            <div className='rest' style={{ paddingRight: '.7rem' }}>
+                                                <a href="#" className="btn btn-light btn-active-light-primary btn-sm" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end" style={{ width: '14rem', justifyContent: 'space-between', display: 'flex' }}>
+                                                    Plan<i className="ki-duotone ki-down fs-5 m-0"></i>
+
                                                 </a>
                                                 <div className="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-bold fs-7 w-125px py-4">
                                                     <div className="menu-item px-3">
-                                                        <a href="#" className="menu-link px-3">
-                                                            Property Tour                                                        </a>
+                                                        <a className="menu-link px-3">Edit</a>
                                                     </div>
                                                     <div className="menu-item px-3">
-                                                        <a
-                                                            href="#"
-                                                            className="menu-link px-3"
-                                                            data-kt-users-table-filter="delete_row"
-                                                        >
-                                                            Surveyor Service
+                                                        <a className="menu-link px-3" data-kt-users-table-filter="delete_row">
+                                                            Delete
                                                         </a>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="text-end min-w-100px" style={{ padding: "0 .4rem" }}>
-                                                <a
-                                                    href="#"
-                                                    className="btn btn-light btn-active-light-primary btn-sm"
-                                                    data-kt-menu-trigger="click"
-                                                    data-kt-menu-placement="bottom-end"
-                                                >
-                                                    Duration
-                                                    <i className="ki-duotone ki-down fs-5 m-0"></i>
+                                            <div className='rest' style={{ paddingRight: '.7rem' }}>
+                                                <a href="#" className="btn btn-light btn-active-light-primary btn-sm" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end" style={{ width: '14rem', justifyContent: 'space-between', display: 'flex' }}>
+                                                    Duration<i className="ki-duotone ki-down fs-5 m-0"></i>
+
                                                 </a>
                                                 <div className="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-bold fs-7 w-125px py-4">
                                                     <div className="menu-item px-3">
-                                                        <a href="#" className="menu-link px-3">
-                                                            Buyer & Owner
-                                                        </a>
+                                                        <a className="menu-link px-3">Edit</a>
                                                     </div>
                                                     <div className="menu-item px-3">
-                                                        <a
-                                                            href="#"
-                                                            className="menu-link px-3"
-                                                            data-kt-users-table-filter="delete_row"
-                                                        >
-                                                            Property inspector & Owner
+                                                        <a className="menu-link px-3" data-kt-users-table-filter="delete_row">
+                                                            Delete
                                                         </a>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div className="text-end min-w-100px">
-                                                <a
-                                                    href="#"
-                                                    className="btn btn-light btn-active-light-primary btn-sm"
-                                                    data-kt-menu-trigger="click"
-                                                    data-kt-menu-placement="bottom-end"
-                                                >
-                                                    Status
-                                                    <i className="ki-duotone ki-down fs-5 m-0"></i>
+                                            <div className='rest' style={{ paddingRight: '0rem' }}>
+                                                <a href="#" className="btn btn-light btn-active-light-primary btn-sm" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end" style={{ width: '14rem', justifyContent: 'space-between', display: 'flex' }}>
+                                                    Status<i className="ki-duotone ki-down fs-5 m-0"></i>
                                                 </a>
                                                 <div className="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-bold fs-7 w-125px py-4">
                                                     <div className="menu-item px-3">
-                                                        <a href="#" className="menu-link px-3">
-                                                            Pending
-                                                        </a>
+                                                        <a className="menu-link px-3">Edit</a>
                                                     </div>
                                                     <div className="menu-item px-3">
-                                                        <a
-                                                            href="#"
-                                                            className="menu-link px-3"
-                                                            data-kt-users-table-filter="delete_row"
-                                                        >
-                                                            Complete
+                                                        <a className="menu-link px-3" data-kt-users-table-filter="delete_row">
+                                                            Delete
                                                         </a>
                                                     </div>
                                                 </div>
                                             </div>
+
                                         </div>
                                     </div>
                                 </div>

@@ -3,34 +3,34 @@ import React from 'react';
 const OverviewDetalis = () => {
   return (
     <>
-      <div className="d-flex flex-wrap flex-stack mb-6 card-header flex-nowrap border-0">
+      <div className="d-flex flex-wrap flex-stack mb-2 card-header flex-nowrap border-0">
         <div className="card-body p-0">
           <div className="row mb-7">
-            <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Location</label>
-            <div className="col-lg-8">
-              <span className="fw-bolder fs-6 text-muted">Vietnam</span>
+            <label className="col-lg-3 fs-4 fw-bolder text-gray-900">Location</label>
+            <div className="col-lg-9">
+              <span className="fw-bolder fs-4 text-muted"><img src="/media/logos/vietnam_phn.png" alt="" className="w-3" style={{ paddingRight: '4px', width: "2rem" }} />Vietnam</span>
             </div>
           </div>
 
           <div className="row mb-7">
-            <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Currency</label>
-            <div className="col-lg-8 fv-row">
-              <span className="fw-bold fs-6 text-muted">đ VND</span>
+            <label className="col-lg-3 fs-4 fw-bolder text-gray-900">Currency</label>
+            <div className="col-lg-9 fv-row">
+              <span className="fw-bold fs-4 text-muted">₫ VND</span>
             </div>
           </div>
 
           <div className="row mb-7">
-            <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Language</label>
-            <div className="col-lg-8 fv-row">
-              <span className="fw-bold fs-6 text-muted">English</span>
+            <label className="col-lg-3 fs-4 fw-bolder text-gray-900">Language</label>
+            <div className="col-lg-9 fv-row">
+              <span className="fw-bold fs-4 text-muted">English</span>
             </div>
           </div>
 
           <div className="row mb-7">
-            <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Subscription</label>
-            <div className="col-lg-8 fv-row">
+            <label className="col-lg-3 fs-4 fw-bolder text-gray-900">Subscription</label>
+            <div className="col-lg-9 fv-row" style={{marginTop: "-5px"}}>
               <a className='btn btn-light btn-light-warning btn-sm'>
-                <span className="fw-bold fs-6">None</span>
+                <span className="fw-bold fs-4">None</span>
               </a>
             </div>
           </div>

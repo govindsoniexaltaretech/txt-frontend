@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-type TaskStatus = 'Pending' | 'In Progress' | 'Completed';
+type TaskStatus = 'Scheduled' | 'Requested' | 'Completed' | 'Rescheduled' | 'Cancelled' ;
 
 interface TaskDetails {
     task_id: number;
@@ -10,46 +10,105 @@ interface TaskDetails {
     task_due_date: string;
     task_status: TaskStatus;
 }
-
 const tasksList: TaskDetails[] = [
     {
-        task_id: 1010,
-        task_icon: '/metronic8/react/demo1/media/avatars/300-5.jpg',
-        task_location: '456 Maple Drive',
-        task_category: 'Grocery Shopping',
-        task_due_date: '10-10-2024 14:00',
-        task_status: 'Pending',
+        task_id: 1011,
+        task_icon: '/media/avatars/300-5.jpg',
+        task_location: '987 Elm Street',
+        task_category: 'Dog Walking',
+        task_due_date: '14-14-2024 10:00',
+        task_status: 'Scheduled',
     },
     {
-        task_id: 2020,
-        task_icon: '/metronic8/react/demo1/media/avatars/300-5.jpg',
-        task_location: '789 Oak Lane',
-        task_category: 'House Repair',
-        task_due_date: '11-11-2024 09:00',
-        task_status: 'In Progress',
+        task_id: 2021,
+        task_icon: '/media/avatars/300-7.jpg',
+        task_location: '321 Birch Road',
+        task_category: 'Package Delivery',
+        task_due_date: '15-15-2024 12:00',
+        task_status: 'Requested',
     },
     {
-        task_id: 3030,
-        task_icon: '/metronic8/react/demo1/media/avatars/300-5.jpg',
-        task_location: '123 Pine Avenue',
-        task_category: 'Gardening',
-        task_due_date: '12-12-2024 08:00',
+        task_id: 3031,
+        task_icon: '/media/avatars/300-8.jpg',
+        task_location: '654 Willow Drive',
+        task_category: 'Cleaning',
+        task_due_date: '16-16-2024 14:00',
         task_status: 'Completed',
     },
     {
-        task_id: 4040,
-        task_icon: '/metronic8/react/demo1/media/avatars/300-5.jpg',
-        task_location: '234 Cedar Street',
-        task_category: 'Car Maintenance',
-        task_due_date: '13-13-2024 15:00',
-        task_status: 'Pending',
+        task_id: 4041,
+        task_icon: '/media/avatars/300-9.jpg',
+        task_location: '789 Spruce Lane',
+        task_category: 'Laundry',
+        task_due_date: '17-17-2024 16:00',
+        task_status: 'Rescheduled',
+    },
+    {
+        task_id: 5051,
+        task_icon: '/media/avatars/300-10.jpg',
+        task_location: '159 Chestnut Avenue',
+        task_category: 'Meal Preparation',
+        task_due_date: '18-18-2024 18:00',
+        task_status: 'Cancelled',
+    },
+    {
+        task_id: 6061,
+        task_icon: '/media/avatars/300-11.jpg',
+        task_location: '951 Redwood Street',
+        task_category: 'Grocery Delivery',
+        task_due_date: '19-19-2024 20:00',
+        task_status: 'Scheduled',
+    },
+    {
+        task_id: 7071,
+        task_icon: '/media/avatars/300-12.jpg',
+        task_location: '357 Aspen Road',
+        task_category: 'Babysitting',
+        task_due_date: '20-20-2024 22:00',
+        task_status: 'Requested',
+    },
+    {
+        task_id: 8081,
+        task_icon: '/media/avatars/300-13.jpg',
+        task_location: '753 Fir Avenue',
+        task_category: 'Pet Grooming',
+        task_due_date: '21-21-2024 06:00',
+        task_status: 'Completed',
+    },
+    {
+        task_id: 9091,
+        task_icon: '/media/avatars/300-14.jpg',
+        task_location: '852 Maple Street',
+        task_category: 'Lawn Mowing',
+        task_due_date: '22-22-2024 08:00',
+        task_status: 'Rescheduled',
+    },
+    {
+        task_id: 10102,
+        task_icon: '/media/avatars/300-15.jpg',
+        task_location: '963 Pine Crescent',
+        task_category: 'House Cleaning',
+        task_due_date: '23-23-2024 10:00',
+        task_status: 'Cancelled',
     },
 ];
 
-const taskStatusColors: { [key in TaskStatus]: string } = {
-    Pending: '#FF5733',
-    'In Progress': '#FFC300',
-    Completed: '#28B463',
+
+const getRoleStyles = (task_status: TaskStatus) => {
+    switch (task_status) {
+        case 'Scheduled':
+            return { color: '#3E97FF', backgroundColor: '#EEF6FF' };
+        case 'Completed':
+            return { color: '#50CD89', backgroundColor: '#E8FFF3' };
+        case 'Requested':
+            return { color: '#FFC300', backgroundColor: '#FFF8DD' };
+        case 'Rescheduled':
+            return { color: '#7239EA', backgroundColor: '#F8F5FF' };
+        case 'Cancelled':
+            return { color: '#F1416C', backgroundColor: '#FFF5F8' };
+        default:
+            return {};
+    }
 };
 
 const ServicesHList: React.FC = () => {
@@ -78,7 +137,7 @@ const ServicesHList: React.FC = () => {
                                             <th className="min-w-125px">Service Type</th>
                                             <th className="min-w-125px">Date & Time Availed</th>
                                             <th className="min-w-125px">Service Provider</th>
-                                            <th className="text-end min-w-100px">Status</th>
+                                            <th className="text-center min-w-100px">Status</th>
                                         </>
                                     </tr>
                                 </thead>
@@ -96,9 +155,9 @@ const ServicesHList: React.FC = () => {
                                                         <td>{task.task_id}</td>
                                                         <td>
                                                             <div className="d-flex align-items-center">
-                                                                <div className="symbol overflow-hidden me-3">
+                                                                <div className="symbol overflow-hidden me-3" style={{ borderRadius: "0"}}>
                                                                     <a href="#">
-                                                                        <div className="symbol-label">
+                                                                        <div className="symbol-label" style={{ borderRadius: "0"}}>
                                                                             <img src={task.task_icon} alt={`Task ${task.task_id}`} className="w-100" />
                                                                         </div>
                                                                     </a>
@@ -108,15 +167,12 @@ const ServicesHList: React.FC = () => {
                                                         <td>{task.task_location}</td>
                                                         <td>{task.task_due_date}</td>
                                                         <td>{task.task_category}</td>
-                                                        <td className="text-end min-w-100px">
+                                                        <td className="text-center min-w-100px">
                                                             <div
                                                                 className="badge"
                                                                 style={{
-                                                                    backgroundColor: taskStatusColors[task.task_status as TaskStatus] || '#CCCCCC',
-                                                                    color: '#fff',
-                                                                    padding: '5px 10px',
-                                                                    borderRadius: '5px',
-                                                                    fontWeight: 'bold'
+                                                                    ...getRoleStyles(task.task_status),
+                                                                    padding: '1rem'
                                                                 }}
                                                             >
                                                                 {task.task_status}
@@ -130,6 +186,45 @@ const ServicesHList: React.FC = () => {
                                 ))}
                             </tbody>
                         </table>
+                    </div>
+                    <div className="row">
+                        <div className="col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start">
+                            {/* Add any content if needed here */}
+                        </div>
+                        <div className="col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end">
+                            <div id="kt_table_users_paginate">
+                                <ul className="pagination">
+                                    <li className="page-item previous">
+                                        <a href="#" className="page-link">
+                                            <i className="previous"></i>
+                                        </a>
+                                    </li>
+                                    <li className="page-item active">
+                                        <a href="#" className="page-link">1</a>
+                                    </li>
+                                    <li className="page-item">
+                                        <a href="#" className="page-link">2</a>
+                                    </li>
+                                    <li className="page-item">
+                                        <a href="#" className="page-link">3</a>
+                                    </li>
+                                    <li className="page-item">
+                                        <a href="#" className="page-link">4</a>
+                                    </li>
+                                    <li className="page-item">
+                                        <a href="#" className="page-link">5</a>
+                                    </li>
+                                    <li className="page-item">
+                                        <a href="#" className="page-link">6</a>
+                                    </li>
+                                    <li className="page-item next">
+                                        <a href="#" className="page-link">
+                                            <i className="next"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     {selectedTask && (
                         <>

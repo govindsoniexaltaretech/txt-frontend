@@ -1,61 +1,132 @@
 import React, { useState } from 'react';
 
-type SubscriptionHStatus = 'Pending' | 'In Progress' | 'Completed';
+type SubscriptionHStatus = 'Active' | 'In Active';
 
 interface SubscriptionHDetails {
-    subscriptionHList_id: number;
-    subscriptionHList_icon: string;
-    subscriptionHList_location: string;
-    subscriptionHList_category: string;
-    subscriptionHList_due_date: string;
+    subscriptionHList_id: string;
+    subscriptionHList_plan: string;
+    subscriptionHList_description: string;
+    subscriptionHList_duration: string;
+    subscriptionHList_price: string;
     subscriptionHList_status: SubscriptionHStatus;
 }
 
 const tasksList: SubscriptionHDetails[] = [
     {
-        subscriptionHList_id: 1010,
-        subscriptionHList_icon: '/metronic8/react/demo1/media/avatars/300-5.jpg',
-        subscriptionHList_location: '456 Maple Drive',
-        subscriptionHList_category: 'Grocery Shopping',
-        subscriptionHList_due_date: '10-10-2024 14:00',
-        subscriptionHList_status: 'Pending',
+        subscriptionHList_id: 'SUB123001',
+        subscriptionHList_plan: 'Premium Gold Plan',
+        subscriptionHList_description: 'Gold Members',
+        subscriptionHList_duration: 'Yearly',
+        subscriptionHList_price: '₫ 120.00',
+        subscriptionHList_status: 'Active',
     },
     {
-        subscriptionHList_id: 2020,
-        subscriptionHList_icon: '/metronic8/react/demo1/media/avatars/300-5.jpg',
-        subscriptionHList_location: '789 Oak Lane',
-        subscriptionHList_category: 'House Repair',
-        subscriptionHList_due_date: '11-11-2024 09:00',
-        subscriptionHList_status: 'In Progress',
+        subscriptionHList_id: 'SUB123002',
+        subscriptionHList_plan: 'Basic Silver Plan',
+        subscriptionHList_description: 'Silver Members',
+        subscriptionHList_duration: 'Monthly',
+        subscriptionHList_price: '₫ 25.00',
+        subscriptionHList_status: 'In Active',
     },
     {
-        subscriptionHList_id: 3030,
-        subscriptionHList_icon: '/metronic8/react/demo1/media/avatars/300-5.jpg',
-        subscriptionHList_location: '123 Pine Avenue',
-        subscriptionHList_category: 'Gardening',
-        subscriptionHList_due_date: '12-12-2024 08:00',
-        subscriptionHList_status: 'Completed',
+        subscriptionHList_id: 'SUB123003',
+        subscriptionHList_plan: 'Enterprise Plan',
+        subscriptionHList_description: 'Corporate Clients',
+        subscriptionHList_duration: 'Half-Yearly',
+        subscriptionHList_price: '₫ 300.00',
+        subscriptionHList_status: 'Active',
     },
     {
-        subscriptionHList_id: 4040,
-        subscriptionHList_icon: '/metronic8/react/demo1/media/avatars/300-5.jpg',
-        subscriptionHList_location: '234 Cedar Street',
-        subscriptionHList_category: 'Car Maintenance',
-        subscriptionHList_due_date: '13-13-2024 15:00',
-        subscriptionHList_status: 'Pending',
+        subscriptionHList_id: 'SUB123004',
+        subscriptionHList_plan: 'Starter Plan',
+        subscriptionHList_description: 'New Users',
+        subscriptionHList_duration: 'Monthly',
+        subscriptionHList_price: '₫ 15.00',
+        subscriptionHList_status: 'In Active',
+    },
+    {
+        subscriptionHList_id: 'SUB123005',
+        subscriptionHList_plan: 'Professional Plan',
+        subscriptionHList_description: 'Professionals',
+        subscriptionHList_duration: 'Quarterly',
+        subscriptionHList_price: '₫ 75.00',
+        subscriptionHList_status: 'Active',
+    },
+    {
+        subscriptionHList_id: 'SUB123006',
+        subscriptionHList_plan: 'Family Plan',
+        subscriptionHList_description: 'Family Members',
+        subscriptionHList_duration: 'Yearly',
+        subscriptionHList_price: '₫ 200.00',
+        subscriptionHList_status: 'In Active',
+    },
+    {
+        subscriptionHList_id: 'SUB123007',
+        subscriptionHList_plan: 'Student Plan',
+        subscriptionHList_description: 'Students',
+        subscriptionHList_duration: 'Monthly',
+        subscriptionHList_price: '₫ 10.00',
+        subscriptionHList_status: 'Active',
+    },
+    {
+        subscriptionHList_id: 'SUB123008',
+        subscriptionHList_plan: 'Senior Plan',
+        subscriptionHList_description: 'Senior Citizens',
+        subscriptionHList_duration: 'Half-Yearly',
+        subscriptionHList_price: '₫ 50.00',
+        subscriptionHList_status: 'In Active',
+    },
+    {
+        subscriptionHList_id: 'SUB123009',
+        subscriptionHList_plan: 'Executive Plan',
+        subscriptionHList_description: 'Executives',
+        subscriptionHList_duration: 'Quarterly',
+        subscriptionHList_price: '₫ 150.00',
+        subscriptionHList_status: 'Active',
+    },
+    {
+        subscriptionHList_id: 'SUB123010',
+        subscriptionHList_plan: 'Elite Plan',
+        subscriptionHList_description: 'Elite Members',
+        subscriptionHList_duration: 'Yearly',
+        subscriptionHList_price: '₫ 500.00',
+        subscriptionHList_status: 'Active',
+    },
+    {
+        subscriptionHList_id: 'SUB123011',
+        subscriptionHList_plan: 'Corporate Plan',
+        subscriptionHList_description: 'Corporate Clients',
+        subscriptionHList_duration: 'Monthly',
+        subscriptionHList_price: '₫ 100.00',
+        subscriptionHList_status: 'In Active',
+    },
+    {
+        subscriptionHList_id: 'SUB123012',
+        subscriptionHList_plan: 'VIP Plan',
+        subscriptionHList_description: 'VIP Members',
+        subscriptionHList_duration: 'Quarterly',
+        subscriptionHList_price: '₫ 350.00',
+        subscriptionHList_status: 'Active',
     },
 ];
 
-const SubscriptionHStatusColors: { [key in SubscriptionHStatus]: string } = {
-    Pending: '#FF5733',
-    'In Progress': '#FFC300',
-    Completed: '#28B463',
+
+
+const getRoleStyles = (subscriptionHList_status: SubscriptionHStatus) => {
+    switch (subscriptionHList_status) {
+        case 'Active':
+            return { color: '#50CD89', backgroundColor: '#E8FFF3' };
+        case 'In Active':
+            return { color: '#F1416C', backgroundColor: '#FFF5F8' };
+        default:
+            return {};
+    }
 };
 
 const SubscriptionHList: React.FC = () => {
-    const [selectedSubscriptionH, setSelectedSubscriptionH] = useState<number | null>(null);
+    const [selectedSubscriptionH, setSelectedSubscriptionH] = useState<string | null>(null);
 
-    const handleRowClick = (id: number) => {
+    const handleRowClick = (id: string) => {
         setSelectedSubscriptionH(id);
     };
 
@@ -71,19 +142,20 @@ const SubscriptionHList: React.FC = () => {
                         <table id="kt_table_tasks" className="table align-middle table-row-dashed fs-6 gy-5">
                             {!selectedSubscriptionH && (
                                 <thead>
-                                    <tr className="text-start text-muted fw-bolder fs-7 text-uppercase gs-0">
+                                    <tr className="text-center text-muted fw-bold fs-5 text gs-0">
                                         <>
-                                            <th className="min-w-125px">Service Id</th>
-                                            <th className="min-w-125px">Service</th>
-                                            <th className="min-w-125px">Service Type</th>
-                                            <th className="min-w-125px">Date & Time Availed</th>
-                                            <th className="min-w-125px">Service Provider</th>
-                                            <th className="text-end min-w-100px">Status</th>
+                                            <th className="min-w-125px">Subscription ID</th>
+                                            <th className="min-w-125px">Plan</th>
+                                            <th className="min-w-125px">Description</th>
+                                            <th className="min-w-125px">Duration</th>
+                                            <th className="min-w-125px">Price</th>
+                                            <th className="min-w-125px">Status</th>
+                                            <th className="min-w-100px">Actions</th>
                                         </>
                                     </tr>
                                 </thead>
                             )}
-                            <tbody className="text-gray-600 fw-bold">
+                            <tbody className="text-center text-gray-600 fw-bold">
                                 {tasksList.map((task) => (
                                     <React.Fragment key={task.subscriptionHList_id}>
                                         {(selectedSubscriptionH === null || selectedSubscriptionH === task.subscriptionHList_id) && (
@@ -94,32 +166,29 @@ const SubscriptionHList: React.FC = () => {
                                                 {!selectedSubscriptionH && (
                                                     <>
                                                         <td>{task.subscriptionHList_id}</td>
-                                                        <td>
-                                                            <div className="d-flex align-items-center">
-                                                                <div className="symbol overflow-hidden me-3">
-                                                                    <a href="#">
-                                                                        <div className="symbol-label">
-                                                                            <img src={task.subscriptionHList_icon} alt={`Task ${task.subscriptionHList_id}`} className="w-100" />
-                                                                        </div>
-                                                                    </a>
-                                                                </div>
-                                                            </div>
-                                                        </td>
-                                                        <td>{task.subscriptionHList_location}</td>
-                                                        <td>{task.subscriptionHList_due_date}</td>
-                                                        <td>{task.subscriptionHList_category}</td>
-                                                        <td className="text-end min-w-100px">
+                                                        <td>{task.subscriptionHList_plan}</td>
+                                                        <td>{task.subscriptionHList_description}</td>
+                                                        <td>{task.subscriptionHList_duration}</td>
+                                                        <td>{task.subscriptionHList_price}</td>
+                                                        <td className="text-center min-w-100px">
                                                             <div
                                                                 className="badge"
                                                                 style={{
-                                                                    backgroundColor: SubscriptionHStatusColors[task.subscriptionHList_status as SubscriptionHStatus] || '#CCCCCC',
-                                                                    color: '#fff',
-                                                                    padding: '5px 10px',
-                                                                    borderRadius: '5px',
-                                                                    fontWeight: 'bold'
+                                                                    ...getRoleStyles(task.subscriptionHList_status),
+                                                                    padding: '1rem'
                                                                 }}
                                                             >
                                                                 {task.subscriptionHList_status}
+                                                            </div>
+                                                        </td>
+                                                        <td>
+                                                            <div className="text-center d-flex align-items my-2" style={{ justifyContent: 'center' }}>
+                                                                <div className=''>
+                                                                    <i className="iconend border border-gray-300 border rounded py-3 px-4 me-6 mb-3 bi bi-pencil"></i>
+                                                                </div>
+                                                                <div className=''>
+                                                                    <i className="iconend border border-gray-300 border rounded py-3 px-4 me-6 mb-3 bi bi-trash3"></i>
+                                                                </div>
                                                             </div>
                                                         </td>
                                                     </>
@@ -130,6 +199,45 @@ const SubscriptionHList: React.FC = () => {
                                 ))}
                             </tbody>
                         </table>
+                    </div>
+                    <div className="row">
+                        <div className="col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start">
+                            {/* Add any content if needed here */}
+                        </div>
+                        <div className="col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end">
+                            <div id="kt_table_users_paginate">
+                                <ul className="pagination">
+                                    <li className="page-item previous">
+                                        <a href="#" className="page-link">
+                                            <i className="previous"></i>
+                                        </a>
+                                    </li>
+                                    <li className="page-item active">
+                                        <a href="#" className="page-link">1</a>
+                                    </li>
+                                    <li className="page-item">
+                                        <a href="#" className="page-link">2</a>
+                                    </li>
+                                    <li className="page-item">
+                                        <a href="#" className="page-link">3</a>
+                                    </li>
+                                    <li className="page-item">
+                                        <a href="#" className="page-link">4</a>
+                                    </li>
+                                    <li className="page-item">
+                                        <a href="#" className="page-link">5</a>
+                                    </li>
+                                    <li className="page-item">
+                                        <a href="#" className="page-link">6</a>
+                                    </li>
+                                    <li className="page-item next">
+                                        <a href="#" className="page-link">
+                                            <i className="next"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
                     </div>
                     {selectedSubscriptionH && (
                         <>
@@ -167,7 +275,7 @@ const SubscriptionHList: React.FC = () => {
                                                 <div className="row mb-7">
                                                     <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Service Type</label>
                                                     <div className="col-lg-8 fv-row">
-                                                        <span className="fw-bold fs-6 text-muted">{task.subscriptionHList_location}</span>
+                                                        <span className="fw-bold fs-6 text-muted">{task.subscriptionHList_description}</span>
                                                     </div>
                                                 </div>
 
@@ -181,26 +289,19 @@ const SubscriptionHList: React.FC = () => {
                                                 <div className="row mb-7">
                                                     <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Service Provider</label>
                                                     <div className="col-lg-8 fv-row">
-                                                        <span className="fw-bold fs-6 text-muted">{task.subscriptionHList_category}</span>
+                                                        <span className="fw-bold fs-6 text-muted">{task.subscriptionHList_duration}</span>
                                                     </div>
                                                 </div>
 
                                                 <div className="row mb-7">
                                                     <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Date & Time</label>
                                                     <div className="col-lg-8 fv-row">
-                                                        <span className="fw-bold fs-6 text-muted">{task.subscriptionHList_due_date}</span>
+                                                        <span className="fw-bold fs-6 text-muted">{task.subscriptionHList_price}</span>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div className="d-flex align-items my-2">
                                                 <div className=''>
-                                                    <div className="row mb-7" style={{ justifyContent: 'center' }}>
-                                                        <div className="col-lg-8 fv-row">
-                                                            <div className="symbol-label">
-                                                                <img src={task.subscriptionHList_icon} alt={`Property ${task.subscriptionHList_id}`} style={{ width: '100%' }} />
-                                                            </div>
-                                                        </div>
-                                                    </div>
                                                     <div className="row" style={{ justifyContent: 'center' }}>
                                                         <button onClick={handleBackClick} className="btn btn-primary" style={{ width: "auto" }}>
                                                             Back to List

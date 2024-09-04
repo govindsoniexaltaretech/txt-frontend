@@ -1,65 +1,51 @@
-// import {useIntl} from 'react-intl'
-import { SidebarMenuItemWithSub } from './SidebarMenuItemWithSub'
+import { SidebarMenuItem } from './SidebarMenuItem'
 
 const SidebarMenuMain = () => {
-  // const intl = useIntl()
 
   return (
     <>
-      <SidebarMenuItemWithSub
+      <SidebarMenuItem
         to='/users'
         title='Users'
-        fontIcon='bi-user'
+        hasBullet={false}
         icon='user'
-      >
-        {/* Add your sub-menu items here */}
-      </SidebarMenuItemWithSub>
-
-
-      <SidebarMenuItemWithSub
+        fontIcon='bi-user'
+      />
+      <SidebarMenuItem
         to='/appointment'
         title='Appointments'
+        hasBullet={false}
         fontIcon='bi-calendar'
         icon='calendar'
-      >
-        {/* Add your sub-menu items here */}
-      </SidebarMenuItemWithSub>
-
-      <SidebarMenuItemWithSub
+      />
+      <SidebarMenuItem
         to='/services'
         title='Services'
+        hasBullet={false}
         fontIcon='bi-house'
         icon='home'
-      >
-        {/* Add your sub-menu items here */}
-      </SidebarMenuItemWithSub>
-
-      <SidebarMenuItemWithSub
+      />
+      <SidebarMenuItem
         to='/subscription'
         title='Subscription'
+        hasBullet={false}
         fontIcon='bi-bar-chart'
         icon='chart'
-      >
-        {/* Add your sub-menu items here */}
-      </SidebarMenuItemWithSub>
-
-      <SidebarMenuItemWithSub
+      />
+      <SidebarMenuItem
         to='/discount'
         title='Discount'
+        hasBullet={false}
         fontIcon='bi-tags'
         icon='tag'
-      >
-        {/* Add your sub-menu items here */}
-      </SidebarMenuItemWithSub>
-
-      <SidebarMenuItemWithSub
+      />
+      <SidebarMenuItem
         to='/properties'
         title='Properties'
+        hasBullet={false}
         fontIcon='bi-map'
         icon='map-pin'
-      >
-        {/* Add your sub-menu items here */}
-      </SidebarMenuItemWithSub>
+      />
     </>
   )
 }

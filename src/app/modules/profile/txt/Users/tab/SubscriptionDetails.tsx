@@ -24,61 +24,61 @@ const SubscriptionDetails = () => {
             <div className="d-flex flex-wrap flex-stack mb-6 card-header flex-nowrap border-0">
                 <div className="card-body p-0">
                     <div className="row mb-7">
-                        <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Subscription ID</label>
-                        <div className="col-lg-8">
-                            <span className="fw-bolder fs-6 text-muted">SUB123456</span>
+                        <label className="col-lg-3 fs-4 fw-bolder text-gray-900">Subscription ID</label>
+                        <div className="col-lg-9">
+                            <span className="fw-bolder fs-4 text-muted">SUB123456</span>
                         </div>
                     </div>
 
                     <div className="row mb-7">
-                        <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Plan Name</label>
-                        <div className="col-lg-8 fv-row">
-                            <span className="fw-bold fs-6 text-muted">Buyer Premium Plan (Sale)</span>
+                        <label className="col-lg-3 fs-4 fw-bolder text-gray-900">Plan Name</label>
+                        <div className="col-lg-9 fv-row">
+                            <span className="fw-bold fs-4 text-muted">Buyer Premium Plan (Sale)</span>
                         </div>
                     </div>
 
                     <div className="row mb-7">
-                        <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Start Date</label>
-                        <div className="col-lg-8 fv-row">
-                            <span className="fw-bold fs-6 text-muted">06-06-2024 18:00</span>
+                        <label className="col-lg-3 fs-4 fw-bolder text-gray-900">Start Date</label>
+                        <div className="col-lg-9 fv-row">
+                            <span className="fw-bold fs-4 text-muted">06-06-2024 18:00</span>
                         </div>
                     </div>
 
                     <div className="row mb-7">
-                        <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Renewal Date</label>
-                        <div className="col-lg-8 fv-row">
-                            <span className="fw-bold fs-6 text-muted">06-10-2024 18:00</span>
+                        <label className="col-lg-3 fs-4 fw-bolder text-gray-900">Renewal Date</label>
+                        <div className="col-lg-9 fv-row">
+                            <span className="fw-bold fs-4 text-muted">06-10-2024 18:00</span>
                         </div>
                     </div>
 
                     <div className="row mb-7">
-                        <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Features Included</label>
-                        <div className="col-lg-8 fv-row">
-                            <span className="fw-bold fs-6 text-muted">Premium support, Access to exclusive listings, Free home inspections</span>
+                        <label className="col-lg-3 fs-4 fw-bolder text-gray-900">Features Included</label>
+                        <div className="col-lg-9 fv-row">
+                            <span className="fw-bold fs-4 text-muted">Premium support, Access to exclusive listings, Free home inspections</span>
                         </div>
                     </div>
 
                     <div className="row mb-7">
-                        <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Payment Method</label>
-                        <div className="col-lg-8 fv-row">
+                        <label className="col-lg-3 fs-4 fw-bolder text-gray-900">Payment Method</label>
+                        <div className="col-lg-9 fv-row">
                             <div className="symbol-label">
-                                <img src="/metronic8/react/demo1//media/logos/visa.png" alt="Property" className="w-5" />
+                                <img src="/media/logos/visa.png" alt="Property" className="w-5" />
                             </div>
                         </div>
                     </div>
 
                     <div className="row mb-7">
-                        <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Subscription Fee</label>
-                        <div className="col-lg-8 fv-row">
-                            <span className="fw-bold fs-6 text-muted">đ 35.99</span>
+                        <label className="col-lg-3 fs-4 fw-bolder text-gray-900">Subscription Fee</label>
+                        <div className="col-lg-9 fv-row">
+                            <span className="fw-bold fs-4 text-muted">đ 35.99</span>
                         </div>
                     </div>
 
                     <div className="row mb-7">
-                        <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Status</label>
-                        <div className="col-lg-8 fv-row">
+                        <label className="col-lg-3 fs-4 fw-bolder text-gray-900">Status</label>
+                        <div className="col-lg-9 fv-row">
                             <a className='btn btn-light btn-light-success btn-sm p-2'>
-                                <span className="fw-bold fs-6">None</span>
+                                <span className="fw-bold fs-4">None</span>
                             </a>
                         </div>
                     </div>

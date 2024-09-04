@@ -53,7 +53,13 @@ const OverviewDetailsServices = () => {
 
   return (
     <div style={{ width: '100%', height: 350 }}>
-      <h3>Services</h3>
+      <div className="d-flex flex-wrap flex-stack mb-0 card-header flex-nowrap border-0">
+        <h3 style={{ padding: "1rem 0" }}>Services</h3>
+        <div className="d-flex align-items my-2">
+          <i className="bi bi-three-dots bg-gray-300" style={{ height: "2rem", padding: ".5rem", borderRadius: "10px"}}></i>
+        </div>
+      </div>
+
       <Chart 
         options={{
           ...options,

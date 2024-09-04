@@ -1521,6 +1521,11 @@
   "resolved" "https://registry.npmjs.org/colors/-/colors-0.6.2.tgz"
   "version" "0.6.2"
 
+"colors@~1.1.2":
+  "integrity" "sha512-ENwblkFQpqqia6b++zLD/KUWafYlVY/UNnAp7oz7LY7E924wmpye416wBOmvv/HMWzl8gL1kJlfvId/1Dg176w=="
+  "resolved" "https://registry.npmjs.org/colors/-/colors-1.1.2.tgz"
+  "version" "1.1.2"
+
 "combined-stream@^1.0.8":
   "integrity" "sha512-FQN4MRfuJeHf7cBbBMJFXhKSDq+2kAArBlmRBvcvFE5BB1HZKXtSFASDhdlz9zOYwxh8lDdnvmMOe/+5cdoEdg=="
   "resolved" "https://registry.npmjs.org/combined-stream/-/combined-stream-1.0.8.tgz"
@@ -3185,7 +3190,7 @@
   dependencies:
     "brace-expansion" "^2.0.1"
 
-"minimist@^1.2.6":
+"minimist@^1.2.6", "minimist@~1.2.0":
   "integrity" "sha512-2yyAR8qBkN3YuheJanUpWC5U3bb5osDywNB8RzDVlDwDHbocAJveqqj1u8+SVD7jkWT4yvsHCpWqqWqAxb0zCA=="
   "resolved" "https://registry.npmjs.org/minimist/-/minimist-1.2.8.tgz"
   "version" "1.2.8"
@@ -3886,6 +3891,14 @@
     "@jest/schemas" "^29.6.3"
     "ansi-styles" "^5.0.0"
     "react-is" "^18.0.0"
+
+"preview@^0.1.3":
+  "integrity" "sha512-dEgpDFuinp138SqUyuxp9T3kb93o/CuaozXm1/7An4U43NFrrhprhDMnYN/OV0KhjeQP+plfaagyI0GKkmHucQ=="
+  "resolved" "https://registry.npmjs.org/preview/-/preview-0.1.3.tgz"
+  "version" "0.1.3"
+  dependencies:
+    "colors" "~1.1.2"
+    "minimist" "~1.2.0"
 
 "prism-react-renderer@2.3.1":
   "integrity" "sha512-Rdf+HzBLR7KYjzpJ1rSoxT9ioO85nZngQEoFIhL07XhtJHlCU3SOz0GJ6+qvMyQe0Se+BV3qpe6Yd/NmQF5Juw=="

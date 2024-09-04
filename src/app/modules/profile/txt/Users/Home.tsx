@@ -25,8 +25,8 @@ const users: User[] = [
         mobilenumber: '755-584-678',
         registerationnumber: '06-06-2024 18:00',
         currency: '₫',
-        avatar: '/metronic8/react/demo1/media/avatars/300-6.jpg',
-        avatar_action: '/metronic8/react/demo1/media/logos/talk.png',
+        avatar: '/media/avatars/300-6.jpg',
+        avatar_action: '/media/logos/talk.png',
     },
     {
         id: 2,
@@ -39,7 +39,7 @@ const users: User[] = [
         avatar: null,
         avatarInitial: 'M',
         avatarColor: 'bg-light-danger text-danger',
-        avatar_action: '/metronic8/react/demo1/media/logos/line.png',
+        avatar_action: '/media/logos/line.png',
 
     },
     {
@@ -50,8 +50,8 @@ const users: User[] = [
         mobilenumber: '755-584-678',
         registerationnumber: '06-06-2024 18:00',
         currency: '₫',
-        avatar: '/metronic8/react/demo1/media/avatars/300-1.jpg',
-        avatar_action: '/metronic8/react/demo1/media/logos/line.png',
+        avatar: '/media/avatars/300-1.jpg',
+        avatar_action: '/media/logos/line.png',
 
     },
     {
@@ -62,10 +62,108 @@ const users: User[] = [
         mobilenumber: '755-584-678',
         registerationnumber: '06-06-2024 18:00',
         currency: '₫',
-        avatar: '/metronic8/react/demo1/media/avatars/300-5.jpg',
-        avatar_action: '/metronic8/react/demo1/media/logos/line.png',
+        avatar: '/media/avatars/300-5.jpg',
+        avatar_action: '/media/logos/line.png',
 
     },
+    {
+        id: 5,
+        name: 'Kim Ji-Soo',
+        email: 'kimjisoo@soundcloud.com',
+        role: 'Buyer',
+        mobilenumber: '755-584-678',
+        registerationnumber: '06-06-2024 18:00',
+        currency: '₫',
+        avatar: '/media/avatars/300-7.jpg',
+        avatar_action: '/media/logos/talk.png',
+    },
+    {
+        id: 6,
+        name: 'Suzuki Aoi',
+        email: 'suzukiaoi@privacy.gov.au',
+        role: 'Owner',
+        mobilenumber: '755-584-678',
+        registerationnumber: '06-06-2024 18:00',
+        currency: '₫',
+        avatar: null,
+        avatarInitial: 'M',
+        avatarColor: 'bg-light-danger text-danger',
+        avatar_action: '/media/logos/line.png',
+
+    },
+    {
+        id: 7,
+        name: 'Takahashi Sora',
+        email: 'takahashisora@uiuc.edu',
+        role: 'Home Services',
+        mobilenumber: '755-584-678',
+        registerationnumber: '06-06-2024 18:00',
+        currency: '₫',
+        avatar: '/media/avatars/300-1.jpg',
+        avatar_action: '/media/logos/line.png',
+
+    },
+    {
+        id: 8,
+        name: 'Wang Wei',
+        email: 'wangwei17@abc.net.au',
+        role: 'Buyer',
+        mobilenumber: '755-584-678',
+        registerationnumber: '06-06-2024 18:00',
+        currency: '₫',
+        avatar: '/media/avatars/300-7.jpg',
+        avatar_action: '/media/logos/line.png',
+
+    },
+    {
+        id: 9,
+        name: 'Kim Ji-Soo',
+        email: 'kimjisoo@soundcloud.com',
+        role: 'Buyer',
+        mobilenumber: '755-584-678',
+        registerationnumber: '06-06-2024 18:00',
+        currency: '₫',
+        avatar: '/media/avatars/300-8.jpg',
+        avatar_action: '/media/logos/talk.png',
+    },
+    {
+        id: 10,
+        name: 'Suzuki Aoi',
+        email: 'suzukiaoi@privacy.gov.au',
+        role: 'Owner',
+        mobilenumber: '755-584-678',
+        registerationnumber: '06-06-2024 18:00',
+        currency: '₫',
+        avatar: null,
+        avatarInitial: 'M',
+        avatarColor: 'bg-light-danger text-danger',
+        avatar_action: '/media/logos/line.png',
+
+    },
+    {
+        id: 11,
+        name: 'Takahashi Sora',
+        email: 'takahashisora@uiuc.edu',
+        role: 'Home Services',
+        mobilenumber: '755-584-678',
+        registerationnumber: '06-06-2024 18:00',
+        currency: '₫',
+        avatar: '/media/avatars/300-9.jpg',
+        avatar_action: '/media/logos/line.png',
+
+    },
+    {
+        id: 12,
+        name: 'Wang Wei',
+        email: 'wangwei17@abc.net.au',
+        role: 'Buyer',
+        mobilenumber: '755-584-678',
+        registerationnumber: '06-06-2024 18:00',
+        currency: '₫',
+        avatar: '/media/avatars/300-10.jpg',
+        avatar_action: '/media/logos/line.png',
+
+    }
 ];
 
 
@@ -244,15 +342,6 @@ const Home = () => {
                                     </div>
                                     <div className="card-toolbar">
                                         <div className="d-flex justify-content-end" data-kt-user-table-toolbar="base">
-                                            {/* <button type="button" className="btn btn-light-primary me-3" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
-                                                <i className="ki-duotone ki-filter fs-2"><span className="path1"></span><span className="path2"></span></i>Filter
-                                            </button>
-                                            <button type="button" className="btn btn-light-primary me-3">
-                                                <i className="ki-duotone ki-exit-up fs-2"><span className="path1"></span><span className="path2"></span></i>Export
-                                            </button>
-                                            <button type="button" className="btn btn-primary">
-                                                <i className="ki-duotone ki-plus fs-2"></i>Add User
-                                            </button> */}
                                             <div className='rest' style={{ paddingRight: '.7rem' }}>
                                                 <a href="#" className="btn btn-light btn-active-light-primary btn-sm" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end" style={{ width: '14rem', justifyContent: 'space-between', display: 'flex' }}>
                                                     Pick date range<i className="bi bi-x-lg fs-5 m-0"></i>
@@ -304,29 +393,31 @@ const Home = () => {
                                                 {users.map((user) => (
                                                     <tr key={user.id}>
                                                         <td>
-                                                            <div className="d-flex align-items-center">
-                                                                <div className="symbol symbol-circle symbol-50px overflow-hidden me-3">
-                                                                    {user.avatar ? (
-                                                                        <a href="#">
-                                                                            <div className="symbol-label">
-                                                                                <img src={user.avatar} alt={user.name} className="w-100" />
-                                                                            </div>
+                                                            <a href="/users/overview">
+                                                                <div className="d-flex align-items-center">
+                                                                    <div className="symbol symbol-circle symbol-50px overflow-hidden me-3">
+                                                                        {user.avatar ? (
+                                                                            <a href="/users/overview">
+                                                                                <div className="symbol-label">
+                                                                                    <img src={user.avatar} alt={user.name} className="w-100" />
+                                                                                </div>
+                                                                            </a>
+                                                                        ) : (
+                                                                            <a href="/users/overview">
+                                                                                <div className={`symbol-label fs-3 ${user.avatarColor}`}>
+                                                                                    {user.avatarInitial}
+                                                                                </div>
+                                                                            </a>
+                                                                        )}
+                                                                    </div>
+                                                                    <div className="d-flex flex-column">
+                                                                        <a href="/users/overview" className="text-gray-800 text-hover-primary mb-1">
+                                                                            {user.name}
                                                                         </a>
-                                                                    ) : (
-                                                                        <a href="#">
-                                                                            <div className={`symbol-label fs-3 ${user.avatarColor}`}>
-                                                                                {user.avatarInitial}
-                                                                            </div>
-                                                                        </a>
-                                                                    )}
+                                                                        <span>{user.email}</span>
+                                                                    </div>
                                                                 </div>
-                                                                <div className="d-flex flex-column">
-                                                                    <a href="#" className="text-gray-800 text-hover-primary mb-1">
-                                                                        {user.name}
-                                                                    </a>
-                                                                    <span>{user.email}</span>
-                                                                </div>
-                                                            </div>
+                                                            </a>
                                                         </td>
                                                         <td>
                                                             <div
@@ -337,7 +428,7 @@ const Home = () => {
                                                             </div>
                                                         </td>
                                                         <td>
-                                                            <div className="fw-thin fs-4"><img src="/metronic8/react/demo1/media/logos/vietnam_phn.png" alt={user.name} className="w-5" style={{ paddingRight: '4px' }} />{user.mobilenumber}</div>
+                                                            <div className="fw-thin fs-4"><img src="/media/logos/vietnam_phn.png" alt={user.name} className="w-5" style={{ paddingRight: '4px' }} />{user.mobilenumber}</div>
                                                         </td>
                                                         <td>
                                                             {user.registerationnumber && (
