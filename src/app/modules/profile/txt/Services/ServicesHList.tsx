@@ -127,10 +127,10 @@ const ServicesHList: React.FC = () => {
             <div className='d-flex flex-column flex-column-fluid'>
                 <div className="card-body py-4">
                     <div className="table-responsive">
-                        <table id="kt_table_tasks" className="table align-middle table-row-dashed fs-6 gy-5">
+                        <table id="kt_table_tasks" className="table align-middle table-row-dashed fs-5 gy-5">
                             {!selectedTask && (
                                 <thead>
-                                    <tr className="text-start text-muted fw-bolder fs-7 text-uppercase gs-0">
+                                    <tr className="text-start text-muted fw-bolder fs-5 text gs-0">
                                         <>
                                             <th className="min-w-125px">Service Id</th>
                                             <th className="min-w-125px">Service</th>

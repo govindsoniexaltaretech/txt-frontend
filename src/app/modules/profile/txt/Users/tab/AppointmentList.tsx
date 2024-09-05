@@ -82,7 +82,7 @@ const AppointmentList: React.FC = () => {
             <div className='d-flex flex-column flex-column-fluid'>
                 <div className="card-body py-4">
                     <div className="table-responsive">
-                        <table id="kt_table_users" className="table align-middle table-row-dashed fs-6 gy-5">
+                        <table id="kt_table_users" className="table align-middle table-row-dashed fs-5 gy-5">
                             {!selectedAppointment && (
                                 <thead>
                                     <tr className="text-start text-muted fw-bolder fs-5 gs-0">
@@ -92,7 +92,7 @@ const AppointmentList: React.FC = () => {
                                             <th className="min-w-125px">Address</th>
                                             <th className="min-w-125px">Appointment Type</th>
                                             <th className="min-w-125px">Date & Time</th>
-                                            <th className="text-end min-w-100px">Status</th>
+                                            <th className="text-center min-w-100px">Status</th>
                                         </>
                                     </tr>
                                 </thead>
@@ -122,7 +122,7 @@ const AppointmentList: React.FC = () => {
                                                         <td>{appointment.address}</td>
                                                         <td>{appointment.appointment_type}</td>
                                                         <td>{appointment.date_time}</td>
-                                                        <td className="text-end min-w-100px">
+                                                        <td className="text-center min-w-100px">
                                                             <div
                                                                 className="badge"
                                                                 style={{

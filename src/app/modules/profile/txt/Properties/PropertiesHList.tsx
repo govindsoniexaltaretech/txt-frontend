@@ -121,13 +121,13 @@ const PropertiesHList: React.FC = () => {
             <div className='d-flex flex-column flex-column-fluid'>
                 <div className="card-body py-4">
                     <div className="table-responsive">
-                        <table id="kt_table_Propertiess" className="table align-middle table-row-dashed fs-6 gy-5">
+                        <table id="kt_table_Propertiess" className="table align-middle table-row-dashed fs-5 gy-5">
                             {!selectedProperties && (
                                 <thead>
-                                    <tr className="text-start text-muted fw-bolder fs-7 text-uppercase gs-0">
+                                    <tr className="text-start text-muted fw-bolder fs-5 text gs-0">
                                         <>
                                             <th className="text-center min-w-125px">Property ID</th>
-                                            <th className="text-center min-w-125px">Property</th>
+                                            <th className="text min-w-125px">Property</th>
                                             <th className="text-center min-w-125px">Property  Type</th>
                                             <th className="text-center min-w-125px">Address</th>
                                             <th className="text-center min-w-125px">Date Uploaded</th>

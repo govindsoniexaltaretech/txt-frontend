@@ -76,7 +76,7 @@ const SubscriptionDetails = () => {
 
                     <div className="row mb-7">
                         <label className="col-lg-3 fs-4 fw-bolder text-gray-900">Status</label>
-                        <div className="col-lg-9 fv-row">
+                        <div className="col-lg-9 fv-row" style={{marginTop: "-.6rem"}}>
                             <a className='btn btn-light btn-light-success btn-sm p-2'>
                                 <span className="fw-bold fs-4">None</span>
                             </a>

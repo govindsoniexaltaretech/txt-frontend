@@ -8,7 +8,7 @@ const Footer = () => {
   }, [config])
   return (
     <>
-      <div className='text-gray-900 order-2 order-md-1'>
+      {/* <div className='text-gray-900 order-2 order-md-1'>
         <span className='text-muted fw-semibold me-1'>
           {new Date().getFullYear().toString()}&copy;
         </span>
@@ -19,9 +19,9 @@ const Footer = () => {
         >
           TET HOME
         </a>
-      </div>
+      </div> */}
 
-      <ul className='menu menu-gray-600 menu-hover-primary fw-semibold order-1'>
+      {/* <ul className='menu menu-gray-600 menu-hover-primary fw-semibold order-1'>
         <li className='menu-item'>
           <a href='#' target='_blank' className='menu-link px-2'>
             About
@@ -43,7 +43,7 @@ const Footer = () => {
             Purchase
           </a>
         </li>
-      </ul>
+      </ul> */}
     </>
   )
 }

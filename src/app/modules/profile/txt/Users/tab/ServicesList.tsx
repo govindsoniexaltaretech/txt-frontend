@@ -101,16 +101,16 @@ const ServicesList: React.FC = () => {
             <div className='d-flex flex-column flex-column-fluid'>
                 <div className="card-body py-4">
                     <div className="table-responsive">
-                        <table id="kt_table_users" className="table align-middle table-row-dashed fs-6 gy-5">
+                        <table id="kt_table_users" className="table align-middle table-row-dashed fs-5 gy-5">
                             {!selectedService && (
                                 <thead>
-                                    <tr className="text-start text-muted fw-bolder fs-7 text-uppercase gs-0">
+                                    <tr className="text-start text-muted fw-bolder fs-5 text gs-0">
                                         <th className="min-w-125px">Service Id</th>
                                         <th className="min-w-125px">Service</th>
                                         <th className="min-w-125px">Service Type</th>
                                         <th className="min-w-125px">Date & Time Availed</th>
                                         <th className="min-w-125px">Service Provider</th>
-                                        <th className="text-end min-w-100px">Status</th>
+                                        <th className="text-center min-w-100px">Status</th>
                                     </tr>
                                 </thead>
                             )}
@@ -141,7 +141,7 @@ const ServicesList: React.FC = () => {
                                                         <td>{aservice.service_typel}</td>
                                                         <td>{aservice.date_time}</td>
                                                         <td>{aservice.service_provider}</td>
-                                                        <td className="text-end min-w-100px">
+                                                        <td className="text-center min-w-100px">
                                                             <div
                                                                 className="badge"
                                                                 style={{

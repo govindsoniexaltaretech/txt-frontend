@@ -28,7 +28,7 @@ const OverviewDetalis = () => {
 
           <div className="row mb-7">
             <label className="col-lg-3 fs-4 fw-bolder text-gray-900">Subscription</label>
-            <div className="col-lg-9 fv-row" style={{marginTop: "-5px"}}>
+            <div className="col-lg-9 fv-row" style={{marginTop: "-.6rem"}}>
               <a className='btn btn-light btn-light-warning btn-sm'>
                 <span className="fw-bold fs-4">None</span>
               </a>
