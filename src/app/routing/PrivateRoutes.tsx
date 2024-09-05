@@ -15,6 +15,7 @@ const PrivateRoutes = () => {
   const OverViewUsers = lazy(() => import('../modules/profile/txt/Users/Overview'))
   const Appointments = lazy(() => import('../modules/profile/txt/Appointments/Home'))
   const Services = lazy(() => import('../modules/profile/txt/Services/Home'))
+  const Properties = lazy(() => import('../modules/profile/txt/Properties/Home'))
   const Subscriptions = lazy(() => import('../modules/profile/txt/Subscriptions/Home'))
   const Discount = lazy(() => import('../modules/profile/txt/Discount/Home'))
 
@@ -82,6 +83,14 @@ const PrivateRoutes = () => {
           element={
             <SuspensedView>
               <Discount />
+            </SuspensedView>
+          }
+        />
+        <Route
+          path='properties/*'
+          element={
+            <SuspensedView>
+              <Properties />
             </SuspensedView>
           }
         />
