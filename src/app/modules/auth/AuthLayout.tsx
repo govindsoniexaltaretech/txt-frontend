@@ -1,7 +1,7 @@
 
-import {useEffect} from 'react'
-import {Outlet, Link} from 'react-router-dom'
-import {toAbsoluteUrl} from '../../../_metronic/helpers'
+import { useEffect } from 'react'
+import { Outlet, Link } from 'react-router-dom'
+import { toAbsoluteUrl } from '../../../_metronic/helpers'
 
 const AuthLayout = () => {
   useEffect(() => {
@@ -55,13 +55,13 @@ const AuthLayout = () => {
       {/* begin::Aside */}
       <div
         className='d-flex flex-lg-row-fluid w-lg-50 bgi-size-cover bgi-position-center order-1 order-lg-2'
-        style={{backgroundImage: `url(${toAbsoluteUrl('media/misc/auth-bg.png')})`}}
+        style={{ backgroundImage: `url(${toAbsoluteUrl('media/misc/auth-bg.png')})` }}
       >
         {/* begin::Content */}
         <div className='d-flex flex-column flex-center py-15 px-5 px-md-15 w-100'>
           {/* begin::Logo */}
           <Link to='/' className='mb-12'>
-            <img alt='Logo' src={toAbsoluteUrl('media/logos/custom-1.png')} className='h-75px' />
+            <img alt='Logo' src={toAbsoluteUrl('media/logos/tetlogo.png')} className='h-50px' />
           </Link>
           {/* end::Logo */}
 
@@ -74,24 +74,24 @@ const AuthLayout = () => {
           {/* end::Image */}
 
           {/* begin::Title */}
-          <h1 className='text-white fs-2qx fw-bolder text-center mb-7'>
-            Fast, Efficient and Productive
+          <h1 className='text fs-2qx fw-bolder text-center mb-7'>
+            Fast, Efficient, and Productive Real Estate Solutions
           </h1>
           {/* end::Title */}
 
           {/* begin::Text */}
-          <div className='text-white fs-base text-center'>
-            In this kind of post,{' '}
+          <div className='text fs-base text-center'>
+            At TET HOME, we focus on delivering
             <a href='#' className='opacity-75-hover text-warning fw-bold me-1'>
-              the blogger
+              exceptional services
             </a>
-            introduces a person they’ve interviewed <br /> and provides some background information
-            about
+            to meet your real estate needs. From efficient property management to 
             <a href='#' className='opacity-75-hover text-warning fw-bold me-1'>
-              the interviewee
+               personalized solutions
             </a>
-            and their <br /> work following this is a transcript of the interview.
+            , we ensure that every aspect of your real estate journey is productive and smooth.
           </div>
+
           {/* end::Text */}
         </div>
         {/* end::Content */}
@@ -101,4 +101,4 @@ const AuthLayout = () => {
   )
 }
 
-export {AuthLayout}
+export { AuthLayout }
