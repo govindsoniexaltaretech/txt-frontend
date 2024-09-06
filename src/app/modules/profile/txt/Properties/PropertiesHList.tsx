@@ -13,7 +13,7 @@ interface PropertiesDetails {
 const PropertiessList: PropertiesDetails[] = [
     {
         Properties_id: 1011,
-        Properties_icon: '/media/avatars/300-5.jpg',
+        Properties_icon: '/media/logos/appointment/1.png',
         Properties_location: 'Apartmentt',
         Properties_category: '756 Nguyen Hue Boulevard...',
         Properties_due_date: '14-14-2024 10:00',
@@ -21,7 +21,7 @@ const PropertiessList: PropertiesDetails[] = [
     },
     {
         Properties_id: 2021,
-        Properties_icon: '/media/avatars/300-7.jpg',
+        Properties_icon: '/media/logos/appointment/2.png',
         Properties_location: 'Serviced Apartment',
         Properties_category: '756 Nguyen Hue Boulevard...',
         Properties_due_date: '15-15-2024 12:00',
@@ -29,7 +29,7 @@ const PropertiessList: PropertiesDetails[] = [
     },
     {
         Properties_id: 3031,
-        Properties_icon: '/media/avatars/300-8.jpg',
+        Properties_icon: '/media/logos/appointment/3.png',
         Properties_location: 'Duplex Apartment',
         Properties_category: '756 Nguyen Hue Boulevard...',
         Properties_due_date: '16-16-2024 14:00',
@@ -37,7 +37,7 @@ const PropertiessList: PropertiesDetails[] = [
     },
     {
         Properties_id: 4041,
-        Properties_icon: '/media/avatars/300-9.jpg',
+        Properties_icon: '/media/logos/appointment/4.png',
         Properties_location: 'Apartment',
         Properties_category: '756 Nguyen Hue Boulevard...',
         Properties_due_date: '17-17-2024 16:00',
@@ -45,7 +45,7 @@ const PropertiessList: PropertiesDetails[] = [
     },
     {
         Properties_id: 5051,
-        Properties_icon: '/media/avatars/300-10.jpg',
+        Properties_icon: '/media/logos/appointment/5.png',
         Properties_location: 'Apartment',
         Properties_category: '756 Nguyen Hue Boulevard...',
         Properties_due_date: '18-18-2024 18:00',
@@ -53,7 +53,7 @@ const PropertiessList: PropertiesDetails[] = [
     },
     {
         Properties_id: 6061,
-        Properties_icon: '/media/avatars/300-11.jpg',
+        Properties_icon: '/media/logos/appointment/6.png',
         Properties_location: 'Penthouse',
         Properties_category: '756 Nguyen Hue Boulevard...',
         Properties_due_date: '19-19-2024 20:00',
@@ -61,7 +61,7 @@ const PropertiessList: PropertiesDetails[] = [
     },
     {
         Properties_id: 7071,
-        Properties_icon: '/media/avatars/300-12.jpg',
+        Properties_icon: '/media/logos/appointment/1.png',
         Properties_location: 'Villa',
         Properties_category: '756 Nguyen Hue Boulevard...',
         Properties_due_date: '20-20-2024 22:00',
@@ -69,7 +69,7 @@ const PropertiessList: PropertiesDetails[] = [
     },
     {
         Properties_id: 8081,
-        Properties_icon: '/media/avatars/300-13.jpg',
+        Properties_icon: '/media/logos/appointment/2.png',
         Properties_location: 'Independent Houses ',
         Properties_category: '756 Nguyen Hue Boulevard...',
         Properties_due_date: '21-21-2024 06:00',
@@ -77,7 +77,7 @@ const PropertiessList: PropertiesDetails[] = [
     },
     {
         Properties_id: 9091,
-        Properties_icon: '/media/avatars/300-14.jpg',
+        Properties_icon: '/media/logos/appointment/3.png',
         Properties_location: 'Apartment',
         Properties_category: '756 Nguyen Hue Boulevard...',
         Properties_due_date: '22-22-2024 08:00',
@@ -85,7 +85,7 @@ const PropertiessList: PropertiesDetails[] = [
     },
     {
         Properties_id: 10102,
-        Properties_icon: '/media/avatars/300-15.jpg',
+        Properties_icon: '/media/logos/appointment/4.png',
         Properties_location: 'Independent Houses',
         Properties_category: '756 Nguyen Hue Boulevard...',
         Properties_due_date: '23-23-2024 10:00',

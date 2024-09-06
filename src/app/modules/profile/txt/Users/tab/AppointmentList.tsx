@@ -14,7 +14,7 @@ interface Appointment {
 const appointments: Appointment[] = [
     {
         id: 3451,
-        property_type: '/media/avatars/300-5.jpg',
+        property_type: '/media/logos/appointment/1.png',
         address: '756 Nguyen Hue Boulevard',
         appointment_type: 'Property Tour',
         date_time: '06-06-2024 18:00',
@@ -22,7 +22,7 @@ const appointments: Appointment[] = [
     },
     {
         id: 2352,
-        property_type: '/media/avatars/300-1.jpg',
+        property_type: '/media/logos/appointment/2.png',
         address: '756 Nguyen Hue Boulevard',
         appointment_type: 'Property Tour',
         date_time: '07-06-2024 14:00',
@@ -30,7 +30,7 @@ const appointments: Appointment[] = [
     },
     {
         id: 3212,
-        property_type: '/media/avatars/300-4.jpg',
+        property_type: '/media/logos/appointment/3.png',
         address: '789 Pine Road',
         appointment_type: 'Virtual Tour',
         date_time: '08-06-2024 09:00',
@@ -38,19 +38,29 @@ const appointments: Appointment[] = [
     },
     {
         id: 4234,
-        property_type: '/media/avatars/300-3.jpg',
+        property_type: '/media/logos/appointment/4.png',
         address: '101 Maple Lane',
         appointment_type: 'Property Tour',
         date_time: '09-06-2024 11:00',
         status: 'Scheduled',
     },
+    {
+        id: 7612,
+        property_type: '/media/logos/appointment/5.png',
+        address: '789 Pine Road',
+        appointment_type: 'Virtual Tour',
+        date_time: '08-06-2024 09:00',
+        status: 'Completed',
+    },
+    {
+        id: 8734,
+        property_type: '/media/logos/appointment/6.png',
+        address: '101 Maple Lane',
+        appointment_type: 'Property Tour',
+        date_time: '09-06-2024 11:00',
+        status: 'Scheduled',
+    }
 ];
-
-// const statusColors: { [key in Status]: string } = {
-//     Scheduled: '#3E97FF',
-//     Rescheduled: '#7239EA',
-//     Completed: '#50CD89',
-// };
 
 const getRoleStyles = (status: Status) => {
     switch (status) {
@@ -110,9 +120,9 @@ const AppointmentList: React.FC = () => {
                                                         <td>{appointment.id}</td>
                                                         <td>
                                                             <div className="d-flex align-items-center" style={{ justifyContent: "center" }}>
-                                                                <div className="symbol overflow-hidden me-3" style={{ borderRadius: "0"}}>
+                                                                <div className="symbol overflow-hidden me-3" style={{ borderRadius: "0" }}>
                                                                     <a href="#">
-                                                                        <div className="symbol-label" style={{ borderRadius: "0"}}>
+                                                                        <div className="symbol-label" style={{ borderRadius: "0" }}>
                                                                             <img src={appointment.property_type} alt={`Property ${appointment.id}`} className="w-100" />
                                                                         </div>
                                                                     </a>
@@ -160,53 +170,61 @@ const AppointmentList: React.FC = () => {
                                                     data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}"
                                                     className="page-title d-flex flex-wrap me-3 flex-column justify-content-center"
                                                 >
-                                                    <h1 className="page-heading d-flex text-gray-900 fw-bold fs-2 my-0 flex-column justify-content-center">
+                                                    <h1 className="page-heading d-flex text-gray-900 fw-bold fs-1 my-0 flex-column justify-content-center">
                                                         Property details
                                                     </h1>
+                                                </div>
+                                                <div className="d-flex align-items my-2">
+                                                    <div className=''>
+                                                        <i className="iconend border border-gray-300 border rounded py-3 px-4 me-6 mb-3 bi bi-pencil"></i>
+                                                    </div>
+                                                    <div className=''>
+                                                        <i className="iconend border border-gray-300 border rounded py-3 px-4 me-6 mb-3 bi bi-trash3"></i>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="d-flex flex-wrap flex-stack mb-6 card-header flex-nowrap border-0">
                                             <div className="card-body p-0">
                                                 <div className="row mb-7">
-                                                    <label className="col-lg-4 fs-6 fw-bolder text-gray-900">ID</label>
-                                                    <div className="col-lg-8">
-                                                        <span className="fw-bolder fs-6 text-muted">{appointment.id}</span>
+                                                    <label className="col-lg-3 fs-5 fw-bolder text-gray-900">Id</label>
+                                                    <div className="col-lg-9">
+                                                        <span className="fw-bolder fs-5 text-muted">{appointment.id}</span>
                                                     </div>
                                                 </div>
 
                                                 <div className="row mb-7">
-                                                    <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Address</label>
-                                                    <div className="col-lg-8 fv-row">
-                                                        <span className="fw-bold fs-6 text-muted">{appointment.address}</span>
+                                                    <label className="col-lg-3 fs-5 fw-bolder text-gray-900">Address</label>
+                                                    <div className="col-lg-9 fv-row">
+                                                        <span className="fw-bold fs-5 text-muted">{appointment.address}</span>
                                                     </div>
                                                 </div>
 
                                                 <div className="row mb-7">
-                                                    <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Property Type</label>
-                                                    <div className="col-lg-8 fv-row">
-                                                        <span className="fw-bold fs-6 text-muted">Independent House</span>
+                                                    <label className="col-lg-3 fs-5 fw-bolder text-gray-900">Property Type</label>
+                                                    <div className="col-lg-9 fv-row">
+                                                        <span className="fw-bold fs-5 text-muted">Independent House</span>
                                                     </div>
                                                 </div>
 
                                                 <div className="row mb-7">
-                                                    <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Age of Property</label>
-                                                    <div className="col-lg-8 fv-row">
-                                                        <span className="fw-bold fs-6 text-muted">5+ Years</span>
+                                                    <label className="col-lg-3 fs-5 fw-bolder text-gray-900">Age of Property</label>
+                                                    <div className="col-lg-9 fv-row">
+                                                        <span className="fw-bold fs-5 text-muted">5+ Years</span>
                                                     </div>
                                                 </div>
 
                                                 <div className="row mb-7">
-                                                    <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Preferred Tenant</label>
-                                                    <div className="col-lg-8 fv-row">
-                                                        <span className="fw-bold fs-6 text-muted">Family</span>
+                                                    <label className="col-lg-3 fs-5 fw-bolder text-gray-900">Preferred Tenant</label>
+                                                    <div className="col-lg-9 fv-row">
+                                                        <span className="fw-bold fs-5 text-muted">Family</span>
                                                     </div>
                                                 </div>
 
                                                 <div className="row mb-7">
-                                                    <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Posted on</label>
-                                                    <div className="col-lg-8 fv-row">
-                                                        <span className="fw-bold fs-6 text-muted">{appointment.date_time}</span>
+                                                    <label className="col-lg-3 fs-5 fw-bolder text-gray-900">Posted on</label>
+                                                    <div className="col-lg-9 fv-row">
+                                                        <span className="fw-bold fs-5 text-muted">{appointment.date_time}</span>
                                                     </div>
                                                 </div>
 
@@ -216,11 +234,11 @@ const AppointmentList: React.FC = () => {
                                                     <div className="row mb-7" style={{ justifyContent: 'center' }}>
                                                         <div className="col-lg-8 fv-row">
                                                             <div className="symbol-label">
-                                                                <img src={appointment.property_type} alt={`Property ${appointment.id}`} style={{ width: '100%' }} />
+                                                                <img src={appointment.property_type} alt={`Property ${appointment.id}`} style={{ width: '30rem' }} />
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div className="row" style={{ justifyContent: 'center' }}>
+                                                    <div className="row" style={{ justifyContent: 'end' }}>
                                                         <button onClick={handleBackClick} className="btn btn-primary" style={{ width: "auto" }}>
                                                             Back to List
                                                         </button>

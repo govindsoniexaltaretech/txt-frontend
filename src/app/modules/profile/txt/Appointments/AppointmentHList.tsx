@@ -1,101 +1,101 @@
 import React, { useState } from 'react';
 
-type TaskStatus = 'Scheduled' | 'Requested' | 'Completed' | 'Rescheduled' | 'Cancelled' ;
+type AppointmentStatus = 'Scheduled' | 'Requested' | 'Completed' | 'Rescheduled' | 'Cancelled' ;
 
-interface TaskDetails {
-    task_id: number;
-    task_icon: string;
-    task_location: string;
-    task_category: string;
-    task_due_date: string;
-    task_status: TaskStatus;
+interface AppointmentDetails {
+    Appointment_id: number;
+    Appointment_icon: string;
+    Appointment_location: string;
+    Appointment_category: string;
+    Appointment_due_date: string;
+    Appointment_status: AppointmentStatus;
 }
-const tasksList: TaskDetails[] = [
+const AppointmentsList: AppointmentDetails[] = [
     {
-        task_id: 1011,
-        task_icon: '/media/logos/service/1.jpg',
-        task_location: '987 Elm Street',
-        task_category: 'Dog Walking',
-        task_due_date: '14-14-2024 10:00',
-        task_status: 'Scheduled',
+        Appointment_id: 1011,
+        Appointment_icon: '/media/logos/appointment/1.png',
+        Appointment_location: 'Property Tour',
+        Appointment_category: 'Dog Walking',
+        Appointment_due_date: '14-14-2024 10:00',
+        Appointment_status: 'Scheduled',
     },
     {
-        task_id: 2021,
-        task_icon: '/media/logos/service/2.png',
-        task_location: '321 Birch Road',
-        task_category: 'Package Delivery',
-        task_due_date: '15-15-2024 12:00',
-        task_status: 'Requested',
+        Appointment_id: 2021,
+        Appointment_icon: '/media/logos/appointment/2.png',
+        Appointment_location: '321 Birch Road',
+        Appointment_category: 'Package Delivery',
+        Appointment_due_date: '15-15-2024 12:00',
+        Appointment_status: 'Requested',
     },
     {
-        task_id: 3031,
-        task_icon: '/media/logos/service/3.png',
-        task_location: '654 Willow Drive',
-        task_category: 'Cleaning',
-        task_due_date: '16-16-2024 14:00',
-        task_status: 'Completed',
+        Appointment_id: 3031,
+        Appointment_icon: '/media/logos/appointment/3.png',
+        Appointment_location: '654 Willow Drive',
+        Appointment_category: 'Cleaning',
+        Appointment_due_date: '16-16-2024 14:00',
+        Appointment_status: 'Completed',
     },
     {
-        task_id: 4041,
-        task_icon: '/media/logos/service/4.png',
-        task_location: '789 Spruce Lane',
-        task_category: 'Laundry',
-        task_due_date: '17-17-2024 16:00',
-        task_status: 'Rescheduled',
+        Appointment_id: 4041,
+        Appointment_icon: '/media/logos/appointment/4.png',
+        Appointment_location: '789 Spruce Lane',
+        Appointment_category: 'Laundry',
+        Appointment_due_date: '17-17-2024 16:00',
+        Appointment_status: 'Rescheduled',
     },
     {
-        task_id: 5051,
-        task_icon: '/media/logos/service/5.png',
-        task_location: '159 Chestnut Avenue',
-        task_category: 'Meal Preparation',
-        task_due_date: '18-18-2024 18:00',
-        task_status: 'Cancelled',
+        Appointment_id: 5051,
+        Appointment_icon: '/media/logos/appointment/5.png',
+        Appointment_location: '159 Chestnut Avenue',
+        Appointment_category: 'Meal Preparation',
+        Appointment_due_date: '18-18-2024 18:00',
+        Appointment_status: 'Cancelled',
     },
     {
-        task_id: 6061,
-        task_icon: '/media/logos/service/6.png',
-        task_location: '951 Redwood Street',
-        task_category: 'Grocery Delivery',
-        task_due_date: '19-19-2024 20:00',
-        task_status: 'Scheduled',
+        Appointment_id: 6061,
+        Appointment_icon: '/media/logos/appointment/6.png',
+        Appointment_location: '951 Redwood Street',
+        Appointment_category: 'Grocery Delivery',
+        Appointment_due_date: '19-19-2024 20:00',
+        Appointment_status: 'Scheduled',
     },
     {
-        task_id: 7071,
-        task_icon: '/media/logos/service/1.jpg',
-        task_location: '357 Aspen Road',
-        task_category: 'Babysitting',
-        task_due_date: '20-20-2024 22:00',
-        task_status: 'Requested',
+        Appointment_id: 7071,
+        Appointment_icon: '/media/logos/appointment/1.png',
+        Appointment_location: '357 Aspen Road',
+        Appointment_category: 'Babysitting',
+        Appointment_due_date: '20-20-2024 22:00',
+        Appointment_status: 'Requested',
     },
     {
-        task_id: 8081,
-        task_icon: '/media/logos/service/2.png',
-        task_location: '753 Fir Avenue',
-        task_category: 'Pet Grooming',
-        task_due_date: '21-21-2024 06:00',
-        task_status: 'Completed',
+        Appointment_id: 8081,
+        Appointment_icon: '/media/logos/appointment/2.png',
+        Appointment_location: '753 Fir Avenue',
+        Appointment_category: 'Pet Grooming',
+        Appointment_due_date: '21-21-2024 06:00',
+        Appointment_status: 'Completed',
     },
     {
-        task_id: 9091,
-        task_icon: '/media/logos/service/3.png',
-        task_location: '852 Maple Street',
-        task_category: 'Lawn Mowing',
-        task_due_date: '22-22-2024 08:00',
-        task_status: 'Rescheduled',
+        Appointment_id: 9091,
+        Appointment_icon: '/media/logos/appointment/3.png',
+        Appointment_location: '852 Maple Street',
+        Appointment_category: 'Lawn Mowing',
+        Appointment_due_date: '22-22-2024 08:00',
+        Appointment_status: 'Rescheduled',
     },
     {
-        task_id: 10102,
-        task_icon: '/media/logos/service/4.png',
-        task_location: '963 Pine Crescent',
-        task_category: 'House Cleaning',
-        task_due_date: '23-23-2024 10:00',
-        task_status: 'Cancelled',
+        Appointment_id: 10102,
+        Appointment_icon: '/media/logos/appointment/4.png',
+        Appointment_location: '963 Pine Crescent',
+        Appointment_category: 'House Cleaning',
+        Appointment_due_date: '23-23-2024 10:00',
+        Appointment_status: 'Cancelled',
     },
 ];
 
 
-const getRoleStyles = (task_status: TaskStatus) => {
-    switch (task_status) {
+const getRoleStyles = (Appointment_status: AppointmentStatus) => {
+    switch (Appointment_status) {
         case 'Scheduled':
             return { color: '#3E97FF', backgroundColor: '#EEF6FF' };
         case 'Completed':
@@ -112,14 +112,14 @@ const getRoleStyles = (task_status: TaskStatus) => {
 };
 
 const ServicesHList: React.FC = () => {
-    const [selectedTask, setSelectedTask] = useState<number | null>(null);
+    const [selectedAppointment, setSelectedAppointment] = useState<number | null>(null);
 
     const handleRowClick = (id: number) => {
-        setSelectedTask(id);
+        setSelectedAppointment(id);
     };
 
     const handleBackClick = () => {
-        setSelectedTask(null);
+        setSelectedAppointment(null);
     };
 
     return (
@@ -127,55 +127,55 @@ const ServicesHList: React.FC = () => {
             <div className='d-flex flex-column flex-column-fluid'>
                 <div className="card-body py-4">
                     <div className="table-responsive">
-                        <table id="kt_table_tasks" className="table align-middle table-row-dashed fs-5 gy-5">
-                            {!selectedTask && (
+                        <table id="kt_table_Appointments" className="table align-middle table-row-dashed fs-5 gy-5">
+                            {!selectedAppointment && (
                                 <thead>
                                     <tr className="text-start text-muted fw-bolder fs-5 text gs-0">
                                         <>
-                                            <th className="min-w-125px">Service Id</th>
-                                            <th className="min-w-125px">Service</th>
-                                            <th className="min-w-125px">Service Type</th>
-                                            <th className="min-w-125px">Date & Time Availed</th>
-                                            <th className="min-w-125px">Service Provider</th>
+                                            <th className="min-w-125px">Id</th>
+                                            <th className="min-w-125px">Property</th>
+                                            <th className="text-center min-w-125px">Appointment Type</th>
+                                            <th className="text-center min-w-125px">Appointment Between</th>
+                                            <th className="text-center min-w-125px">Date & Time</th>
                                             <th className="text-center min-w-100px">Status</th>
                                         </>
                                     </tr>
                                 </thead>
                             )}
                             <tbody className="text-gray-600 fw-bold">
-                                {tasksList.map((task) => (
-                                    <React.Fragment key={task.task_id}>
-                                        {(selectedTask === null || selectedTask === task.task_id) && (
+                                {AppointmentsList.map((Appointment) => (
+                                    <React.Fragment key={Appointment.Appointment_id}>
+                                        {(selectedAppointment === null || selectedAppointment === Appointment.Appointment_id) && (
                                             <tr
-                                                onClick={() => handleRowClick(task.task_id)}
+                                                onClick={() => handleRowClick(Appointment.Appointment_id)}
                                                 style={{ cursor: 'pointer' }}
                                             >
-                                                {!selectedTask && (
+                                                {!selectedAppointment && (
                                                     <>
-                                                        <td>{task.task_id}</td>
-                                                        <td>
+                                                        <td>{Appointment.Appointment_id}</td>
+                                                        <td className='text-center'>
                                                             <div className="d-flex align-items-center">
                                                                 <div className="symbol overflow-hidden me-3" style={{ borderRadius: "0"}}>
                                                                     <a href="#">
                                                                         <div className="symbol-label" style={{ borderRadius: "0"}}>
-                                                                            <img src={task.task_icon} alt={`Task ${task.task_id}`} className="w-100" />
+                                                                            <img src={Appointment.Appointment_icon} alt={`Appointment ${Appointment.Appointment_id}`} className="w-100" />
                                                                         </div>
                                                                     </a>
                                                                 </div>
                                                             </div>
                                                         </td>
-                                                        <td>{task.task_location}</td>
-                                                        <td>{task.task_due_date}</td>
-                                                        <td>{task.task_category}</td>
+                                                        <td className='text-center'>{Appointment.Appointment_location}</td>
+                                                        <td className='text-center'>{Appointment.Appointment_due_date}</td>
+                                                        <td className='text-center'>{Appointment.Appointment_category}</td>
                                                         <td className="text-center min-w-100px">
                                                             <div
                                                                 className="badge"
                                                                 style={{
-                                                                    ...getRoleStyles(task.task_status),
+                                                                    ...getRoleStyles(Appointment.Appointment_status),
                                                                     padding: '1rem'
                                                                 }}
                                                             >
-                                                                {task.task_status}
+                                                                {Appointment.Appointment_status}
                                                             </div>
                                                         </td>
                                                     </>
@@ -226,12 +226,12 @@ const ServicesHList: React.FC = () => {
                             </div>
                         </div>
                     </div>
-                    {selectedTask && (
+                    {selectedAppointment && (
                         <>
-                            {tasksList
-                                .filter(task => task.task_id === selectedTask)
-                                .map(task => (
-                                    <div key={task.task_id}>
+                            {AppointmentsList
+                                .filter(Appointment => Appointment.Appointment_id === selectedAppointment)
+                                .map(Appointment => (
+                                    <div key={Appointment.Appointment_id}>
                                         <div id="kt_app_toolbar" className="app-toolbar py-3 py-lg-6">
                                             <div
                                                 id="kt_app_toolbar_container"
@@ -245,7 +245,7 @@ const ServicesHList: React.FC = () => {
                                                     className="page-title d-flex flex-wrap me-3 flex-column justify-content-center"
                                                 >
                                                     <h1 className="page-heading d-flex text-gray-900 fw-bold fs-2 my-0 flex-column justify-content-center">
-                                                        Task Details
+                                                        Appointment Details
                                                     </h1>
                                                 </div>
                                             </div>
@@ -255,35 +255,35 @@ const ServicesHList: React.FC = () => {
                                                 <div className="row mb-7">
                                                     <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Service Id</label>
                                                     <div className="col-lg-8">
-                                                        <span className="fw-bolder fs-6 text-muted">{task.task_id}</span>
+                                                        <span className="fw-bolder fs-6 text-muted">{Appointment.Appointment_id}</span>
                                                     </div>
                                                 </div>
 
                                                 <div className="row mb-7">
                                                     <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Service Type</label>
                                                     <div className="col-lg-8 fv-row">
-                                                        <span className="fw-bold fs-6 text-muted">{task.task_location}</span>
+                                                        <span className="fw-bold fs-6 text-muted">{Appointment.Appointment_location}</span>
                                                     </div>
                                                 </div>
 
                                                 <div className="row mb-7">
                                                     <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Icon</label>
                                                     <div className="col-lg-8 fv-row">
-                                                        <span className="fw-bold fs-6 text-muted">Independent Task</span>
+                                                        <span className="fw-bold fs-6 text-muted">Independent Appointment</span>
                                                     </div>
                                                 </div>
 
                                                 <div className="row mb-7">
                                                     <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Service Provider</label>
                                                     <div className="col-lg-8 fv-row">
-                                                        <span className="fw-bold fs-6 text-muted">{task.task_category}</span>
+                                                        <span className="fw-bold fs-6 text-muted">{Appointment.Appointment_category}</span>
                                                     </div>
                                                 </div>
 
                                                 <div className="row mb-7">
                                                     <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Date & Time</label>
                                                     <div className="col-lg-8 fv-row">
-                                                        <span className="fw-bold fs-6 text-muted">{task.task_due_date}</span>
+                                                        <span className="fw-bold fs-6 text-muted">{Appointment.Appointment_due_date}</span>
                                                     </div>
                                                 </div>
                                             </div>
@@ -292,7 +292,7 @@ const ServicesHList: React.FC = () => {
                                                     <div className="row mb-7" style={{ justifyContent: 'center' }}>
                                                         <div className="col-lg-8 fv-row">
                                                             <div className="symbol-label">
-                                                                <img src={task.task_icon} alt={`Property ${task.task_id}`} style={{ width: '100%' }} />
+                                                                <img src={Appointment.Appointment_icon} alt={`Property ${Appointment.Appointment_id}`} style={{ width: '100%' }} />
                                                             </div>
                                                         </div>
                                                     </div>

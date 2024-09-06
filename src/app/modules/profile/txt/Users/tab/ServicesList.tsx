@@ -16,7 +16,7 @@ interface Aservice {
 const aservices: Aservice[] = [
     {
         service_id: 9752,
-        service_property_type: '/media/avatars/300-5.jpg',
+        service_property_type: '/media/logos/service/1.jpg',
         service_typel: 'Curtain cleaning',
         service_provider: 'Taylor Smith',
         date_time: '06-06-2024 18:00',
@@ -24,7 +24,7 @@ const aservices: Aservice[] = [
     },
     {
         service_id: 9352,
-        service_property_type: '/media/avatars/300-1.jpg',
+        service_property_type: '/media/logos/service/2.png',
         service_typel: 'AC Cleaning',
         service_provider: '',
         date_time: '07-06-2024 14:00',
@@ -32,7 +32,7 @@ const aservices: Aservice[] = [
     },
     {
         service_id: 3233,
-        service_property_type: '/media/avatars/300-2.jpg',
+        service_property_type: '/media/logos/service/3.png',
         service_typel: 'Curtain Cleaning',
         service_provider: 'Olivia Thomas',
         date_time: '08-06-2024 09:00',
@@ -40,7 +40,7 @@ const aservices: Aservice[] = [
     },
     {
         service_id: 5666,
-        service_property_type: '/media/avatars/300-3.jpg',
+        service_property_type: '/media/logos/service/4.png',
         service_typel: 'Bathroom Cleaning',
         service_provider: 'Gems Andrew',
         date_time: '09-06-2024 11:00',
@@ -48,7 +48,7 @@ const aservices: Aservice[] = [
     },
     {
         service_id: 7778,
-        service_property_type: '/media/avatars/300-4.jpg',
+        service_property_type: '/media/logos/service/5.png',
         service_typel: 'AC Cleaning',
         service_provider: 'Olivia Thomas',
         date_time: '08-06-2024 09:00',
@@ -56,19 +56,13 @@ const aservices: Aservice[] = [
     },
     {
         service_id: 6009,
-        service_property_type: '/media/avatars/300-6.jpg',
+        service_property_type: '/media/logos/service/6.png',
         service_typel: 'Plumbing',
         service_provider: 'Gems Andrew',
         date_time: '09-06-2024 11:00',
         status: 'Scheduled',
     }
 ];
-
-// const statusColors: { [key in Status]: string } = {
-//     Scheduled: '#3E97FF',
-//     Rescheduled: '#7239EA',
-//     Completed: '#50CD89',
-// };
 
 const getRoleStyles = (status: Status) => {
     switch (status) {
@@ -181,61 +175,69 @@ const ServicesList: React.FC = () => {
                                                     data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}"
                                                     className="page-title d-flex flex-wrap me-3 flex-column justify-content-center"
                                                 >
-                                                    <h1 className="page-heading d-flex text-gray-900 fw-bold fs-2 my-0 flex-column justify-content-center">
+                                                    <h1 className="page-heading d-flex text-gray-900 fw-bold fs-1 my-0 flex-column justify-content-center">
                                                         Service Details
                                                     </h1>
+                                                </div>
+                                                <div className="d-flex align-items my-2">
+                                                    <div className=''>
+                                                        <i className="iconend border border-gray-300 border rounded py-3 px-4 me-6 mb-3 bi bi-pencil"></i>
+                                                    </div>
+                                                    <div className=''>
+                                                        <i className="iconend border border-gray-300 border rounded py-3 px-4 me-6 mb-3 bi bi-trash3"></i>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="d-flex flex-wrap flex-stack mb-6 card-header flex-nowrap border-0">
                                             <div className="card-body p-0">
                                                 <div className="row mb-7">
-                                                    <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Service ID</label>
-                                                    <div className="col-lg-8">
-                                                        <span className="fw-bolder fs-6 text-muted">{aservice.service_id}</span>
+                                                    <label className="col-lg-3 fs-5 fw-bolder text-gray-900">Service ID</label>
+                                                    <div className="col-lg-9">
+                                                        <span className="fw-bolder fs-5 text-muted">{aservice.service_id}</span>
                                                     </div>
                                                 </div>
 
                                                 <div className="row mb-7">
-                                                    <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Address</label>
-                                                    <div className="col-lg-8 fv-row">
-                                                        <span className="fw-bold fs-6 text-muted">756 Nguyen Hue Boulevard, Ben Nghe Ward, District 1, Ho Chi Minh City, Vietnam</span>
+                                                    <label className="col-lg-3 fs-5 fw-bolder text-gray-900">Address</label>
+                                                    <div className="col-lg-9 fv-row">
+                                                        <span className="fw-bold fs-5 text-muted">756 Nguyen Hue Boulevard, Ben Nghe Ward, District 1, Ho Chi Minh City, Vietnam</span>
                                                     </div>
                                                 </div>
 
                                                 <div className="row mb-7">
-                                                    <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Date & Time</label>
-                                                    <div className="col-lg-8 fv-row">
-                                                        <span className="fw-bold fs-6 text-muted">{aservice.date_time}</span>
+                                                    <label className="col-lg-3 fs-5 fw-bolder text-gray-900">Date & Time</label>
+                                                    <div className="col-lg-9 fv-row">
+                                                        <span className="fw-bold fs-5 text-muted">{aservice.date_time}</span>
                                                     </div>
                                                 </div>
 
                                                 <div className="row mb-7">
-                                                    <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Type of Service</label>
-                                                    <div className="col-lg-8 fv-row">
-                                                        <span className="fw-bold fs-6 text-muted">{aservice.service_typel}</span>
+                                                    <label className="col-lg-3 fs-5 fw-bolder text-gray-900">Type of Service</label>
+                                                    <div className="col-lg-9 fv-row">
+                                                        <span className="fw-bold fs-5 text-muted">{aservice.service_typel}</span>
                                                     </div>
                                                 </div>
 
                                                 <div className="row mb-7">
-                                                    <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Price</label>
-                                                    <div className="col-lg-8 fv-row">
-                                                        <span className="fw-bold fs-6 text-muted">đ 35.99</span>
+                                                    <label className="col-lg-3 fs-5 fw-bolder text-gray-900">Price</label>
+                                                    <div className="col-lg-9 fv-row">
+                                                        <span className="fw-bold fs-5 text-muted">đ 35.99</span>
                                                     </div>
                                                 </div>
 
                                                 <div className="row mb-7">
-                                                    <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Payment Method</label>
-                                                    <div className="col-lg-8 fv-row">
-                                                        <span className="fw-bold fs-6 text-muted">Credit Card</span>
+                                                    <label className="col-lg-3 fs-5 fw-bolder text-gray-900">Payment Method</label>
+                                                    <div className="col-lg-9 fv-row">
+                                                        <span className="fw-bold fs-5 text-muted">Credit Card</span>
                                                     </div>
                                                 </div>
 
                                                 <div className="row mb-7">
-                                                    <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Payment Status</label>
-                                                    <div className="col-lg-8 fv-row">
-                                                        <a className='btn btn-light btn-light-success btn-sm p-2'>
-                                                            <span className="fw-bold fs-6">{aservice.status}</span>
+                                                    <label className="col-lg-3 fs-5 fw-bolder text-gray-900">Payment Status</label>
+                                                    <div className="col-lg-9 fv-row">
+                                                        <a className='btn btn-light btn-light-success btn-sm p-2' style={{marginTop: '-0.6rem'}}>
+                                                            <span className="fw-bold fs-5">{aservice.status}</span>
                                                         </a>
                                                     </div>
                                                 </div>
@@ -246,11 +248,11 @@ const ServicesList: React.FC = () => {
                                                     <div className="row mb-7" style={{ justifyContent: 'center' }}>
                                                         <div className="col-lg-8 fv-row">
                                                             <div className="symbol-label">
-                                                                <img src={aservice.service_property_type} alt={`Property ${aservice.service_id}`} style={{ width: '100%' }} />
+                                                                <img src={aservice.service_property_type} alt={`Property ${aservice.service_id}`} style={{ width: '30rem' }} />
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div className="row" style={{ justifyContent: 'center' }}>
+                                                    <div className="row" style={{ justifyContent: 'end' }}>
                                                         <button onClick={handleBackClickService} className="btn btn-primary" style={{ width: "auto" }}>
                                                             Back to List
                                                         </button>

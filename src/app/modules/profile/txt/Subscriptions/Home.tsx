@@ -135,7 +135,7 @@ const Home: React.FC = () => {
                                         </div>
                                         <div className="card-header pt-5 card-title d-flex">
                                             <span className="fs-2hx fw-bold text-gray-900 me-2 lh-1 ls-n2">22,005</span>
-                                            <span className="text-gray-500 pt-1 fw-semibold fs-7"> 82.79% Subscribers</span>
+                                            <span className="text-gray-500 pt-1 fw-semibold fs-7" style={{ textAlign: 'center', color: 'gray', marginTop: '10px' }}> 82.79% Subscribers</span>
                                         </div>
                                         <div className="card-body d-flex flex-column justify-content-end pe-0">
                                             <span className="text-gray-500 pt-1 fw-semibold fs-3">Total no. of Subscribed Users</span>

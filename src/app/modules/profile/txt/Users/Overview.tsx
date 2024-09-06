@@ -36,11 +36,11 @@ const Overview = () => {
                     <div id="kt_app_content" className="app-content flex-column-fluid">
                         <div id="kt_app_content_container" className="app-container container-xxl">
                             <div className="card mb-5 mb-xl-10">
-                                <div className="card-body pt-9 pb-0">
+                                <div className="card-body pt-9">
                                     <div className="d-flex flex-wrap flex-sm-nowrap mb-3">
                                         <div className="me-7 mb-4">
                                             <div className="symbol symbol-100px symbol-lg-160px symbol-fixed position-relative">
-                                                <img src="/media/avatars/300-1.jpg" alt="Metornic" />
+                                                <img src="/media/logos/user1.png" alt="Metornic" />
                                             </div>
                                         </div>
                                         <div className="flex-grow-1">
