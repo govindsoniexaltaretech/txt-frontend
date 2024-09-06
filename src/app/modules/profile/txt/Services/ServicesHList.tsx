@@ -134,9 +134,9 @@ const ServicesHList: React.FC = () => {
                                         <>
                                             <th className="min-w-125px">Service Id</th>
                                             <th className="min-w-125px">Service</th>
-                                            <th className="min-w-125px">Service Type</th>
-                                            <th className="min-w-125px">Date & Time Availed</th>
-                                            <th className="min-w-125px">Service Provider</th>
+                                            <th className="text-center min-w-125px">Service Type</th>
+                                            <th className="text-center min-w-125px">Date & Time Availed</th>
+                                            <th className="text-center min-w-125px">Service Provider</th>
                                             <th className="text-center min-w-100px">Status</th>
                                         </>
                                     </tr>
@@ -153,7 +153,7 @@ const ServicesHList: React.FC = () => {
                                                 {!selectedTask && (
                                                     <>
                                                         <td>{task.task_id}</td>
-                                                        <td>
+                                                        <td className="text-center">
                                                             <div className="d-flex align-items-center">
                                                                 <div className="symbol overflow-hidden me-3" style={{ borderRadius: "0"}}>
                                                                     <a href="#">
@@ -164,9 +164,9 @@ const ServicesHList: React.FC = () => {
                                                                 </div>
                                                             </div>
                                                         </td>
-                                                        <td>{task.task_location}</td>
-                                                        <td>{task.task_due_date}</td>
-                                                        <td>{task.task_category}</td>
+                                                        <td className="text-center">{task.task_location}</td>
+                                                        <td className="text-center">{task.task_due_date}</td>
+                                                        <td className="text-center">{task.task_category}</td>
                                                         <td className="text-center min-w-100px">
                                                             <div
                                                                 className="badge"

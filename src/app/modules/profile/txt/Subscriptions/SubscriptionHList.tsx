@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-type SubscriptionHStatus = 'Active' | 'In Active';
+type SubscriptionHStatus = 'Active' | 'Inactive';
 
 interface SubscriptionHDetails {
     subscriptionHList_id: string;
@@ -13,100 +13,100 @@ interface SubscriptionHDetails {
 
 const tasksList: SubscriptionHDetails[] = [
     {
-        subscriptionHList_id: 'SUB123001',
+        subscriptionHList_id: 'SUB123456',
         subscriptionHList_plan: 'Buyer Premium Plan (Sale)',
         subscriptionHList_description: 'Buyer',
         subscriptionHList_duration: 'Quarterly',
-        subscriptionHList_price: '₫ 20.00',
+        subscriptionHList_price: '₫ 35.99',
         subscriptionHList_status: 'Active',
     },
     {
-        subscriptionHList_id: 'SUB123002',
+        subscriptionHList_id: 'SUB123323',
         subscriptionHList_plan: 'Buyer Premium Plan (Sale)',
         subscriptionHList_description: 'Buyer',
         subscriptionHList_duration: 'Monthly',
-        subscriptionHList_price: '₫ 25.00',
-        subscriptionHList_status: 'In Active',
+        subscriptionHList_price: '₫ 35.99',
+        subscriptionHList_status: 'Inactive',
     },
     {
-        subscriptionHList_id: 'SUB123003',
-        subscriptionHList_plan: 'Owner Premium Plan',
-        subscriptionHList_description: 'Owner',
-        subscriptionHList_duration: 'Quarterly',
-        subscriptionHList_price: '₫ 30.00',
-        subscriptionHList_status: 'Active',
-    },
-    {
-        subscriptionHList_id: 'SUB123004',
+        subscriptionHList_id: 'SUB123332',
         subscriptionHList_plan: 'Owner Premium Plan',
         subscriptionHList_description: 'Owner',
         subscriptionHList_duration: 'Monthly',
-        subscriptionHList_price: '₫ 15.00',
-        subscriptionHList_status: 'In Active',
+        subscriptionHList_price: '₫ 35.99',
+        subscriptionHList_status: 'Inactive',
     },
     {
-        subscriptionHList_id: 'SUB123005',
+        subscriptionHList_id: 'SUB123324',
         subscriptionHList_plan: 'Owner Premium Plan',
         subscriptionHList_description: 'Owner',
         subscriptionHList_duration: 'Quarterly',
-        subscriptionHList_price: '₫ 75.00',
+        subscriptionHList_price: '₫ 35.99',
         subscriptionHList_status: 'Active',
     },
     {
-        subscriptionHList_id: 'SUB123006',
-        subscriptionHList_plan: 'Buyer Premium Plan (Sale)',
-        subscriptionHList_description: 'Buyer',
-        subscriptionHList_duration: 'Quarterly',
-        subscriptionHList_price: '₫ 20.00',
-        subscriptionHList_status: 'In Active',
+        subscriptionHList_id: 'SUB123362',
+        subscriptionHList_plan: 'Owner Premium Plan',
+        subscriptionHList_description: 'Owner',
+        subscriptionHList_duration: 'Monthly',
+        subscriptionHList_price: '₫ 35.99',
+        subscriptionHList_status: 'Inactive',
     },
     {
-        subscriptionHList_id: 'SUB123007',
+        subscriptionHList_id: 'SUB123382',
         subscriptionHList_plan: 'Buyer Premium Plan (Sale)',
         subscriptionHList_description: 'Buyer',
         subscriptionHList_duration: 'Monthly',
-        subscriptionHList_price: '₫ 10.00',
-        subscriptionHList_status: 'Active',
+        subscriptionHList_price: '₫ 35.99',
+        subscriptionHList_status: 'Inactive',
     },
     {
-        subscriptionHList_id: 'SUB123008',
+        subscriptionHList_id: 'SUB123456',
         subscriptionHList_plan: 'Buyer Premium Plan (Sale)',
         subscriptionHList_description: 'Buyer',
         subscriptionHList_duration: 'Quarterly',
-        subscriptionHList_price: '₫ 50.00',
-        subscriptionHList_status: 'In Active',
-    },
-    {
-        subscriptionHList_id: 'SUB123009',
-        subscriptionHList_plan: 'Owner Premium Plan',
-        subscriptionHList_description: 'Owner',
-        subscriptionHList_duration: 'Quarterly',
-        subscriptionHList_price: '₫ 150.00',
+        subscriptionHList_price: '₫ 35.99',
         subscriptionHList_status: 'Active',
     },
     {
-        subscriptionHList_id: 'SUB123010',
-        subscriptionHList_plan: 'Owner Premium Plan',
-        subscriptionHList_description: 'Owner',
-        subscriptionHList_duration: 'Quarterly',
-        subscriptionHList_price: '₫ 50.00',
-        subscriptionHList_status: 'Active',
-    },
-    {
-        subscriptionHList_id: 'SUB123011',
-        subscriptionHList_plan: 'Owner Premium Plan',
-        subscriptionHList_description: 'Owner',
-        subscriptionHList_duration: 'Monthly',
-        subscriptionHList_price: '₫ 10.00',
-        subscriptionHList_status: 'In Active',
-    },
-    {
-        subscriptionHList_id: 'SUB123012',
+        subscriptionHList_id: 'SUB123323',
         subscriptionHList_plan: 'Buyer Premium Plan (Sale)',
-        subscriptionHList_description: 'Buyers',
+        subscriptionHList_description: 'Buyer',
         subscriptionHList_duration: 'Monthly',
-        subscriptionHList_price: '₫ 35.00',
+        subscriptionHList_price: '₫ 35.99',
+        subscriptionHList_status: 'Inactive',
+    },
+    {
+        subscriptionHList_id: 'SUB123332',
+        subscriptionHList_plan: 'Owner Premium Plan',
+        subscriptionHList_description: 'Owner',
+        subscriptionHList_duration: 'Monthly',
+        subscriptionHList_price: '₫ 35.99',
+        subscriptionHList_status: 'Inactive',
+    },
+    {
+        subscriptionHList_id: 'SUB123324',
+        subscriptionHList_plan: 'Owner Premium Plan',
+        subscriptionHList_description: 'Owner',
+        subscriptionHList_duration: 'Quarterly',
+        subscriptionHList_price: '₫ 35.99',
         subscriptionHList_status: 'Active',
+    },
+    {
+        subscriptionHList_id: 'SUB123362',
+        subscriptionHList_plan: 'Owner Premium Plan',
+        subscriptionHList_description: 'Owner',
+        subscriptionHList_duration: 'Monthly',
+        subscriptionHList_price: '₫ 35.99',
+        subscriptionHList_status: 'Inactive',
+    },
+    {
+        subscriptionHList_id: 'SUB123382',
+        subscriptionHList_plan: 'Buyer Premium Plan (Sale)',
+        subscriptionHList_description: 'Buyer',
+        subscriptionHList_duration: 'Monthly',
+        subscriptionHList_price: '₫ 35.99',
+        subscriptionHList_status: 'Inactive',
     },
 ];
 
@@ -116,7 +116,7 @@ const getRoleStyles = (subscriptionHList_status: SubscriptionHStatus) => {
     switch (subscriptionHList_status) {
         case 'Active':
             return { color: '#50CD89', backgroundColor: '#E8FFF3' };
-        case 'In Active':
+        case 'Inactive':
             return { color: '#F1416C', backgroundColor: '#FFF5F8' };
         default:
             return {};

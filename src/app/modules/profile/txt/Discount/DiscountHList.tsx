@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-type DiscountHStatus = 'Active' | 'In Active';
+type DiscountHStatus = 'Active' | 'Inactive';
 
 interface DiscountHDetails {
     DiscountHList_id: string;
@@ -13,7 +13,7 @@ interface DiscountHDetails {
 
 const DiscounttasksList: DiscountHDetails[] = [
     {
-        DiscountHList_id: 'COD123001',
+        DiscountHList_id: 'COD12345',
         DiscountHList_plan: 'MAX20OFF',
         DiscountHList_description: '20% off on premium plan',
         DiscountHList_duration: '20%',
@@ -21,93 +21,69 @@ const DiscounttasksList: DiscountHDetails[] = [
         DiscountHList_status: 'Active',
     },
     {
-        DiscountHList_id: 'COD123002',
+        DiscountHList_id: 'COD12343',
         DiscountHList_plan: 'MAX40OFF',
         DiscountHList_description: '20% off on premium plan',
         DiscountHList_duration: '40%',
         DiscountHList_price: '2',
-        DiscountHList_status: 'In Active',
+        DiscountHList_status: 'Inactive',
     },
     {
-        DiscountHList_id: 'COD123003',
+        DiscountHList_id: 'COD12341',
         DiscountHList_plan: 'MAX40OFF',
         DiscountHList_description: '10% off on premium plan',
         DiscountHList_duration: '40%',
+        DiscountHList_price: '2',
+        DiscountHList_status: 'Inactive',
+    },
+    {
+        DiscountHList_id: 'COD12338',
+        DiscountHList_plan: 'MAX30OFF',
+        DiscountHList_description: '20% off on premium plan',
+        DiscountHList_duration: '30%',
         DiscountHList_price: '3',
         DiscountHList_status: 'Active',
     },
     {
-        DiscountHList_id: 'COD123004',
+        DiscountHList_id: 'COD12337',
         DiscountHList_plan: 'MAX30OFF',
         DiscountHList_description: '20% off on premium plan',
         DiscountHList_duration: '30%',
         DiscountHList_price: '2',
-        DiscountHList_status: 'In Active',
+        DiscountHList_status: 'Inactive',
     },
     {
-        DiscountHList_id: 'COD123005',
-        DiscountHList_plan: 'MAX30OFF',
-        DiscountHList_description: '20% off on premium plan',
-        DiscountHList_duration: '30%',
-        DiscountHList_price: '7',
-        DiscountHList_status: 'Active',
-    },
-    {
-        DiscountHList_id: 'COD123006',
+        DiscountHList_id: 'COD12335',
         DiscountHList_plan: 'MAX10OFF',
         DiscountHList_description: '20% off on premium plan',
         DiscountHList_duration: '10%',
         DiscountHList_price: '2',
-        DiscountHList_status: 'In Active',
+        DiscountHList_status: 'Inactive',
     },
     {
-        DiscountHList_id: 'COD123007',
+        DiscountHList_id: 'COD12334',
         DiscountHList_plan: 'MAX40OFF',
         DiscountHList_description: '20% off on premium plan',
         DiscountHList_duration: '40%',
-        DiscountHList_price: '1',
+        DiscountHList_price: '2',
         DiscountHList_status: 'Active',
     },
     {
-        DiscountHList_id: 'COD123008',
+        DiscountHList_id: 'COD12331',
         DiscountHList_plan: 'MAX30OFF',
         DiscountHList_description: '20% off on premium plan',
         DiscountHList_duration: '30%',
-        DiscountHList_price: '5',
-        DiscountHList_status: 'In Active',
+        DiscountHList_price: '2',
+        DiscountHList_status: 'Active',
     },
     {
-        DiscountHList_id: 'COD123009',
+        DiscountHList_id: 'COD12330',
         DiscountHList_plan: 'MAX10OFF',
         DiscountHList_description: '20% off on premium plan',
         DiscountHList_duration: '10%',
-        DiscountHList_price: '5',
+        DiscountHList_price: '2',
         DiscountHList_status: 'Active',
-    },
-    {
-        DiscountHList_id: 'COD123010',
-        DiscountHList_plan: 'MAX25OFF',
-        DiscountHList_description: '20% off on premium plan',
-        DiscountHList_duration: '25%',
-        DiscountHList_price: '5',
-        DiscountHList_status: 'Active',
-    },
-    {
-        DiscountHList_id: 'COD123011',
-        DiscountHList_plan: 'MAX30OFF',
-        DiscountHList_description: '20% off on premium plan',
-        DiscountHList_duration: '30%',
-        DiscountHList_price: '1',
-        DiscountHList_status: 'In Active',
-    },
-    {
-        DiscountHList_id: 'COD123012',
-        DiscountHList_plan: 'MAX10OFF',
-        DiscountHList_description: '20% off on premium plan',
-        DiscountHList_duration: '10%',
-        DiscountHList_price: '3',
-        DiscountHList_status: 'Active',
-    },
+    }
 ];
 
 
@@ -116,7 +92,7 @@ const getRoleStyles = (DiscountHList_status: DiscountHStatus) => {
     switch (DiscountHList_status) {
         case 'Active':
             return { color: '#50CD89', backgroundColor: '#E8FFF3' };
-        case 'In Active':
+        case 'Inactive':
             return { color: '#F1416C', backgroundColor: '#FFF5F8' };
         default:
             return {};
