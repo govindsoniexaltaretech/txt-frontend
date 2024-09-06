@@ -47,7 +47,7 @@ const PrivateRoutes = () => {
           }
         />
         <Route
-          path='users/overview/*'
+          path='users-overview/*'
           element={
             <SuspensedView>
               <OverViewUsers />

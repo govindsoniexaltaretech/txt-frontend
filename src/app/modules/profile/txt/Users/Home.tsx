@@ -393,17 +393,17 @@ const Home = () => {
                                                 {users.map((user) => (
                                                     <tr key={user.id}>
                                                         <td>
-                                                            <a href="/users/overview">
+                                                            <a href="/users-overview">
                                                                 <div className="d-flex align-items-center">
                                                                     <div className="symbol symbol-circle symbol-50px overflow-hidden me-3">
                                                                         {user.avatar ? (
-                                                                            <a href="/users/overview">
+                                                                            <a href="/users-overview">
                                                                                 <div className="symbol-label">
                                                                                     <img src={user.avatar} alt={user.name} className="w-100" />
                                                                                 </div>
                                                                             </a>
                                                                         ) : (
-                                                                            <a href="/users/overview">
+                                                                            <a href="/users-overview">
                                                                                 <div className={`symbol-label fs-3 ${user.avatarColor}`}>
                                                                                     {user.avatarInitial}
                                                                                 </div>
@@ -411,7 +411,7 @@ const Home = () => {
                                                                         )}
                                                                     </div>
                                                                     <div className="d-flex flex-column">
-                                                                        <a href="/users/overview" className="text-gray-800 text-hover-primary mb-1">
+                                                                        <a href="/users-overview" className="text-gray-800 text-hover-primary mb-1">
                                                                             {user.name}
                                                                         </a>
                                                                         <span>{user.email}</span>
