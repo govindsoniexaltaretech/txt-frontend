@@ -47,6 +47,27 @@ const SidebarMenuMain = () => {
         icon='chart'
       />  
       <SidebarMenuItem
+        to='/feedback'
+        title='Feedback'
+        hasBullet={false}
+        fontIcon='bi-bar-chart'
+        icon='chart'
+      /> 
+      <SidebarMenuItem
+        to='/service-providers'
+        title='Service Providers'
+        hasBullet={false}
+        fontIcon='bi-bar-chart'
+        icon='chart'
+      /> 
+      <SidebarMenuItem
+        to='/cms'
+        title='CMS'
+        hasBullet={false}
+        fontIcon='bi-bar-chart'
+        icon='chart'
+      /> 
+      <SidebarMenuItem
         to='/master-data'
         title='Master Data'
         hasBullet={false}
