@@ -43,11 +43,26 @@ const SidebarMenuMain = () => {
         to='/properties'
         title='Properties'
         hasBullet={false}
-        fontIcon='bi-map'
-        icon='map-pin'
-      />
+         fontIcon='bi-bar-chart'
+        icon='chart'
+      />  
+      <SidebarMenuItem
+        to='/master-data'
+        title='Master Data'
+        hasBullet={false}
+        fontIcon='bi-bar-chart'
+        icon='chart'
+      /> 
+      <SidebarMenuItem
+        to='/system-users'
+        title='System Users'
+        hasBullet={false}
+        fontIcon='bi-bar-chart'
+        icon='chart'
+      /> 
     </>
   )
 }
 
 export { SidebarMenuMain }
+
