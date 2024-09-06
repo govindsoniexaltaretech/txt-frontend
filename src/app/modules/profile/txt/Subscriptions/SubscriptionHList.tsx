@@ -11,7 +11,7 @@ interface SubscriptionHDetails {
     subscriptionHList_status: SubscriptionHStatus;
 }
 
-const tasksList: SubscriptionHDetails[] = [
+const tasksListSubscription: SubscriptionHDetails[] = [
     {
         subscriptionHList_id: 'SUB123456',
         subscriptionHList_plan: 'Buyer Premium Plan (Sale)',
@@ -61,7 +61,7 @@ const tasksList: SubscriptionHDetails[] = [
         subscriptionHList_status: 'Inactive',
     },
     {
-        subscriptionHList_id: 'SUB123456',
+        subscriptionHList_id: 'SUB129456',
         subscriptionHList_plan: 'Buyer Premium Plan (Sale)',
         subscriptionHList_description: 'Buyer',
         subscriptionHList_duration: 'Quarterly',
@@ -69,7 +69,7 @@ const tasksList: SubscriptionHDetails[] = [
         subscriptionHList_status: 'Active',
     },
     {
-        subscriptionHList_id: 'SUB123323',
+        subscriptionHList_id: 'SUB993323',
         subscriptionHList_plan: 'Buyer Premium Plan (Sale)',
         subscriptionHList_description: 'Buyer',
         subscriptionHList_duration: 'Monthly',
@@ -77,7 +77,7 @@ const tasksList: SubscriptionHDetails[] = [
         subscriptionHList_status: 'Inactive',
     },
     {
-        subscriptionHList_id: 'SUB123332',
+        subscriptionHList_id: 'SUB093332',
         subscriptionHList_plan: 'Owner Premium Plan',
         subscriptionHList_description: 'Owner',
         subscriptionHList_duration: 'Monthly',
@@ -85,7 +85,7 @@ const tasksList: SubscriptionHDetails[] = [
         subscriptionHList_status: 'Inactive',
     },
     {
-        subscriptionHList_id: 'SUB123324',
+        subscriptionHList_id: 'SUB873324',
         subscriptionHList_plan: 'Owner Premium Plan',
         subscriptionHList_description: 'Owner',
         subscriptionHList_duration: 'Quarterly',
@@ -93,7 +93,7 @@ const tasksList: SubscriptionHDetails[] = [
         subscriptionHList_status: 'Active',
     },
     {
-        subscriptionHList_id: 'SUB123362',
+        subscriptionHList_id: 'SUB583362',
         subscriptionHList_plan: 'Owner Premium Plan',
         subscriptionHList_description: 'Owner',
         subscriptionHList_duration: 'Monthly',
@@ -101,7 +101,7 @@ const tasksList: SubscriptionHDetails[] = [
         subscriptionHList_status: 'Inactive',
     },
     {
-        subscriptionHList_id: 'SUB123382',
+        subscriptionHList_id: 'SUB223382',
         subscriptionHList_plan: 'Buyer Premium Plan (Sale)',
         subscriptionHList_description: 'Buyer',
         subscriptionHList_duration: 'Monthly',
@@ -109,7 +109,6 @@ const tasksList: SubscriptionHDetails[] = [
         subscriptionHList_status: 'Inactive',
     },
 ];
-
 
 
 const getRoleStyles = (subscriptionHList_status: SubscriptionHStatus) => {
@@ -156,7 +155,7 @@ const SubscriptionHList: React.FC = () => {
                                 </thead>
                             )}
                             <tbody className="text-center text-gray-600 fw-bold">
-                                {tasksList.map((task) => (
+                                {tasksListSubscription.map((task) => (
                                     <React.Fragment key={task.subscriptionHList_id}>
                                         {(selectedSubscriptionH === null || selectedSubscriptionH === task.subscriptionHList_id) && (
                                             <tr
@@ -200,48 +199,50 @@ const SubscriptionHList: React.FC = () => {
                             </tbody>
                         </table>
                     </div>
-                    <div className="row">
-                        <div className="col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start">
-                            {/* Add any content if needed here */}
-                        </div>
-                        <div className="col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end">
-                            <div id="kt_table_users_paginate">
-                                <ul className="pagination">
-                                    <li className="page-item previous">
-                                        <a href="#" className="page-link">
-                                            <i className="previous"></i>
-                                        </a>
-                                    </li>
-                                    <li className="page-item active">
-                                        <a href="#" className="page-link">1</a>
-                                    </li>
-                                    <li className="page-item">
-                                        <a href="#" className="page-link">2</a>
-                                    </li>
-                                    <li className="page-item">
-                                        <a href="#" className="page-link">3</a>
-                                    </li>
-                                    <li className="page-item">
-                                        <a href="#" className="page-link">4</a>
-                                    </li>
-                                    <li className="page-item">
-                                        <a href="#" className="page-link">5</a>
-                                    </li>
-                                    <li className="page-item">
-                                        <a href="#" className="page-link">6</a>
-                                    </li>
-                                    <li className="page-item next">
-                                        <a href="#" className="page-link">
-                                            <i className="next"></i>
-                                        </a>
-                                    </li>
-                                </ul>
+                    {!selectedSubscriptionH && (
+                        <div className="row">
+                            <div className="col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start">
+                                {/* Add any content if needed here */}
+                            </div>
+                            <div className="col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end">
+                                <div id="kt_table_users_paginate">
+                                    <ul className="pagination">
+                                        <li className="page-item previous">
+                                            <a href="#" className="page-link">
+                                                <i className="previous"></i>
+                                            </a>
+                                        </li>
+                                        <li className="page-item active">
+                                            <a href="#" className="page-link">1</a>
+                                        </li>
+                                        <li className="page-item">
+                                            <a href="#" className="page-link">2</a>
+                                        </li>
+                                        <li className="page-item">
+                                            <a href="#" className="page-link">3</a>
+                                        </li>
+                                        <li className="page-item">
+                                            <a href="#" className="page-link">4</a>
+                                        </li>
+                                        <li className="page-item">
+                                            <a href="#" className="page-link">5</a>
+                                        </li>
+                                        <li className="page-item">
+                                            <a href="#" className="page-link">6</a>
+                                        </li>
+                                        <li className="page-item next">
+                                            <a href="#" className="page-link">
+                                                <i className="next"></i>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                    )}
                     {selectedSubscriptionH && (
                         <>
-                            {tasksList
+                            {tasksListSubscription
                                 .filter(task => task.subscriptionHList_id === selectedSubscriptionH)
                                 .map(task => (
                                     <div key={task.subscriptionHList_id}>
@@ -258,36 +259,37 @@ const SubscriptionHList: React.FC = () => {
                                                     className="page-title d-flex flex-wrap me-3 flex-column justify-content-center"
                                                 >
                                                     <h1 className="page-heading d-flex text-gray-900 fw-bold fs-2 my-0 flex-column justify-content-center">
-                                                        Task Details
+                                                    Subscription Details
                                                     </h1>
+                                                </div>
+                                                <div className="d-flex align-items my-2">
+                                                    <div className=''>
+                                                        <i className="iconend border border-gray-300 border rounded py-3 px-4 me-6 mb-3 bi bi-pencil"></i>
+                                                    </div>
+                                                    <div className=''>
+                                                        <i className="iconend border border-gray-300 border rounded py-3 px-4 me-6 mb-3 bi bi-trash3"></i>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div className="d-flex flex-wrap flex-stack mb-6 card-header flex-nowrap border-0">
                                             <div className="card-body p-0">
                                                 <div className="row mb-7">
-                                                    <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Service Id</label>
+                                                    <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Subscription Id</label>
                                                     <div className="col-lg-8">
                                                         <span className="fw-bolder fs-6 text-muted">{task.subscriptionHList_id}</span>
                                                     </div>
                                                 </div>
 
                                                 <div className="row mb-7">
-                                                    <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Service Type</label>
+                                                    <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Subscription Description</label>
                                                     <div className="col-lg-8 fv-row">
                                                         <span className="fw-bold fs-6 text-muted">{task.subscriptionHList_description}</span>
                                                     </div>
                                                 </div>
 
                                                 <div className="row mb-7">
-                                                    <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Icon</label>
-                                                    <div className="col-lg-8 fv-row">
-                                                        <span className="fw-bold fs-6 text-muted">Independent Task</span>
-                                                    </div>
-                                                </div>
-
-                                                <div className="row mb-7">
-                                                    <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Service Provider</label>
+                                                    <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Subscription Duration</label>
                                                     <div className="col-lg-8 fv-row">
                                                         <span className="fw-bold fs-6 text-muted">{task.subscriptionHList_duration}</span>
                                                     </div>

@@ -239,41 +239,49 @@ const DiscountHList: React.FC = () => {
                                                         Discount Details
                                                     </h1>
                                                 </div>
+                                                <div className="d-flex align-items my-2">
+                                                    <div className=''>
+                                                        <i className="iconend border border-gray-300 border rounded py-3 px-4 me-6 mb-3 bi bi-pencil"></i>
+                                                    </div>
+                                                    <div className=''>
+                                                        <i className="iconend border border-gray-300 border rounded py-3 px-4 me-6 mb-3 bi bi-trash3"></i>
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div className="d-flex flex-wrap flex-stack mb-6 card-header flex-nowrap border-0">
                                             <div className="card-body p-0">
                                                 <div className="row mb-7">
-                                                    <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Code Id</label>
-                                                    <div className="col-lg-8">
+                                                    <label className="col-lg-3 fs-6 fw-bolder text-gray-900">Discount Id</label>
+                                                    <div className="col-lg-9">
                                                         <span className="fw-bolder fs-6 text-muted">{task.DiscountHList_id}</span>
                                                     </div>
                                                 </div>
 
                                                 <div className="row mb-7">
-                                                    <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Code Description</label>
-                                                    <div className="col-lg-8 fv-row">
+                                                    <label className="col-lg-3 fs-6 fw-bolder text-gray-900">Discount Description</label>
+                                                    <div className="col-lg-9 fv-row">
                                                         <span className="fw-bold fs-6 text-muted">{task.DiscountHList_description}</span>
                                                     </div>
                                                 </div>
 
                                                 <div className="row mb-7">
-                                                    <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Code</label>
-                                                    <div className="col-lg-8 fv-row">
+                                                    <label className="col-lg-3 fs-6 fw-bolder text-gray-900">Discount Plan</label>
+                                                    <div className="col-lg-9 fv-row">
                                                         <span className="fw-bold fs-6 text-muted">{task.DiscountHList_plan}</span>
                                                     </div>
                                                 </div>
 
                                                 <div className="row mb-7">
-                                                    <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Discount Percentage</label>
-                                                    <div className="col-lg-8 fv-row">
+                                                    <label className="col-lg-3 fs-6 fw-bolder text-gray-900">Discount Percentage</label>
+                                                    <div className="col-lg-9 fv-row">
                                                         <span className="fw-bold fs-6 text-muted">{task.DiscountHList_duration}</span>
                                                     </div>
                                                 </div>
 
                                                 <div className="row mb-7">
-                                                    <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Max uses</label>
-                                                    <div className="col-lg-8 fv-row">
+                                                    <label className="col-lg-3 fs-6 fw-bolder text-gray-900">Max uses</label>
+                                                    <div className="col-lg-9 fv-row">
                                                         <span className="fw-bold fs-6 text-muted">{task.DiscountHList_price}</span>
                                                     </div>
                                                 </div>
