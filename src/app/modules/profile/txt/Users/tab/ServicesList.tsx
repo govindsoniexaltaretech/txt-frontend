@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 // Define the type for the status
-type Status = 'Scheduled' | 'Rescheduled' | 'Completed';
+type Status = 'Scheduled' | 'Requested' | 'Completed' | 'Rescheduled';
 
 interface Aservice {
     service_id: number;
@@ -28,7 +28,7 @@ const aservices: Aservice[] = [
         service_typel: 'AC Cleaning',
         service_provider: '',
         date_time: '07-06-2024 14:00',
-        status: 'Rescheduled',
+        status: 'Requested',
     },
     {
         service_id: 3233,
@@ -44,7 +44,7 @@ const aservices: Aservice[] = [
         service_typel: 'Bathroom Cleaning',
         service_provider: 'Gems Andrew',
         date_time: '09-06-2024 11:00',
-        status: 'Scheduled',
+        status: 'Completed',
     },
     {
         service_id: 7778,
@@ -52,7 +52,7 @@ const aservices: Aservice[] = [
         service_typel: 'AC Cleaning',
         service_provider: 'Olivia Thomas',
         date_time: '08-06-2024 09:00',
-        status: 'Completed',
+        status: 'Scheduled',
     },
     {
         service_id: 6009,
@@ -60,7 +60,7 @@ const aservices: Aservice[] = [
         service_typel: 'Plumbing',
         service_provider: 'Gems Andrew',
         date_time: '09-06-2024 11:00',
-        status: 'Scheduled',
+        status: 'Rescheduled',
     }
 ];
 
@@ -73,6 +73,8 @@ const getRoleStyles = (status: Status) => {
             return { color: '#50CD89', backgroundColor: '#E8FFF3' };
         case 'Rescheduled':
             return { color: '#7239EA', backgroundColor: '#F8F5FF' };
+        case 'Requested':
+        return { color: '#F6C000', backgroundColor: '#FFF8DD' };
         default:
             return {};
     }
