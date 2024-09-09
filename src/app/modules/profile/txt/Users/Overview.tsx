@@ -143,18 +143,18 @@ const Overview = () => {
                                             </li>
                                             <li className="nav-item">
                                                 <a
-                                                    className={`nav-link text-active-primary me-6 ${activeTab === 'documents' ? 'active' : ''}`}
-                                                    href="#documents"
-                                                    onClick={() => handleTabClick('documents')}
+                                                    className={`nav-link text-active-primary me-6 ${activeTab === '' ? 'active' : ''}`}
+                                                   
+                                                    // onClick={() => handleTabClick('documents')}
                                                 >
                                                     Documents
                                                 </a>
                                             </li>
                                             <li className="nav-item">
                                                 <a
-                                                    className={`nav-link text-active-primary me-6 ${activeTab === 'feedback' ? 'active' : ''}`}
-                                                    href="#feedback"
-                                                    onClick={() => handleTabClick('feedback')}
+                                                    className={`nav-link text-active-primary me-6 ${activeTab === '' ? 'active' : ''}`}
+                                                   
+                                                    // onClick={() => handleTabClick('feedback')}
                                                 >
                                                     Feedback
                                                 </a>
