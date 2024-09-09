@@ -320,7 +320,6 @@ const Home = () => {
                                         </div>
                                     </div>
                                 </div>
-
                             </div>
                             <div className="card">
                                 <div className="card-header border-0 pt-6">
