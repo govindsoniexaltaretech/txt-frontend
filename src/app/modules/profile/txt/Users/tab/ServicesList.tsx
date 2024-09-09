@@ -64,6 +64,7 @@ const aservices: Aservice[] = [
     }
 ];
 
+
 const getRoleStyles = (status: Status) => {
     switch (status) {
         case 'Scheduled':
@@ -123,9 +124,9 @@ const ServicesList: React.FC = () => {
                                                         <td>{aservice.service_id}</td>
                                                         <td>
                                                             <div className="d-flex align-items-center" style={{ justifyContent: "start" }}>
-                                                                <div className="symbol overflow-hidden me-3" style={{ borderRadius: "0"}}>
+                                                                <div className="symbol overflow-hidden me-3" style={{ borderRadius: "0" }}>
                                                                     <a href="#">
-                                                                        <div className="symbol-label" style={{ borderRadius: "0"}}>
+                                                                        <div className="symbol-label" style={{ borderRadius: "0" }}>
                                                                             <img src={aservice.service_property_type} alt={`Property ${aservice.service_id}`} className="w-100" />
                                                                         </div>
                                                                     </a>
@@ -236,7 +237,7 @@ const ServicesList: React.FC = () => {
                                                 <div className="row mb-7">
                                                     <label className="col-lg-3 fs-5 fw-bolder text-gray-900">Payment Status</label>
                                                     <div className="col-lg-9 fv-row">
-                                                        <a className='btn btn-light btn-light-success btn-sm p-2' style={{marginTop: '-0.6rem'}}>
+                                                        <a className='btn btn-light btn-light-success btn-sm p-2' style={{ marginTop: '-0.6rem' }}>
                                                             <span className="fw-bold fs-5">{aservice.status}</span>
                                                         </a>
                                                     </div>
@@ -244,7 +245,7 @@ const ServicesList: React.FC = () => {
 
                                             </div>
                                             <div className="d-flex align-items my-2">
-                                                <div className=''>
+                                                {/* <div className=''>
                                                     <div className="row mb-7" style={{ justifyContent: 'center' }}>
                                                         <div className="col-lg-8 fv-row">
                                                             <div className="symbol-label">
@@ -256,6 +257,71 @@ const ServicesList: React.FC = () => {
                                                         <button onClick={handleBackClickService} className="btn btn-primary" style={{ width: "auto" }}>
                                                             Back to List
                                                         </button>
+                                                    </div>
+                                                </div> */}
+
+                                                <div className=''>
+                                                    {/* <div className="row mb-7" style={{ justifyContent: 'center' }}>
+                                                        <div className="col-lg-8 fv-row">
+                                                            <div className="symbol-label">
+                                                                <img src={appointment.property_type} alt={`Property ${appointment.id}`} style={{ width: '30rem' }} />
+                                                            </div>
+                                                        </div>
+                                                    </div> */}
+
+                                                    <div className="row mb-7" style={{ justifyContent: 'center', alignItems: 'center' }}>
+                                                        <div
+                                                            className="col-lg-1"
+                                                            style={{
+                                                                cursor: 'pointer',
+                                                                fontSize: '2rem',
+                                                                border: '1px solid #fff',
+                                                                position: 'relative',
+                                                                background: '#fff',
+                                                                zIndex: 999999,
+                                                                boxShadow: '1px 1px 1px 1px #f9f9f9',
+                                                                borderRadius: '0 4px 4px 0',
+                                                                right: '-8%',
+                                                            }}
+                                                        >
+                                                            {/* Previous Button */}
+                                                            <i className="bi bi-arrow-left" style={{ cursor: 'pointer', fontSize: '2rem' }}></i>
+                                                        </div>
+                                                        <div className="col-lg-10">
+                                                            <div className="symbol-label" style={{ position: 'relative' }}>
+                                                                <img src={aservice.service_property_type} alt={`Property ${aservice.service_id}`} style={{ width: '26rem', display: 'block', margin: '0 auto' }} />
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            className="col-lg-1"
+                                                            style={{
+                                                                cursor: 'pointer',
+                                                                fontSize: '2rem',
+                                                                border: '1px solid #fff',
+                                                                position: 'relative',
+                                                                background: '#fff',
+                                                                zIndex: 999999,
+                                                                boxShadow: '1px 1px 1px 1px #f9f9f9',
+                                                                borderRadius: '0 4px 4px 0',
+                                                                left: '-8%',
+                                                            }}
+                                                        >
+                                                            {/* Next Button */}
+                                                            <i className="bi bi-arrow-right" style={{ cursor: 'pointer', fontSize: '2rem' }}></i>
+                                                        </div>
+                                                    </div>
+
+                                                    {/* Dots below the image */}
+                                                    <div className="dots" style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
+                                                        <span style={{ height: '10px', width: '10px', backgroundColor: '#fff', borderRadius: '50%', display: 'inline-block', margin: '-3rem 5px', zIndex: "999" }}></span>
+                                                        <span style={{ height: '10px', width: '10px', backgroundColor: '#bbb', borderRadius: '50%', display: 'inline-block', margin: '-3rem 5px', zIndex: "999" }}></span>
+                                                        <span style={{ height: '10px', width: '10px', backgroundColor: '#bbb', borderRadius: '50%', display: 'inline-block', margin: '-3rem 5px', zIndex: "999" }}></span>
+                                                    </div>
+
+                                                    <div className="row" style={{ justifyContent: 'end' }}>
+                                                        {/* <button onClick={handleBackClick} className="btn btn-primary" style={{ width: "auto" }}>
+                                                            Back to List
+                                                        </button> */}
                                                     </div>
                                                 </div>
                                             </div>
