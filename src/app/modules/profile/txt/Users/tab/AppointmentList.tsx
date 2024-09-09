@@ -264,44 +264,44 @@ const AppointmentList: React.FC = () => {
                                         <div className="d-flex flex-wrap flex-stack mb-6 card-header flex-nowrap border-0 pt-4">
                                             <div className="card-body p-0">
                                                 <div className="row mb-7">
-                                                    <label className="col-lg-3 fs-3 fw-bolder text-gray-900">Id</label>
-                                                    <div className="col-lg-9">
-                                                        <span className="fw-bolder fs-3 text-muted">{appointment.id}</span>
+                                                    <label className="col-lg-4 fs-2 fw-bolder text-gray-900">Id</label>
+                                                    <div className="col-lg-8">
+                                                        <span className="fw-bolder fs-2 text-muted">{appointment.id}</span>
                                                     </div>
                                                 </div>
 
                                                 <div className="row mb-7">
-                                                    <label className="col-lg-3 fs-3 fw-bolder text-gray-900">Address</label>
-                                                    <div className="col-lg-9 fv-row">
-                                                        <span className="fw-bold fs-3 text-muted">{appointment.address}</span>
+                                                    <label className="col-lg-4 fs-2 fw-bolder text-gray-900">Address</label>
+                                                    <div className="col-lg-8 fv-row">
+                                                        <span className="fw-bold fs-2 text-muted">{appointment.address}</span>
                                                     </div>
                                                 </div>
 
                                                 <div className="row mb-7">
-                                                    <label className="col-lg-3 fs-3 fw-bolder text-gray-900">Property Type</label>
-                                                    <div className="col-lg-9 fv-row">
-                                                        <span className="fw-bold fs-3 text-muted">Independent House</span>
+                                                    <label className="col-lg-4 fs-2 fw-bolder text-gray-900">Property Type</label>
+                                                    <div className="col-lg-8 fv-row">
+                                                        <span className="fw-bold fs-2 text-muted">Independent House</span>
                                                     </div>
                                                 </div>
 
                                                 <div className="row mb-7">
-                                                    <label className="col-lg-3 fs-3 fw-bolder text-gray-900">Age of Property</label>
-                                                    <div className="col-lg-9 fv-row">
-                                                        <span className="fw-bold fs-3 text-muted">5+ Years</span>
+                                                    <label className="col-lg-4 fs-2 fw-bolder text-gray-900">Age of Property</label>
+                                                    <div className="col-lg-8 fv-row">
+                                                        <span className="fw-bold fs-2 text-muted">5+ Years</span>
                                                     </div>
                                                 </div>
 
                                                 <div className="row mb-7">
-                                                    <label className="col-lg-3 fs-3 fw-bolder text-gray-900">Preferred Tenant</label>
-                                                    <div className="col-lg-9 fv-row">
-                                                        <span className="fw-bold fs-3 text-muted">Family</span>
+                                                    <label className="col-lg-4 fs-2 fw-bolder text-gray-900">Preferred Tenant</label>
+                                                    <div className="col-lg-8 fv-row">
+                                                        <span className="fw-bold fs-2 text-muted">Family</span>
                                                     </div>
                                                 </div>
 
                                                 <div className="row mb-7">
-                                                    <label className="col-lg-3 fs-3 fw-bolder text-gray-900">Posted on</label>
-                                                    <div className="col-lg-9 fv-row">
-                                                        <span className="fw-bold fs-3 text-muted">{appointment.date_time}</span>
+                                                    <label className="col-lg-4 fs-2 fw-bolder text-gray-900">Posted on</label>
+                                                    <div className="col-lg-8 fv-row">
+                                                        <span className="fw-bold fs-2 text-muted">{appointment.date_time}</span>
                                                     </div>
                                                 </div>
 

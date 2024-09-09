@@ -193,52 +193,52 @@ const ServicesList: React.FC = () => {
                                         <div className="d-flex flex-wrap flex-stack mb-6 card-header flex-nowrap border-0">
                                             <div className="card-body p-0">
                                                 <div className="row mb-7">
-                                                    <label className="col-lg-3 fs-5 fw-bolder text-gray-900">Service ID</label>
-                                                    <div className="col-lg-9">
-                                                        <span className="fw-bolder fs-5 text-muted">{aservice.service_id}</span>
+                                                    <label className="col-lg-4 fs-2 fw-bolder text-gray-900">Service ID</label>
+                                                    <div className="col-lg-8">
+                                                        <span className="fw-bolder fs-2 text-muted">{aservice.service_id}</span>
                                                     </div>
                                                 </div>
 
                                                 <div className="row mb-7">
-                                                    <label className="col-lg-3 fs-5 fw-bolder text-gray-900">Address</label>
-                                                    <div className="col-lg-9 fv-row">
-                                                        <span className="fw-bold fs-5 text-muted">756 Nguyen Hue Boulevard, Ben Nghe Ward, District 1, Ho Chi Minh City, Vietnam</span>
+                                                    <label className="col-lg-4 fs-2 fw-bolder text-gray-900">Address</label>
+                                                    <div className="col-lg-8 fv-row">
+                                                        <span className="fw-bold fs-2 text-muted">756 Nguyen Hue Boulevard, Ben Nghe Ward, District 1, Ho Chi Minh City, Vietnam</span>
                                                     </div>
                                                 </div>
 
                                                 <div className="row mb-7">
-                                                    <label className="col-lg-3 fs-5 fw-bolder text-gray-900">Date & Time</label>
-                                                    <div className="col-lg-9 fv-row">
-                                                        <span className="fw-bold fs-5 text-muted">{aservice.date_time}</span>
+                                                    <label className="col-lg-4 fs-2 fw-bolder text-gray-900">Date & Time</label>
+                                                    <div className="col-lg-8 fv-row">
+                                                        <span className="fw-bold fs-2 text-muted">{aservice.date_time}</span>
                                                     </div>
                                                 </div>
 
                                                 <div className="row mb-7">
-                                                    <label className="col-lg-3 fs-5 fw-bolder text-gray-900">Type of Service</label>
-                                                    <div className="col-lg-9 fv-row">
-                                                        <span className="fw-bold fs-5 text-muted">{aservice.service_typel}</span>
+                                                    <label className="col-lg-4 fs-2 fw-bolder text-gray-900">Type of Service</label>
+                                                    <div className="col-lg-8 fv-row">
+                                                        <span className="fw-bold fs-2 text-muted">{aservice.service_typel}</span>
                                                     </div>
                                                 </div>
 
                                                 <div className="row mb-7">
-                                                    <label className="col-lg-3 fs-5 fw-bolder text-gray-900">Price</label>
-                                                    <div className="col-lg-9 fv-row">
-                                                        <span className="fw-bold fs-5 text-muted">đ 35.99</span>
+                                                    <label className="col-lg-4 fs-2 fw-bolder text-gray-900">Price</label>
+                                                    <div className="col-lg-8 fv-row">
+                                                        <span className="fw-bold fs-2 text-muted">đ 35.99</span>
                                                     </div>
                                                 </div>
 
                                                 <div className="row mb-7">
-                                                    <label className="col-lg-3 fs-5 fw-bolder text-gray-900">Payment Method</label>
-                                                    <div className="col-lg-9 fv-row">
-                                                        <span className="fw-bold fs-5 text-muted">Credit Card</span>
+                                                    <label className="col-lg-4 fs-2 fw-bolder text-gray-900">Payment Method</label>
+                                                    <div className="col-lg-8 fv-row">
+                                                        <span className="fw-bold fs-2 text-muted">Credit Card</span>
                                                     </div>
                                                 </div>
 
                                                 <div className="row mb-7">
-                                                    <label className="col-lg-3 fs-5 fw-bolder text-gray-900">Payment Status</label>
-                                                    <div className="col-lg-9 fv-row">
+                                                    <label className="col-lg-4 fs-2 fw-bolder text-gray-900">Payment Status</label>
+                                                    <div className="col-lg-8 fv-row">
                                                         <a className='btn btn-light btn-light-success btn-sm p-2' style={{ marginTop: '-0.6rem' }}>
-                                                            <span className="fw-bold fs-5">{aservice.status}</span>
+                                                            <span className="fw-bold fs-2">{aservice.status}</span>
                                                         </a>
                                                     </div>
                                                 </div>
