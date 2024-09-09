@@ -18,7 +18,12 @@ const PrivateRoutes = () => {
   const Properties = lazy(() => import('../modules/profile/txt/Properties/Home'))
   const Subscriptions = lazy(() => import('../modules/profile/txt/Subscriptions/Home'))
   const Discount = lazy(() => import('../modules/profile/txt/Discount/Home'))
-
+  const Feedback = lazy(() => import('../modules/profile/txt/Feedback/Home'))
+  const ServiceProviders = lazy(() => import('../modules/profile/txt/Service Providers/Home'))
+  const CMS = lazy(() => import('../modules/profile/txt/CMS/Home'))
+  const MasterData = lazy(() => import('../modules/profile/txt/Master Data/Home'))
+  const SystemUsers = lazy(() => import('../modules/profile/txt/System Users/Home'))
+  
   // End User 
   const ProfilePage = lazy(() => import('../modules/profile/ProfilePage'))
   const WizardsPage = lazy(() => import('../modules/wizards/WizardsPage'))
@@ -94,6 +99,47 @@ const PrivateRoutes = () => {
             </SuspensedView>
           }
         />
+        <Route
+          path='feedback/*'
+          element={
+            <SuspensedView>
+              <Feedback />
+            </SuspensedView>
+          }
+        />
+        <Route
+          path='service-providers/*'
+          element={
+            <SuspensedView>
+              <ServiceProviders />
+            </SuspensedView>
+          }
+        />
+        <Route
+          path='cms/*'
+          element={
+            <SuspensedView>
+              <CMS />
+            </SuspensedView>
+          }
+        />
+        <Route
+          path='master-data/*'
+          element={
+            <SuspensedView>
+              <MasterData />
+            </SuspensedView>
+          }
+        />
+        <Route
+          path='system-users/*'
+          element={
+            <SuspensedView>
+              <SystemUsers />
+            </SuspensedView>
+          }
+        />
+        
         {/* End TXT Page  */}
         <Route
           path='crafted/pages/profile/*'
