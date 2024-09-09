@@ -232,34 +232,6 @@ const Overview = () => {
                                 </div>
                             </div>
                         )}
-                        {activeTab === 'documents' && (
-                            <div id="documents">
-                                {/* documents Details */}
-                                <div id="kt_app_content" className="app-content flex-column-fluid pt-0 mb-4">
-                                    <div id="kt_app_content_container" className="app-container container-xxl">
-                                        <div className="card">
-                                            <div className="card-body">
-                                                <h1>Documents Details</h1>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        )}
-                        {activeTab === 'feedback' && (
-                            <div id="feedback">
-                                {/* feedback Details */}
-                                <div id="kt_app_content" className="app-content flex-column-fluid pt-0 mb-4">
-                                    <div id="kt_app_content_container" className="app-container container-xxl">
-                                        <div className="card">
-                                            <div className="card-body">
-                                                <h1>FeedBack Details</h1>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        )}
                     </div>
 
                 </div>

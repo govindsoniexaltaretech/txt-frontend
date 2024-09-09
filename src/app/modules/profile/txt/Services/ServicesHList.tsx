@@ -38,7 +38,7 @@ const tasksList: TaskDetails[] = [
     {
         task_id: 2482,
         task_icon: '/media/logos/service/4.png',
-        task_location: '789 Spruce Lane',
+        task_location: 'Curtain cleaning',
         task_category: 'Taylor Smith',
         task_due_date: '24-07-2024 14:00',
         task_status: 'Completed',
