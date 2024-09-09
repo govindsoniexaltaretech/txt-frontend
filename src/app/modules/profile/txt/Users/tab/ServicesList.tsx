@@ -287,7 +287,7 @@ const ServicesList: React.FC = () => {
                                                             {/* Previous Button */}
                                                             <i className="bi bi-arrow-left" style={{ cursor: 'pointer', fontSize: '2rem' }}></i>
                                                         </div>
-                                                        <div className="col-lg-10">
+                                                        <div className="col-lg-10" style={{ overflow: 'hidden'}}>
                                                             <div className="symbol-label" style={{ position: 'relative' }}>
                                                                 <img src={aservice.service_property_type} alt={`Property ${aservice.service_id}`} style={{ width: '26rem', display: 'block', margin: '0 auto' }} />
                                                             </div>
