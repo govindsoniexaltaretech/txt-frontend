@@ -14,7 +14,7 @@ const Home: React.FC = () => {
                                 This CMS page is currently under construction. Please check back later.
                             </div>
                             <div className="mb-3">
-                                <img
+                                {/* <img
                                     src="/media/auth/giphy.gif"
                                     className="mw-100 mh-300px theme-light-show"
                                     alt="404 Error Light"
@@ -23,7 +23,7 @@ const Home: React.FC = () => {
                                     src="/media/auth/giphy.gif"
                                     className="mw-100 mh-300px theme-dark-show"
                                     alt="404 Error Dark"
-                                />
+                                /> */}
                             </div>
                             <div className="mb-0">
                                 <Button variant="contained" color="primary" href="/users">
