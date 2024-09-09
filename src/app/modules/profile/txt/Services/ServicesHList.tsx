@@ -147,7 +147,7 @@ const ServicesHList: React.FC = () => {
                                     <React.Fragment key={task.task_id}>
                                         {(selectedTask === null || selectedTask === task.task_id) && (
                                             <tr
-                                                onClick={() => handleRowClick(task.task_id)}
+                                                // onClick={() => handleRowClick(task.task_id)}
                                                 style={{ cursor: 'pointer' }}
                                             >
                                                 {!selectedTask && (

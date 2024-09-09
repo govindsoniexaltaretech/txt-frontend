@@ -159,7 +159,7 @@ const SubscriptionHList: React.FC = () => {
                                     <React.Fragment key={task.subscriptionHList_id}>
                                         {(selectedSubscriptionH === null || selectedSubscriptionH === task.subscriptionHList_id) && (
                                             <tr
-                                                onClick={() => handleRowClick(task.subscriptionHList_id)}
+                                                // onClick={() => handleRowClick(task.subscriptionHList_id)}
                                                 style={{ cursor: 'pointer' }}
                                             >
                                                 {!selectedSubscriptionH && (

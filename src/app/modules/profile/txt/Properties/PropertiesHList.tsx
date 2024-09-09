@@ -149,7 +149,7 @@ const PropertiesHList: React.FC = () => {
                                     <React.Fragment key={Properties.Properties_id}>
                                         {(selectedProperties === null || selectedProperties === Properties.Properties_id) && (
                                             <tr
-                                                onClick={() => handleRowClick(Properties.Properties_id)}
+                                                // onClick={() => handleRowClick(Properties.Properties_id)}
                                                 style={{ cursor: 'pointer' }}
                                             >
                                                 {!selectedProperties && (

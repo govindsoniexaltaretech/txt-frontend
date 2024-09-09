@@ -136,7 +136,7 @@ const DiscountHList: React.FC = () => {
                                     <React.Fragment key={task.DiscountHList_id}>
                                         {(selectedDiscountH === null || selectedDiscountH === task.DiscountHList_id) && (
                                             <tr
-                                                onClick={() => handleRowClick(task.DiscountHList_id)}
+                                                // onClick={() => handleRowClick(task.DiscountHList_id)}
                                                 style={{ cursor: 'pointer' }}
                                             >
                                                 {!selectedDiscountH && (

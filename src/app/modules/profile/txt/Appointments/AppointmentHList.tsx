@@ -147,7 +147,7 @@ const ServicesHList: React.FC = () => {
                                     <React.Fragment key={Appointment.Appointment_id}>
                                         {(selectedAppointment === null || selectedAppointment === Appointment.Appointment_id) && (
                                             <tr
-                                                onClick={() => handleRowClick(Appointment.Appointment_id)}
+                                                // onClick={() => handleRowClick(Appointment.Appointment_id)}
                                                 style={{ cursor: 'pointer' }}
                                             >
                                                 {!selectedAppointment && (
@@ -233,7 +233,7 @@ const ServicesHList: React.FC = () => {
                             {AppointmentsList
                                 .filter(Appointment => Appointment.Appointment_id === selectedAppointment)
                                 .map(Appointment => (
-                                    <div key={Appointment.Appointment_id}>
+                                    <div>
                                         <div id="kt_app_toolbar" className="app-toolbar py-3 py-lg-6">
                                             <div
                                                 id="kt_app_toolbar_container"
