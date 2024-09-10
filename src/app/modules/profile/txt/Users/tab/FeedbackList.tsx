@@ -311,7 +311,6 @@ const FeedbackListList: React.FC = () => {
                               </div>
                             </div>
 
-
                           </div>
                         </div>
                       </div>
@@ -342,7 +341,7 @@ const FeedbackListList: React.FC = () => {
                             <label className="col-lg-4 fs-2 fw-bolder text-gray-900">Date:
                             </label>
                             <div className="col-lg-8 fv-row">
-                              <span className="fw-bold fs-2 text-muted">2024-09-05</span>
+                              <span className="fw-bold fs-2 text-muted">09-07-2024 11:00</span>
                             </div>
                           </div>
 
