@@ -304,6 +304,14 @@ const FeedbackListList: React.FC = () => {
                               </div>
                             </div>
 
+                            <div className="row mb-7">
+                              <label className="col-lg-4 fs-2 fw-bolder text-gray-900">Status</label>
+                              <div className="col-lg-8 fv-row">
+                                <span className="fw-bold fs-2 text-muted">{FeedbackList.status}</span>
+                              </div>
+                            </div>
+
+
                           </div>
                         </div>
                       </div>
