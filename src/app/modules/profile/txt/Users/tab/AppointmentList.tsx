@@ -307,6 +307,19 @@ const AppointmentList: React.FC = () => {
                                                             </h1>
                                                         </div>
                                                         <div className="d-flex align-items my-2">
+
+                                                            <button
+                                                                onClick={handleBackClick}
+                                                                style={{
+                                                                    border: 'none',
+                                                                    background: 'transparent'
+                                                                }}
+                                                            >
+                                                                <div className=''>
+                                                                    <i className="iconend border border-gray-300 border rounded py-3 px-4 me-6 mb-3 bi bi-arrow-left"></i>
+                                                                </div>
+                                                            </button>
+
                                                             <div className=''>
                                                                 <i className="iconend border border-gray-300 border rounded py-3 px-4 me-6 mb-3 bi bi-pencil"></i>
                                                             </div>

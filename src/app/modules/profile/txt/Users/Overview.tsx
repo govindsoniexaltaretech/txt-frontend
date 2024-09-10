@@ -4,6 +4,7 @@ import OverviewDetailsServices from './tab/OverviewDetailsServices';
 import AppointmentList from './tab/AppointmentList';
 import ServicesList from './tab/ServicesList';
 import SubscriptionDetails from './tab/SubscriptionDetails';
+import FeedbackList from './tab/FeedbackList';
 
 const Overview = () => {
     // State to manage the active tab
@@ -28,8 +29,11 @@ const Overview = () => {
             case 'subscription':
                 setBreadcrumbText('Subscription');
                 break;
+            case 'feedback':
+                setBreadcrumbText('Feedback');
+                break;
             default:
-                setBreadcrumbText('Overview');
+                setBreadcrumbText('Feedback');
         }
     };
 
@@ -168,18 +172,18 @@ const Overview = () => {
                                             </li>
                                             <li className="nav-item">
                                                 <a
-                                                    className={`nav-link text-active-primary me-6 ${activeTab === '' ? 'active' : ''}`}
-
-                                                // onClick={() => handleTabClick('documents')}
+                                                    className={`nav-link text-active-primary me-6 ${activeTab === 'documents' ? 'active' : ''}`}
+                                                    href='#documents'
+                                                    onClick={() => handleTabClick('documents')}
                                                 >
                                                     Documents
                                                 </a>
                                             </li>
                                             <li className="nav-item">
                                                 <a
-                                                    className={`nav-link text-active-primary me-6 ${activeTab === '' ? 'active' : ''}`}
-
-                                                // onClick={() => handleTabClick('feedback')}
+                                                    className={`nav-link text-active-primary me-6 ${activeTab === 'feedback' ? 'active' : ''}`}
+                                                    href='#feedback'
+                                                    onClick={() => handleTabClick('feedback')}
                                                 >
                                                     Feedback
                                                 </a>
@@ -246,6 +250,30 @@ const Overview = () => {
                                                 <SubscriptionDetails />
                                             </div>
                                         </div>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+                        {activeTab === 'documents' && (
+                            <div id="documents">
+                                {/* documents Details */}
+                                <div id="kt_app_content" className="app-content flex-column-fluid pt-0 mb-4">
+                                    <div id="kt_app_content_container" className="app-container container-xxl">
+                                        <div className="card">
+                                            <div className="card-body">
+                                                <h1>Documents Page</h1>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        )}
+                        {activeTab === 'feedback' && (
+                            <div id="feedback">
+                                {/* feedback Details */}
+                                <div id="kt_app_content" className="app-content flex-column-fluid pt-0 mb-4">
+                                    <div id="kt_app_content_container" className="app-container container-xxl">
+                                        <FeedbackList />
                                     </div>
                                 </div>
                             </div>
