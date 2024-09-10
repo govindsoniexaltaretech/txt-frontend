@@ -8,16 +8,40 @@ import SubscriptionDetails from './tab/SubscriptionDetails';
 const Overview = () => {
     // State to manage the active tab
     const [activeTab, setActiveTab] = useState('overview');
+    const [breadcrumbText, setBreadcrumbText] = useState('Overview');
 
     // Function to handle tab clicks
     const handleTabClick = (tab: string) => {
         setActiveTab(tab);
+        
+        // Update breadcrumb text based on the clicked tab
+        switch (tab) {
+            case 'overview':
+                setBreadcrumbText('Overview');
+                break;
+            case 'appointments':
+                setBreadcrumbText('Appointments');
+                break;
+            case 'services':
+                setBreadcrumbText('Services');
+                break;
+            case 'subscription':
+                setBreadcrumbText('Subscription');
+                break;
+            default:
+                setBreadcrumbText('Overview');
+        }
     };
+
+    // Function to handle tab clicks
+    // const handleTabClick = (tab: string) => {
+    //     setActiveTab(tab);
+    // };
     return (
         <>
             <div className='app-main flex-column flex-row-fluid' id="kt_app_main">
                 <div className='d-flex flex-column flex-column-fluid'>
-                    <div id="kt_app_toolbar" className="app-toolbar py-3 py-lg-6">
+                    <div id="kt_app_toolbar" className="app-toolbar py-3 py-lg-6 sticky-top" style={{ position: 'sticky', top: '0', zIndex: 10}}>
                         <div id="kt_app_toolbar_container" className="app-container d-flex flex-stack container-xxl">
                             <div
                                 id="kt_page_title"
@@ -27,13 +51,14 @@ const Overview = () => {
                                 className="page-title d-flex flex-wrap me-3 flex-column justify-content-center"
                             >
                                 <h1 className="page-heading d-flex text-gray-900 fw-bold fs-3 my-0 flex-column justify-content-center">
-                                    Users
+                                    {breadcrumbText}
                                 </h1>
-                                <span className="text-gray-500 pt-1 fw-semibold fs-6">Users - Overview</span>
+                                <span className="text-gray-500 pt-1 fw-semibold fs-6">Users - {breadcrumbText}</span>
+                                {/* <span className="text-gray-500 pt-1 fw-semibold fs-6">Users - Overview</span> */}
                             </div>
                         </div>
                     </div>
-                    <div id="kt_app_content" className="app-content flex-column-fluid">
+                    <div id="kt_app_content" className="app-content flex-column-fluid sticky-top" style={{ position: 'sticky', top: '0', zIndex: 10}}>
                         <div id="kt_app_content_container" className="app-container container-xxl">
                             <div className="card mb-5 mb-xl-10">
                                 <div className="card-body pt-9">
@@ -195,11 +220,7 @@ const Overview = () => {
                                 {/* Appointments Details */}
                                 <div id="kt_app_content" className="app-content flex-column-fluid pt-0 mb-4">
                                     <div id="kt_app_content_container" className="app-container container-xxl">
-                                        <div className="card">
-                                            <div className="card-body">
-                                                <AppointmentList />
-                                            </div>
-                                        </div>
+                                        <AppointmentList />
                                     </div>
                                 </div>
                             </div>
@@ -209,11 +230,7 @@ const Overview = () => {
                                 {/* Services Details */}
                                 <div id="kt_app_content" className="app-content flex-column-fluid pt-0 mb-4">
                                     <div id="kt_app_content_container" className="app-container container-xxl">
-                                        <div className="card">
-                                            <div className="card-body">
-                                                <ServicesList />
-                                            </div>
-                                        </div>
+                                        <ServicesList />
                                     </div>
                                 </div>
                             </div>

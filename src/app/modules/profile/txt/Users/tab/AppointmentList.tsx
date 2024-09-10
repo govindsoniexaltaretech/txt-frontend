@@ -165,214 +165,276 @@ const AppointmentList: React.FC = () => {
     };
 
     return (
-        <div className='app-main flex-column flex-row-fluid' id="kt_app_main">
-            <div className='d-flex flex-column flex-column-fluid'>
-                <div className="card-body py-4">
-                    <div className="table-responsive">
-                        <table id="kt_table_users" className="table align-middle table-row-dashed fs-5 gy-5">
-                            {!selectedAppointment && (
-                                <thead>
-                                    <tr className="text-start text-muted fw-bolder fs-5 gs-0">
-                                        <>
-                                            <th className="min-w-125px">Id</th>
-                                            <th className="min-w-125px">Property Type</th>
-                                            <th className="min-w-125px">Address</th>
-                                            <th className="min-w-125px">Appointment Type</th>
-                                            <th className="min-w-125px">Date & Time</th>
-                                            <th className="text-center min-w-100px">Status</th>
-                                        </>
-                                    </tr>
-                                </thead>
-                            )}
-                            <tbody className="text-gray-600 fs-4 fw-bold">
-                                {appointments.map((appointment) => (
-                                    <React.Fragment key={appointment.id}>
-                                        {(selectedAppointment === null || selectedAppointment === appointment.id) && (
-                                            <tr
-                                                onClick={() => handleRowClick(appointment.id)}
-                                                style={{ cursor: 'pointer' }}
-                                            >
-                                                {!selectedAppointment && (
-                                                    <>
-                                                        <td>{appointment.id}</td>
-                                                        <td>
-                                                            <div className="d-flex align-items-center" style={{ justifyContent: "center" }}>
-                                                                <div className="symbol overflow-hidden me-3" style={{ borderRadius: "0" }}>
-                                                                    <a href="#">
-                                                                        <div className="symbol-label" style={{ borderRadius: "0" }}>
-                                                                            <img src={appointment.property_type} alt={`Property ${appointment.id}`} className="w-100" />
-                                                                        </div>
-                                                                    </a>
+        <>
+            {!selectedAppointment && (
+                <div className="card">
+                    <div className="card-body">
+                        <div className='app-main flex-column flex-row-fluid' id="kt_app_main">
+                            <div className='d-flex flex-column flex-column-fluid'>
+                                <div className="card-body py-4">
+                                    <div className="table-responsive">
+                                        <table id="kt_table_users" className="table align-middle table-row-dashed fs-5 gy-5">
+                                            {!selectedAppointment && (
+                                                <thead>
+                                                    <tr className="text-start text-muted fw-bolder fs-5 gs-0">
+                                                        <>
+                                                            <th className="min-w-125px">Id</th>
+                                                            <th className="min-w-125px">Property Type</th>
+                                                            <th className="min-w-125px">Address</th>
+                                                            <th className="min-w-125px">Appointment Type</th>
+                                                            <th className="min-w-125px">Date & Time</th>
+                                                            <th className="text-center min-w-100px">Status</th>
+                                                        </>
+                                                    </tr>
+                                                </thead>
+                                            )}
+                                            <tbody className="text-gray-600 fs-4 fw-bold">
+                                                {appointments.map((appointment) => (
+                                                    <React.Fragment key={appointment.id}>
+                                                        {(selectedAppointment === null || selectedAppointment === appointment.id) && (
+                                                            <tr
+                                                                onClick={() => handleRowClick(appointment.id)}
+                                                                style={{ cursor: 'pointer' }}
+                                                            >
+                                                                {!selectedAppointment && (
+                                                                    <>
+                                                                        <td>{appointment.id}</td>
+                                                                        <td>
+                                                                            <div className="d-flex align-items-center" style={{ justifyContent: "center" }}>
+                                                                                <div className="symbol overflow-hidden me-3" style={{ borderRadius: "0" }}>
+                                                                                    <a href="#">
+                                                                                        <div className="symbol-label" style={{ borderRadius: "0" }}>
+                                                                                            <img src={appointment.property_type} alt={`Property ${appointment.id}`} className="w-100" />
+                                                                                        </div>
+                                                                                    </a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </td>
+                                                                        <td>{appointment.address}</td>
+                                                                        <td>{appointment.appointment_type}</td>
+                                                                        <td>{appointment.date_time}</td>
+                                                                        <td className="text-center min-w-100px">
+                                                                            <div
+                                                                                className="badge"
+                                                                                style={{
+                                                                                    ...getRoleStyles(appointment.status),
+                                                                                    padding: '1rem'
+                                                                                }}
+                                                                            >
+                                                                                {appointment.status}
+                                                                            </div>
+                                                                        </td>
+                                                                    </>
+                                                                )}
+                                                            </tr>
+                                                        )}
+                                                    </React.Fragment>
+                                                ))}
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                    {!selectedAppointment && (
+                                        <div className="row">
+                                            <div className="col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start">
+                                                {/* Add any content if needed here */}
+                                            </div>
+                                            <div className="col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end">
+                                                <div id="kt_table_users_paginate">
+                                                    <ul className="pagination">
+                                                        <li className="page-item previous">
+                                                            <a href="#" className="page-link">
+                                                                <i className="previous"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li className="page-item active">
+                                                            <a href="#" className="page-link">1</a>
+                                                        </li>
+                                                        <li className="page-item">
+                                                            <a href="#" className="page-link">2</a>
+                                                        </li>
+                                                        <li className="page-item">
+                                                            <a href="#" className="page-link">3</a>
+                                                        </li>
+                                                        <li className="page-item">
+                                                            <a href="#" className="page-link">4</a>
+                                                        </li>
+                                                        <li className="page-item">
+                                                            <a href="#" className="page-link">5</a>
+                                                        </li>
+                                                        <li className="page-item">
+                                                            <a href="#" className="page-link">6</a>
+                                                        </li>
+                                                        <li className="page-item next">
+                                                            <a href="#" className="page-link">
+                                                                <i className="next"></i>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    )}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            )}
+            {selectedAppointment && (
+                <>
+                    {appointments
+                        .filter(appointment => appointment.id === selectedAppointment)
+                        .map(appointment => (
+                            <>
+                                <div id="kt_app_content" className="app-content flex-column-fluid pt-0 mb-4">
+                                    <div className='card'>
+                                        <div className="card-body py-4">
+                                            <div key={appointment.id}>
+                                                <div id="kt_app_toolbar" className="app-toolbar py-3 py-lg-6 pb-4">
+                                                    <div
+                                                        id="kt_app_toolbar_container"
+                                                        className="app-container d-flex flex-stack container-xxl"
+                                                    >
+                                                        <div
+                                                            id="kt_page_title"
+                                                            data-kt-swapper="true"
+                                                            data-kt-swapper-mode="prepend"
+                                                            data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}"
+                                                            className="page-title d-flex flex-wrap me-3 flex-column justify-content-center"
+                                                        >
+                                                            <h1 className="page-heading d-flex text-gray-900 fw-bold fs-1 my-0 flex-column justify-content-center">
+                                                                Property details
+                                                            </h1>
+                                                        </div>
+                                                        <div className="d-flex align-items my-2">
+                                                            <div className=''>
+                                                                <i className="iconend border border-gray-300 border rounded py-3 px-4 me-6 mb-3 bi bi-pencil"></i>
+                                                            </div>
+                                                            <div className=''>
+                                                                <i className="iconend border border-gray-300 border rounded py-3 px-4 me-6 mb-3 bi bi-trash3"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div className="d-flex flex-wrap flex-stack mb-6 card-header flex-nowrap border-0 pt-4">
+                                                    <div className="card-body p-0">
+                                                        <div className="row mb-7">
+                                                            <label className="col-lg-4 fs-2 fw-bolder text-gray-900">Id</label>
+                                                            <div className="col-lg-8">
+                                                                <span className="fw-bolder fs-2 text-muted">{appointment.id}</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="row mb-7">
+                                                            <label className="col-lg-4 fs-2 fw-bolder text-gray-900">Address</label>
+                                                            <div className="col-lg-8 fv-row">
+                                                                <span className="fw-bold fs-2 text-muted">{appointment.address}</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="row mb-7">
+                                                            <label className="col-lg-4 fs-2 fw-bolder text-gray-900">Property Type</label>
+                                                            <div className="col-lg-8 fv-row">
+                                                                <span className="fw-bold fs-2 text-muted">Independent House</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="row mb-7">
+                                                            <label className="col-lg-4 fs-2 fw-bolder text-gray-900">Age of Property</label>
+                                                            <div className="col-lg-8 fv-row">
+                                                                <span className="fw-bold fs-2 text-muted">5+ Years</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="row mb-7">
+                                                            <label className="col-lg-4 fs-2 fw-bolder text-gray-900">Preferred Tenant</label>
+                                                            <div className="col-lg-8 fv-row">
+                                                                <span className="fw-bold fs-2 text-muted">Family</span>
+                                                            </div>
+                                                        </div>
+
+                                                        <div className="row mb-7">
+                                                            <label className="col-lg-4 fs-2 fw-bolder text-gray-900">Posted on</label>
+                                                            <div className="col-lg-8 fv-row">
+                                                                <span className="fw-bold fs-2 text-muted">{appointment.date_time}</span>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                    <div className="d-flex align-items my-2">
+                                                        <div className=''>
+                                                            {/* <div className="row mb-7" style={{ justifyContent: 'center' }}>
+                                                            <div className="col-lg-8 fv-row">
+                                                                <div className="symbol-label">
+                                                                    <img src={appointment.property_type} alt={`Property ${appointment.id}`} style={{ width: '30rem' }} />
                                                                 </div>
                                                             </div>
-                                                        </td>
-                                                        <td>{appointment.address}</td>
-                                                        <td>{appointment.appointment_type}</td>
-                                                        <td>{appointment.date_time}</td>
-                                                        <td className="text-center min-w-100px">
-                                                            <div
-                                                                className="badge"
-                                                                style={{
-                                                                    ...getRoleStyles(appointment.status),
-                                                                    padding: '1rem'
-                                                                }}
-                                                            >
-                                                                {appointment.status}
+                                                        </div> */}
+
+                                                            <div className="row mb-7" style={{ justifyContent: 'center', alignItems: 'center' }}>
+                                                                <div
+                                                                    className="col-lg-1"
+                                                                    style={{
+                                                                        cursor: 'pointer',
+                                                                        fontSize: '2rem',
+                                                                        border: '1px solid #fff',
+                                                                        position: 'relative',
+                                                                        background: '#fff',
+                                                                        zIndex: 999999,
+                                                                        boxShadow: '1px 1px 1px 1px #f9f9f9',
+                                                                        borderRadius: '0 4px 4px 0',
+                                                                        right: '-8%',
+                                                                        paddingLeft: '0rem'
+                                                                    }}
+                                                                >
+                                                                    {/* Previous Button */}
+                                                                    <i className="bi bi-arrow-left" style={{ cursor: 'pointer', fontSize: '2rem' }}></i>
+                                                                </div>
+                                                                <div className="col-lg-10" style={{ overflow: 'hidden' }}>
+                                                                    <div className="symbol-label" style={{ position: 'relative' }}>
+                                                                        <img src={appointment.property_type} alt={`Property ${appointment.id}`} style={{ width: '26rem', display: 'block', margin: '0 auto' }} />
+                                                                    </div>
+                                                                </div>
+                                                                <div
+                                                                    className="col-lg-1"
+                                                                    style={{
+                                                                        cursor: 'pointer',
+                                                                        fontSize: '2rem',
+                                                                        border: '1px solid #fff',
+                                                                        position: 'relative',
+                                                                        background: '#fff',
+                                                                        zIndex: 999999,
+                                                                        boxShadow: '1px 1px 1px 1px #f9f9f9',
+                                                                        borderRadius: '0 4px 4px 0',
+                                                                        left: '-8%',
+                                                                    }}
+                                                                >
+                                                                    {/* Next Button */}
+                                                                    <i className="bi bi-arrow-right" style={{ cursor: 'pointer', fontSize: '2rem' }}></i>
+                                                                </div>
                                                             </div>
-                                                        </td>
-                                                    </>
-                                                )}
-                                            </tr>
-                                        )}
-                                    </React.Fragment>
-                                ))}
-                            </tbody>
-                        </table>
-                    </div>
-                    {selectedAppointment && (
-                        <>
-                            {appointments
-                                .filter(appointment => appointment.id === selectedAppointment)
-                                .map(appointment => (
-                                    <div key={appointment.id}>
-                                        <div id="kt_app_toolbar" className="app-toolbar py-3 py-lg-6 pb-4">
-                                            <div
-                                                id="kt_app_toolbar_container"
-                                                className="app-container d-flex flex-stack container-xxl"
-                                            >
-                                                <div
-                                                    id="kt_page_title"
-                                                    data-kt-swapper="true"
-                                                    data-kt-swapper-mode="prepend"
-                                                    data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}"
-                                                    className="page-title d-flex flex-wrap me-3 flex-column justify-content-center"
-                                                >
-                                                    <h1 className="page-heading d-flex text-gray-900 fw-bold fs-1 my-0 flex-column justify-content-center">
-                                                        Property details
-                                                    </h1>
-                                                </div>
-                                                <div className="d-flex align-items my-2">
-                                                    <div className=''>
-                                                        <i className="iconend border border-gray-300 border rounded py-3 px-4 me-6 mb-3 bi bi-pencil"></i>
-                                                    </div>
-                                                    <div className=''>
-                                                        <i className="iconend border border-gray-300 border rounded py-3 px-4 me-6 mb-3 bi bi-trash3"></i>
+
+                                                            {/* Dots below the image */}
+                                                            <div className="dots" style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
+                                                                <span style={{ height: '10px', width: '10px', backgroundColor: '#fff', borderRadius: '50%', display: 'inline-block', margin: '-3rem 5px', zIndex: "999" }}></span>
+                                                                <span style={{ height: '10px', width: '10px', backgroundColor: '#bbb', borderRadius: '50%', display: 'inline-block', margin: '-3rem 5px', zIndex: "999" }}></span>
+                                                                <span style={{ height: '10px', width: '10px', backgroundColor: '#bbb', borderRadius: '50%', display: 'inline-block', margin: '-3rem 5px', zIndex: "999" }}></span>
+                                                            </div>
+
+                                                            <div className="row" style={{ justifyContent: 'end' }}>
+                                                                {/* <button onClick={handleBackClick} className="btn btn-primary" style={{ width: "auto" }}>
+                                                                Back to List
+                                                            </button> */}
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
-                                        <div className="d-flex flex-wrap flex-stack mb-6 card-header flex-nowrap border-0 pt-4">
-                                            <div className="card-body p-0">
-                                                <div className="row mb-7">
-                                                    <label className="col-lg-4 fs-2 fw-bolder text-gray-900">Id</label>
-                                                    <div className="col-lg-8">
-                                                        <span className="fw-bolder fs-2 text-muted">{appointment.id}</span>
-                                                    </div>
-                                                </div>
-
-                                                <div className="row mb-7">
-                                                    <label className="col-lg-4 fs-2 fw-bolder text-gray-900">Address</label>
-                                                    <div className="col-lg-8 fv-row">
-                                                        <span className="fw-bold fs-2 text-muted">{appointment.address}</span>
-                                                    </div>
-                                                </div>
-
-                                                <div className="row mb-7">
-                                                    <label className="col-lg-4 fs-2 fw-bolder text-gray-900">Property Type</label>
-                                                    <div className="col-lg-8 fv-row">
-                                                        <span className="fw-bold fs-2 text-muted">Independent House</span>
-                                                    </div>
-                                                </div>
-
-                                                <div className="row mb-7">
-                                                    <label className="col-lg-4 fs-2 fw-bolder text-gray-900">Age of Property</label>
-                                                    <div className="col-lg-8 fv-row">
-                                                        <span className="fw-bold fs-2 text-muted">5+ Years</span>
-                                                    </div>
-                                                </div>
-
-                                                <div className="row mb-7">
-                                                    <label className="col-lg-4 fs-2 fw-bolder text-gray-900">Preferred Tenant</label>
-                                                    <div className="col-lg-8 fv-row">
-                                                        <span className="fw-bold fs-2 text-muted">Family</span>
-                                                    </div>
-                                                </div>
-
-                                                <div className="row mb-7">
-                                                    <label className="col-lg-4 fs-2 fw-bolder text-gray-900">Posted on</label>
-                                                    <div className="col-lg-8 fv-row">
-                                                        <span className="fw-bold fs-2 text-muted">{appointment.date_time}</span>
-                                                    </div>
-                                                </div>
-
-                                            </div>
-                                            <div className="d-flex align-items my-2">
-                                                <div className=''>
-                                                    {/* <div className="row mb-7" style={{ justifyContent: 'center' }}>
-                                                        <div className="col-lg-8 fv-row">
-                                                            <div className="symbol-label">
-                                                                <img src={appointment.property_type} alt={`Property ${appointment.id}`} style={{ width: '30rem' }} />
-                                                            </div>
-                                                        </div>
-                                                    </div> */}
-
-                                                    <div className="row mb-7" style={{ justifyContent: 'center', alignItems: 'center' }}>
-                                                        <div 
-                                                            className="col-lg-1"
-                                                            style={{
-                                                                cursor: 'pointer',
-                                                                fontSize: '2rem',
-                                                                border: '1px solid #fff',
-                                                                position: 'relative',
-                                                                background: '#fff',
-                                                                zIndex: 999999,
-                                                                boxShadow: '1px 1px 1px 1px #f9f9f9',
-                                                                borderRadius: '0 4px 4px 0',
-                                                                right: '-8%',
-                                                            }}    
-                                                        >
-                                                            {/* Previous Button */}
-                                                            <i className="bi bi-arrow-left" style={{ cursor: 'pointer', fontSize: '2rem' }}></i>
-                                                        </div>
-                                                        <div className="col-lg-10" style={{ overflow: 'hidden'}}>
-                                                            <div className="symbol-label" style={{ position: 'relative' }}>
-                                                                <img src={appointment.property_type} alt={`Property ${appointment.id}`} style={{ width: '26rem', display: 'block', margin: '0 auto' }} />
-                                                            </div>
-                                                        </div>
-                                                        <div 
-                                                            className="col-lg-1"
-                                                            style={{
-                                                                cursor: 'pointer',
-                                                                fontSize: '2rem',
-                                                                border: '1px solid #fff',
-                                                                position: 'relative',
-                                                                background: '#fff',
-                                                                zIndex: 999999,
-                                                                boxShadow: '1px 1px 1px 1px #f9f9f9',
-                                                                borderRadius: '0 4px 4px 0',
-                                                                left: '-8%',
-                                                            }}    
-                                                        >
-                                                            {/* Next Button */}
-                                                            <i className="bi bi-arrow-right" style={{ cursor: 'pointer', fontSize: '2rem' }}></i>
-                                                        </div>
-                                                    </div>
-
-                                                    {/* Dots below the image */}
-                                                    <div className="dots" style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
-                                                        <span style={{ height: '10px', width: '10px', backgroundColor: '#fff', borderRadius: '50%', display: 'inline-block', margin: '-3rem 5px', zIndex: "999" }}></span>
-                                                        <span style={{ height: '10px', width: '10px', backgroundColor: '#bbb', borderRadius: '50%', display: 'inline-block', margin: '-3rem 5px', zIndex: "999" }}></span>
-                                                        <span style={{ height: '10px', width: '10px', backgroundColor: '#bbb', borderRadius: '50%', display: 'inline-block', margin: '-3rem 5px', zIndex: "999" }}></span>
-                                                    </div>
-
-                                                    <div className="row" style={{ justifyContent: 'end' }}>
-                                                        {/* <button onClick={handleBackClick} className="btn btn-primary" style={{ width: "auto" }}>
-                                                            Back to List
-                                                        </button> */}
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                    </div>
+                                </div>
+                                <div id="kt_app_content" className="app-content flex-column-fluid pt-0 mb-4">
+                                    <div className='card'>
                                         <div className="card-body py-4">
                                             <div id="kt_app_content" className="app-content flex-column-fluid">
                                                 <div className="card-header border-0 p-0">
@@ -480,53 +542,12 @@ const AppointmentList: React.FC = () => {
                                             </div>
                                         </div>
                                     </div>
-                                ))}
-                        </>
-                    )}
-                    {!selectedAppointment && (
-                        <div className="row">
-                            <div className="col-sm-12 col-md-5 d-flex align-items-center justify-content-center justify-content-md-start">
-                                {/* Add any content if needed here */}
-                            </div>
-                            <div className="col-sm-12 col-md-7 d-flex align-items-center justify-content-center justify-content-md-end">
-                                <div id="kt_table_users_paginate">
-                                    <ul className="pagination">
-                                        <li className="page-item previous">
-                                            <a href="#" className="page-link">
-                                                <i className="previous"></i>
-                                            </a>
-                                        </li>
-                                        <li className="page-item active">
-                                            <a href="#" className="page-link">1</a>
-                                        </li>
-                                        <li className="page-item">
-                                            <a href="#" className="page-link">2</a>
-                                        </li>
-                                        <li className="page-item">
-                                            <a href="#" className="page-link">3</a>
-                                        </li>
-                                        <li className="page-item">
-                                            <a href="#" className="page-link">4</a>
-                                        </li>
-                                        <li className="page-item">
-                                            <a href="#" className="page-link">5</a>
-                                        </li>
-                                        <li className="page-item">
-                                            <a href="#" className="page-link">6</a>
-                                        </li>
-                                        <li className="page-item next">
-                                            <a href="#" className="page-link">
-                                                <i className="next"></i>
-                                            </a>
-                                        </li>
-                                    </ul>
                                 </div>
-                            </div>
-                        </div>
-                    )}
-                </div>
-            </div>
-        </div>
+                            </>
+                        ))}
+                </>
+            )}
+        </>
     );
 };
 
