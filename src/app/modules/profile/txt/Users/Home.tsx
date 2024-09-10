@@ -225,7 +225,7 @@ const Home = () => {
                                         </div>
                                         <div className="card-header pt-0">
                                             <div className="card-title d-flex flex-column">
-                                                <span className="fs-2hx fw-bold text-gray-900 me-2 lh-1 ls-n2">23,604</span>
+                                                <span className="fs-2hx fw-bold text-gray-900 me-2 lh-1 ls-n2">28,604</span>
                                             </div>
                                         </div>
                                         <div className="card-body d-flex flex-column justify-content-end pe-0">
@@ -234,7 +234,7 @@ const Home = () => {
                                     </div>
                                 </div>
 
-                                {/* Active Projects Card */}
+                         
                                 <div className="col-md-6 col-lg-6 col-xl-6 col-xxl-3">
 
                                     {/* Professionals Card */}

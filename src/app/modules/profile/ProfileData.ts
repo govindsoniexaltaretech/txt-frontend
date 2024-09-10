@@ -11,7 +11,8 @@ export const profileSubmenu: Array<PageLink> = [
     path: '/crafted/pages/profile/overview',
     isActive: true,
     isSeparator: true,
-  },
+  },  
+  
   {
     title: 'Account',
     path: '/crafted/pages/profile/account',

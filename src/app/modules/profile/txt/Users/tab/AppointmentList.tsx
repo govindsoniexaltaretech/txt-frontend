@@ -24,9 +24,9 @@ interface Appointment_two {
 
 const appointments_two: Appointment_two[] = [
     {
-        date_time_two: '06-06-2024 18:00',
+        date_time_two: '06-06-2024 08:00',
         status_two: 'Scheduled',
-        discussed_date_time_two: '06-06-2024 18:00',
+        discussed_date_time_two: '06-06-2024 08:00',
         updated_by_two: 'Owner',
         note_two: 'Appointment Scheduled By Owner.',
     },
