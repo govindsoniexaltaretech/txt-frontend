@@ -13,7 +13,7 @@ const Overview = () => {
     // Function to handle tab clicks
     const handleTabClick = (tab: string) => {
         setActiveTab(tab);
-        
+
         // Update breadcrumb text based on the clicked tab
         switch (tab) {
             case 'overview':
@@ -41,7 +41,7 @@ const Overview = () => {
         <>
             <div className='app-main flex-column flex-row-fluid' id="kt_app_main">
                 <div className='d-flex flex-column flex-column-fluid'>
-                    <div id="kt_app_toolbar" className="app-toolbar py-3 py-lg-6 sticky-top" style={{ position: 'sticky', top: '0', zIndex: 10}}>
+                    <div id="kt_app_toolbar" className="app-toolbar py-3 py-lg-6 sticky-top" style={{ position: 'sticky', top: '0', zIndex: 10 }}>
                         <div id="kt_app_toolbar_container" className="app-container d-flex flex-stack container-xxl">
                             <div
                                 id="kt_page_title"
@@ -58,7 +58,7 @@ const Overview = () => {
                             </div>
                         </div>
                     </div>
-                    <div id="kt_app_content" className="app-content flex-column-fluid sticky-top" style={{ position: 'sticky', top: '0', zIndex: 10}}>
+                    <div id="kt_app_content" className="app-content flex-column-fluid sticky-top" style={{ position: 'sticky', top: '0', zIndex: 10 }}>
                         <div id="kt_app_content_container" className="app-container container-xxl">
                             <div className="card mb-5 mb-xl-10">
                                 <div className="card-body pt-9">
@@ -120,7 +120,7 @@ const Overview = () => {
                                                                     <span className="path1"></span>
                                                                     <span className="path2"></span>
                                                                 </i>
-                                                                Android Mi10 
+                                                                Android Mi10
                                                             </a>
                                                         </div>
                                                     </div>
@@ -169,8 +169,8 @@ const Overview = () => {
                                             <li className="nav-item">
                                                 <a
                                                     className={`nav-link text-active-primary me-6 ${activeTab === '' ? 'active' : ''}`}
-                                                   
-                                                    // onClick={() => handleTabClick('documents')}
+
+                                                // onClick={() => handleTabClick('documents')}
                                                 >
                                                     Documents
                                                 </a>
@@ -178,8 +178,8 @@ const Overview = () => {
                                             <li className="nav-item">
                                                 <a
                                                     className={`nav-link text-active-primary me-6 ${activeTab === '' ? 'active' : ''}`}
-                                                   
-                                                    // onClick={() => handleTabClick('feedback')}
+
+                                                // onClick={() => handleTabClick('feedback')}
                                                 >
                                                     Feedback
                                                 </a>
@@ -192,6 +192,7 @@ const Overview = () => {
                     </div>
 
                     <div className="tab-content mb-10">
+
                         {activeTab === 'overview' && (
                             <div id="overview">
                                 {/* Overview Details */}
@@ -250,7 +251,6 @@ const Overview = () => {
                             </div>
                         )}
                     </div>
-
                 </div>
             </div>
         </>

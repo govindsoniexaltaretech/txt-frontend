@@ -415,7 +415,7 @@ const ServicesList: React.FC = () => {
                                                                         border: '1px solid #fff',
                                                                         position: 'relative',
                                                                         background: '#fff',
-                                                                        zIndex: 999999,
+                                                                        zIndex: 1,
                                                                         boxShadow: '1px 1px 1px 1px #f9f9f9',
                                                                         borderRadius: '0 4px 4px 0',
                                                                         right: '-8%',
@@ -438,7 +438,7 @@ const ServicesList: React.FC = () => {
                                                                         border: '1px solid #fff',
                                                                         position: 'relative',
                                                                         background: '#fff',
-                                                                        zIndex: 999999,
+                                                                        zIndex: 1,
                                                                         boxShadow: '1px 1px 1px 1px #f9f9f9',
                                                                         borderRadius: '0 4px 4px 0',
                                                                         left: '-8%',
@@ -451,9 +451,9 @@ const ServicesList: React.FC = () => {
 
                                                             {/* Dots below the image */}
                                                             <div className="dots" style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
-                                                                <span style={{ height: '10px', width: '10px', backgroundColor: '#fff', borderRadius: '50%', display: 'inline-block', margin: '-3rem 5px', zIndex: "999" }}></span>
-                                                                <span style={{ height: '10px', width: '10px', backgroundColor: '#bbb', borderRadius: '50%', display: 'inline-block', margin: '-3rem 5px', zIndex: "999" }}></span>
-                                                                <span style={{ height: '10px', width: '10px', backgroundColor: '#bbb', borderRadius: '50%', display: 'inline-block', margin: '-3rem 5px', zIndex: "999" }}></span>
+                                                                <span style={{ height: '10px', width: '10px', backgroundColor: '#fff', borderRadius: '50%', display: 'inline-block', margin: '-3rem 5px', zIndex: "1" }}></span>
+                                                                <span style={{ height: '10px', width: '10px', backgroundColor: '#bbb', borderRadius: '50%', display: 'inline-block', margin: '-3rem 5px', zIndex: "1" }}></span>
+                                                                <span style={{ height: '10px', width: '10px', backgroundColor: '#bbb', borderRadius: '50%', display: 'inline-block', margin: '-3rem 5px', zIndex: "1" }}></span>
                                                             </div>
 
                                                             <div className="row" style={{ justifyContent: 'end' }}>
