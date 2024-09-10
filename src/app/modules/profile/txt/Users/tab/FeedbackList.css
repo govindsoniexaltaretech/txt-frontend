@@ -1,3 +1,10 @@
 .quill.custom-quill-editor .ql-editor{
     height: 10rem;
 }
+
+.me-7.mb-4.feedbackimage_two .symbol img {
+    display: flex;
+    object-fit: cover;
+    margin: 0 1rem 0 0;
+    border-radius: 0;
+}

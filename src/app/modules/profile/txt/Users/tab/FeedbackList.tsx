@@ -315,6 +315,16 @@ const FeedbackListList: React.FC = () => {
                     <div className="card-body py-4">
                       <div className="d-flex flex-wrap flex-stack mb-6 card-header flex-nowrap border-0 pt-4">
                         <div className="card-body p-0">
+                          <div className='row mb-7'>
+                            <div className="me-7 mb-4 feedbackimage_two">
+                              <div className="symbol symbol-100px symbol-lg-160px symbol-fixed position-relative ml-4">
+                                <img src="/media/logos/feed_image.png" alt="Metornic" />
+                              </div>
+                              <div className="symbol symbol-100px symbol-lg-160px symbol-fixed position-relative">
+                                <img src="/media/logos/feed_image2.png" alt="Metornic" />
+                              </div>
+                            </div>
+                          </div>
                           <div className="row mb-7">
                             <label className="col-lg-4 fs-2 fw-bolder text-gray-900">Response
                             </label>
