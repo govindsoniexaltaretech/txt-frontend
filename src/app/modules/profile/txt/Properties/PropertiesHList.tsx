@@ -14,7 +14,7 @@ const PropertiessList: PropertiesDetails[] = [
     {
         Properties_id: 3354,
         Properties_icon: '/media/logos/appointment/1.png',
-        Properties_location: 'Apartmentt',
+        Properties_location: 'Apartment',
         Properties_category: '756 Nguyen Hue Boulevard...',
         Properties_due_date: '14-14-2024 10:00',
         Properties_status: 'Approved',
@@ -70,7 +70,7 @@ const PropertiessList: PropertiesDetails[] = [
     {
         Properties_id: 3544,
         Properties_icon: '/media/logos/appointment/2.png',
-        Properties_location: 'Independent Houses ',
+        Properties_location: 'Independent House ',
         Properties_category: '756 Nguyen Hue Boulevard...',
         Properties_due_date: '21-21-2024 06:00',
         Properties_status: 'Pending',
@@ -86,7 +86,7 @@ const PropertiessList: PropertiesDetails[] = [
     {
         Properties_id: 3054,
         Properties_icon: '/media/logos/appointment/1.png',
-        Properties_location: 'Apartmentt',
+        Properties_location: 'Apartment',
         Properties_category: '756 Nguyen Hue Boulevard...',
         Properties_due_date: '14-14-2024 10:00',
         Properties_status: 'Approved',
