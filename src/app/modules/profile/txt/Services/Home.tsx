@@ -1,5 +1,6 @@
 import React from 'react';
 import ServicesHList from './ServicesHList';
+import { Button } from 'react-bootstrap';
 
 const Home: React.FC = () => {
 
@@ -16,9 +17,11 @@ const Home: React.FC = () => {
                                 data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}"
                                 className="page-title d-flex flex-wrap me-3 flex-column justify-content-center"
                             >
-                                <h1 className="page-heading d-flex text-gray-900 fw-bold fs-3 my-0 flex-column justify-content-center">
-                                    Services
-                                </h1>
+                                <Button variant="contained" color="primary" href="/services">
+                                    <h1 className="page-heading d-flex text-gray-900 fw-bold fs-3 my-0 flex-column justify-content-center">
+                                        Services
+                                    </h1>
+                                </Button>
                             </div>
                         </div>
                     </div>

@@ -65,7 +65,7 @@ const appointments: Appointment[] = [
     {
         id: 3451,
         property_type: '/media/logos/appointment/1.png',
-        address: '756 Nguyen Hue Boulevard',
+        address: '756 Nguyen Hue Boulevard is a prominent street in Ho Chi Minh City, known for its vibrant atmosphere and historic landmarks',
         appointment_type: 'Property Tour',
         date_time: '06-06-2024 18:00',
         status: 'Scheduled',
@@ -73,7 +73,7 @@ const appointments: Appointment[] = [
     {
         id: 2352,
         property_type: '/media/logos/appointment/2.png',
-        address: '756 Nguyen Hue Boulevard',
+        address: '756 Nguyen Hue Boulevard is a prominent street in Ho Chi Minh City, known for its vibrant atmosphere and historic landmarks',
         appointment_type: 'Property Visit',
         date_time: '07-06-2024 14:00',
         status: 'Scheduled',
@@ -81,7 +81,7 @@ const appointments: Appointment[] = [
     {
         id: 3212,
         property_type: '/media/logos/appointment/3.png',
-        address: '789 Pine Road',
+        address: '756 Nguyen Hue Boulevard is a prominent street in Ho Chi Minh City, known for its vibrant atmosphere and historic landmarks',
         appointment_type: 'Surveyor Appointment',
         date_time: '08-06-2024 09:00',
         status: 'Scheduled',
@@ -89,7 +89,7 @@ const appointments: Appointment[] = [
     {
         id: 4234,
         property_type: '/media/logos/appointment/4.png',
-        address: '101 Maple Lane',
+        address: '756 Nguyen Hue Boulevard is a prominent street in Ho Chi Minh City, known for its vibrant atmosphere and historic landmarks',
         appointment_type: 'Property Visit',
         date_time: '09-06-2024 11:00',
         status: 'Rescheduled',
@@ -97,7 +97,7 @@ const appointments: Appointment[] = [
     {
         id: 7612,
         property_type: '/media/logos/appointment/5.png',
-        address: '789 Pine Road',
+        address: '756 Nguyen Hue Boulevard is a prominent street in Ho Chi Minh City, known for its vibrant atmosphere and historic landmarks',
         appointment_type: 'Financial Consultation',
         date_time: '08-06-2024 09:00',
         status: 'Completed',
@@ -105,7 +105,7 @@ const appointments: Appointment[] = [
     {
         id: 8734,
         property_type: '/media/logos/appointment/6.png',
-        address: '101 Maple Lane',
+        address: '756 Nguyen Hue Boulevard is a prominent street in Ho Chi Minh City, known for its vibrant atmosphere and historic landmarks',
         appointment_type: 'Surveyor Appointment',
         date_time: '09-06-2024 11:00',
         status: 'Completed',
@@ -178,11 +178,11 @@ const AppointmentList: React.FC = () => {
                                                 <thead>
                                                     <tr className="text-start text-muted fw-bolder fs-5 gs-0">
                                                         <>
-                                                            <th className="min-w-125px">Id</th>
-                                                            <th className="min-w-125px">Property Type</th>
-                                                            <th className="min-w-125px">Address</th>
-                                                            <th className="min-w-125px">Appointment Type</th>
-                                                            <th className="min-w-125px">Date & Time</th>
+                                                            <th className="text-center min-w-125px">Id</th>
+                                                            <th className="text-center min-w-125px">Property Type</th>
+                                                            <th className="text-center min-w-125px">Address</th>
+                                                            <th className="text-center min-w-125px">Appointment Type</th>
+                                                            <th className="text-center min-w-125px">Date & Time</th>
                                                             <th className="text-center min-w-100px">Status</th>
                                                         </>
                                                     </tr>
@@ -198,7 +198,7 @@ const AppointmentList: React.FC = () => {
                                                             >
                                                                 {!selectedAppointment && (
                                                                     <>
-                                                                        <td>{appointment.id}</td>
+                                                                        <td className='text-center'>{appointment.id}</td>
                                                                         <td>
                                                                             <div className="d-flex align-items-center" style={{ justifyContent: "center" }}>
                                                                                 <div className="symbol overflow-hidden me-3" style={{ borderRadius: "0" }}>
@@ -210,9 +210,19 @@ const AppointmentList: React.FC = () => {
                                                                                 </div>
                                                                             </div>
                                                                         </td>
-                                                                        <td>{appointment.address}</td>
-                                                                        <td>{appointment.appointment_type}</td>
-                                                                        <td>{appointment.date_time}</td>
+                                                                        <td className='text-center'>
+                                                                                {appointment.address
+                                                                                        .split(" ")
+                                                                                        .slice(0, 4)
+                                                                                        .join(" ") +
+                                                                                        (appointment.address.split(
+                                                                                            " "
+                                                                                        ).length > 5
+                                                                                            ? "..."
+                                                                                            : "")}
+                                                                        </td>
+                                                                        <td className='text-center'>{appointment.appointment_type}</td>
+                                                                        <td className='text-center'>{appointment.date_time}</td>
                                                                         <td className="text-center min-w-100px">
                                                                             <div
                                                                                 className="badge"

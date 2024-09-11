@@ -132,7 +132,7 @@ const ServicesHList: React.FC = () => {
                                 <thead>
                                     <tr className="text-start text-muted fw-bolder fs-5 text gs-0">
                                         <>
-                                            <th className="min-w-125px">Service Id</th>
+                                            <th className="text-center min-w-125px">Service Id</th>
                                             <th className="min-w-125px">Service</th>
                                             <th className="text-center min-w-125px">Service Type</th>
                                             <th className="text-center min-w-125px">Date & Time Availed</th>
@@ -147,12 +147,12 @@ const ServicesHList: React.FC = () => {
                                     <React.Fragment key={task.task_id}>
                                         {(selectedTask === null || selectedTask === task.task_id) && (
                                             <tr
-                                                // onClick={() => handleRowClick(task.task_id)}
+                                                onClick={() => handleRowClick(task.task_id)}
                                                 style={{ cursor: 'pointer' }}
                                             >
                                                 {!selectedTask && (
                                                     <>
-                                                        <td>{task.task_id}</td>
+                                                        <td className="text-center">{task.task_id}</td>
                                                         <td className="text-center">
                                                             <div className="d-flex align-items-center">
                                                                 <div className="symbol overflow-hidden me-3" style={{ borderRadius: "0" }}>
@@ -246,11 +246,24 @@ const ServicesHList: React.FC = () => {
                                                     data-kt-swapper-parent="{default: '#kt_content_container', 'lg': '#kt_toolbar_container'}"
                                                     className="page-title d-flex flex-wrap me-3 flex-column justify-content-center"
                                                 >
-                                                    <h1 className="page-heading d-flex text-gray-900 fw-bold fs-2 my-0 flex-column justify-content-center">
-                                                        Service Details
+                                                    <h1 className="page-heading d-flex text-gray-900 fw-bold fs-1 my-0 flex-column justify-content-center">
+                                                        Service details
                                                     </h1>
                                                 </div>
                                                 <div className="d-flex align-items my-2">
+
+                                                    <button
+                                                        onClick={handleBackClick}
+                                                        style={{
+                                                            border: 'none',
+                                                            background: 'transparent'
+                                                        }}
+                                                    >
+                                                        <div className=''>
+                                                            <i className="iconend border border-gray-300 border rounded py-3 px-4 me-6 mb-3 bi bi-arrow-left"></i>
+                                                        </div>
+                                                    </button>
+
                                                     <div className=''>
                                                         <i className="iconend border border-gray-300 border rounded py-3 px-4 me-6 mb-3 bi bi-pencil"></i>
                                                     </div>
@@ -263,34 +276,49 @@ const ServicesHList: React.FC = () => {
                                         <div className="d-flex flex-wrap flex-stack mb-6 card-header flex-nowrap border-0">
                                             <div className="card-body p-0">
                                                 <div className="row mb-7">
-                                                    <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Service Id</label>
+                                                    <label className="col-lg-4 fs-2 fw-bolder text-gray-900">Service Id</label>
                                                     <div className="col-lg-8">
-                                                        <span className="fw-bolder fs-6 text-muted">{task.task_id}</span>
+                                                        <span className="fw-bolder fs-2 text-muted">{task.task_id}</span>
                                                     </div>
                                                 </div>
 
                                                 <div className="row mb-7">
-                                                    <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Service Type</label>
+                                                    <label className="col-lg-4 fs-2 fw-bolder text-gray-900">Service Type</label>
                                                     <div className="col-lg-8 fv-row">
-                                                        <span className="fw-bold fs-6 text-muted">{task.task_location}</span>
+                                                        <span className="fw-bold fs-2 text-muted">{task.task_location}</span>
                                                     </div>
                                                 </div>
 
                                                 <div className="row mb-7">
-                                                    <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Service Provider</label>
+                                                    <label className="col-lg-4 fs-2 fw-bolder text-gray-900">Service Provider</label>
                                                     <div className="col-lg-8 fv-row">
-                                                        <span className="fw-bold fs-6 text-muted">{task.task_category}</span>
+                                                        <span className="fw-bold fs-2 text-muted">{task.task_category}</span>
                                                     </div>
                                                 </div>
 
                                                 <div className="row mb-7">
-                                                    <label className="col-lg-4 fs-6 fw-bolder text-gray-900">Date & Time</label>
+                                                    <label className="col-lg-4 fs-2 fw-bolder text-gray-900">Date & Time</label>
                                                     <div className="col-lg-8 fv-row">
-                                                        <span className="fw-bold fs-6 text-muted">{task.task_due_date}</span>
+                                                        <span className="fw-bold fs-2 text-muted">{task.task_due_date}</span>
                                                     </div>
                                                 </div>
+
+                                                <div className="row mb-7">
+                                                    <label className="col-lg-4 fs-2 fw-bolder text-gray-900">Status</label>
+                                                    <div 
+                                                        className="col-lg-8 fv-row"
+                                                        style={{
+                                                            ...getRoleStyles(task.task_status),
+                                                            padding: '1rem',
+                                                            width: 'auto'
+                                                        }}    
+                                                    >
+                                                        <span className="fw-bold fs-2">{task.task_status}</span>
+                                                    </div>
+                                                </div>
+
                                             </div>
-                                            <div className="d-flex align-items my-2">
+                                            {/* <div className="d-flex align-items my-2">
                                                 <div className=''>
                                                     <div className="row mb-7" style={{ justifyContent: '' }}>
                                                         <div className="col-lg-8 fv-row">
@@ -304,6 +332,60 @@ const ServicesHList: React.FC = () => {
                                                             Back to List
                                                         </button>
                                                     </div>
+                                                </div>
+                                            </div> */}
+                                            <div className="d-flex align-items my-2">
+                                                <div className=''>
+                                                    <div className="row mb-7" style={{ justifyContent: 'center', alignItems: 'center' }}>
+                                                        <div
+                                                            className="col-lg-1"
+                                                            style={{
+                                                                cursor: 'pointer',
+                                                                fontSize: '2rem',
+                                                                border: '1px solid #fff',
+                                                                position: 'relative',
+                                                                background: '#fff',
+                                                                zIndex: 2,
+                                                                boxShadow: '1px 1px 1px 1px #f9f9f9',
+                                                                borderRadius: '0 4px 4px 0',
+                                                                right: '-8%',
+                                                                paddingLeft: '0rem'
+                                                            }}
+                                                        >
+                                                            {/* Previous Button */}
+                                                            <i className="bi bi-arrow-left" style={{ cursor: 'pointer', fontSize: '2rem' }}></i>
+                                                        </div>
+                                                        <div className="col-lg-10" style={{ overflow: 'hidden' }}>
+                                                            <div className="symbol-label" style={{ position: 'relative' }}>
+                                                                <img src={task.task_icon} alt={`Property ${task.task_id}`} style={{ width: '26rem', display: 'block', margin: '0 auto' }} />
+                                                            </div>
+                                                        </div>
+                                                        <div
+                                                            className="col-lg-1"
+                                                            style={{
+                                                                cursor: 'pointer',
+                                                                fontSize: '2rem',
+                                                                border: '1px solid #fff',
+                                                                position: 'relative',
+                                                                background: '#fff',
+                                                                zIndex: 2,
+                                                                boxShadow: '1px 1px 1px 1px #f9f9f9',
+                                                                borderRadius: '0 4px 4px 0',
+                                                                left: '-8%',
+                                                            }}
+                                                        >
+                                                            {/* Next Button */}
+                                                            <i className="bi bi-arrow-right" style={{ cursor: 'pointer', fontSize: '2rem' }}></i>
+                                                        </div>
+                                                    </div>
+
+                                                    {/* Dots below the image */}
+                                                    <div className="dots" style={{ display: 'flex', justifyContent: 'center', marginTop: '10px' }}>
+                                                        <span style={{ height: '10px', width: '10px', backgroundColor: '#fff', borderRadius: '50%', display: 'inline-block', margin: '-3rem 5px', zIndex: "2" }}></span>
+                                                        <span style={{ height: '10px', width: '10px', backgroundColor: '#bbb', borderRadius: '50%', display: 'inline-block', margin: '-3rem 5px', zIndex: "2" }}></span>
+                                                        <span style={{ height: '10px', width: '10px', backgroundColor: '#bbb', borderRadius: '50%', display: 'inline-block', margin: '-3rem 5px', zIndex: "2" }}></span>
+                                                    </div>
+
                                                 </div>
                                             </div>
                                         </div>

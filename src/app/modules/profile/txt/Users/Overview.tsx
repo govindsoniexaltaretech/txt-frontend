@@ -172,9 +172,9 @@ const Overview = () => {
                                             </li>
                                             <li className="nav-item">
                                                 <a
-                                                    className={`nav-link text-active-primary me-6 ${activeTab === 'documents' ? 'active' : ''}`}
-                                                    href='#documents'
-                                                    onClick={() => handleTabClick('documents')}
+                                                    className={`nav-link text-active-primary me-6 ${activeTab === '' ? 'active' : ''}`}
+                                                    // href='#documents'
+                                                    // onClick={() => handleTabClick('documents')}
                                                 >
                                                     Documents
                                                 </a>
@@ -186,6 +186,15 @@ const Overview = () => {
                                                     onClick={() => handleTabClick('feedback')}
                                                 >
                                                     Feedback
+                                                </a>
+                                            </li>
+                                            <li className="nav-item">
+                                                <a
+                                                    className={`nav-link text-active-primary me-6 ${activeTab === '' ? 'active' : ''}`}
+                                                    // href='#feedback'
+                                                    // onClick={() => handleTabClick('feedback')}
+                                                >
+                                                    Invoices
                                                 </a>
                                             </li>
                                         </ul>
