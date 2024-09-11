@@ -380,11 +380,11 @@ const Home = () => {
                                             <thead>
                                                 <tr className="text-start text-muted fw-bold fs-5 text gs-0">
                                                     <th className="min-w-125px">Users</th>
-                                                    <th className="min-w-125px">Role</th>
-                                                    <th className="min-w-125px">Mobile Number</th>
-                                                    <th className="min-w-125px">Registration Date</th>
-                                                    <th className="min-w-125px" style={{ textAlign: 'center' }}>Currency</th>
-                                                    <th className="text-end min-w-100px">Messaging App</th>
+                                                    <th className="text-center min-w-125px">Role</th>
+                                                    <th className="text-center min-w-125px">Mobile Number</th>
+                                                    <th className="text-center min-w-125px">Registration Date</th>
+                                                    <th className="text-center min-w-125px" style={{ textAlign: 'center' }}>Currency</th>
+                                                    <th className="text-center min-w-100px">Messaging App</th>
                                                 </tr>
                                             </thead>
                                             <tbody className="text-gray-600 fw-bold">
@@ -417,7 +417,7 @@ const Home = () => {
                                                                 </div>
                                                             </a>
                                                         </td>
-                                                        <td>
+                                                        <td className='text-center'>
                                                             <div
                                                                 className="badge"
                                                                 style={getRoleStyles(user.role)}
@@ -425,29 +425,16 @@ const Home = () => {
                                                                 {user.role}
                                                             </div>
                                                         </td>
-                                                        <td>
+                                                        <td className='text-center'>
                                                             <div className="fw-thin fs-4"><img src="/media/logos/vietnam_phn.png" alt={user.name} className="w-5" style={{ paddingRight: '4px' }} />{user.mobilenumber}</div>
                                                         </td>
-                                                        <td>
+                                                        <td className='text-center'>
                                                             {user.registerationnumber && (
                                                                 <div className="fw-thin fs-4">{user.registerationnumber}</div>
                                                             )}
                                                         </td>
                                                         <td className="fw-thin fs-4 align-items-center" style={{ textAlign: 'center' }}>{user.currency}</td>
                                                         <td className="text-center min-w-100px">
-                                                            {/* <a href="#" className="btn btn-light btn-active-light-primary btn-sm" data-kt-menu-trigger="click" data-kt-menu-placement="bottom-end">
-                                                                Actions<i className="ki-duotone ki-down fs-5 m-0"></i>
-                                                            </a>
-                                                            <div className="menu menu-sub menu-sub-dropdown menu-column menu-rounded menu-gray-600 menu-state-bg-light-primary fw-bold fs-7 w-125px py-4">
-                                                                <div className="menu-item px-3">
-                                                                    <a className="menu-link px-3">Edit</a>
-                                                                </div>
-                                                                <div className="menu-item px-3">
-                                                                    <a className="menu-link px-3" data-kt-users-table-filter="delete_row">
-                                                                        Delete
-                                                                    </a>
-                                                                </div>
-                                                            </div> */}
                                                             <img src={user.avatar_action} alt={user.name} className="w-5" style={{ paddingRight: '4px', textAlign: 'center' }} />
                                                         </td>
                                                     </tr>
