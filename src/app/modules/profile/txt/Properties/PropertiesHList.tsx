@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import ReactQuill from 'react-quill';
 import './PropertiesHList.css';
 
 type PropertiesStatus = 'Approved' | 'Pending';
@@ -157,7 +156,6 @@ const getRoleStyles = (Properties_status: PropertiesStatus) => {
 
 const PropertiesHList: React.FC = () => {
     const [selectedProperties, setSelectedProperties] = useState<number | null>(null);
-    const [editorContent, setEditorContent] = useState<string>('');
 
     const handleRowClick = (id: number) => {
         setSelectedProperties(id);
@@ -165,10 +163,6 @@ const PropertiesHList: React.FC = () => {
 
     const handleBackClick = () => {
         setSelectedProperties(null);
-    };
-
-    const handleEditorChange = (value: string) => {
-        setEditorContent(value);
     };
 
     return (
